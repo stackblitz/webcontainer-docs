@@ -1,0 +1,3 @@
+# Redirect bare section paths to their first page
+/guides /guides/quickstart
+/tutorial /tutorial/1-building-your-first-webcontainers-app
