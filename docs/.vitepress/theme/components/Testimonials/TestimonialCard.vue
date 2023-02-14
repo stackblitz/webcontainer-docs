@@ -20,7 +20,7 @@ defineProps<{
         </div>
         <div class="author__info">
           <p class="author__name">{{ testimonial.author.name }}</p>
-          <p v-if="testimonial.author.title" class="author__title">{{ testimonial.author.title }}</p>
+          <p v-if="testimonial.author.title" class="author__title" v-html="testimonial.author.title" />
         </div>
       </div>
     </div>
@@ -130,5 +130,8 @@ Non-scoped
   :root.dark & {
     color: #fff;
   }
+}
+.author__title a {
+  text-decoration: underline;
 }
 </style>
