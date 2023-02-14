@@ -70,5 +70,5 @@ Tech Educator's Toolkit is an early exploration of WebContainer API and of a new
 [![A still from Dan Jutan's talk](/img/community/dan_jutan_talk.png)](https://www.youtube.com/watch?v=R-1y3Ti3ng4)
 
 ::: tip Get your project featured!
-Have a project you'd like us to showcase here and on our social media? Reach out to our [Developer Advocates on Discord](https://github.com/stackblitz/webcontainer-docs/issues/new?assignees=sylwiavargas&labels=documentation&template=%E2%9C%A8-feature-your-project.md&title=%5B%E2%9C%A8+Project+submission%5D)!
+Have a project you'd like us to showcase here and on our social media? Reach out to our [Developer Advocates](https://github.com/stackblitz/webcontainer-docs/issues/new?assignees=sylwiavargas&labels=documentation&template=%E2%9C%A8-feature-your-project.md&title=%5B%E2%9C%A8+Project+submission%5D)!
 :::
