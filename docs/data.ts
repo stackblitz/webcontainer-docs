@@ -181,28 +181,6 @@ export const testimonialCardData: TestimonialCardData[] = [
     },
     quote: `<strong>As a team working on educational products, StackBlitz WebContainers has been an invaluable tool for us.</strong> The ability to embed full-stack applications with customisable, interactive coding environment directly into our products has greatly enhanced the learning experience for our users.`,
   },
-  // {
-  //   author: {
-  //     name: 'Abdellah Alaoui',
-  //     title: 'Fullstack hacker, Scrimba',
-  //   },
-  //   imgPath: {
-  //     author: '/img/testimonials/abdellah_alaoui.png',
-  //     logo: '/img/testimonials/scrimba.svg',
-  //   },
-  //   quote: `I have worked with WebContainer API for a couple of weeks at Scrimba to make a pooc of backend support. And I can say it's a solid piece of technology. Things just work, and it's also quite fast. <strong>I'm super excited about the GA since it will unlock so much opportunities for OSS projects and the industry at large.</strong>`,
-  // },
-  // {
-  //   author: {
-  //     name: 'Nate Moore',
-  //     title: 'Senior Software Engineer, The Astro Technology Company',
-  //   },
-  //   imgPath: {
-  //     author: '/img/testimonials/nate_moore.jpg',
-  //     logo: '/img/testimonials/astro-full-light.svg',
-  //   },
-  //   quote: `<strong>WebContainers represent a fundamental shift in what is possible in the browser. I'm incredibly excited about the potential this tech unlocks,</strong> from secure, browser-based development environments to highly interactive educational content. `,
-  // },
   {
     author: {
       name: 'swyx',
@@ -268,6 +246,28 @@ export const testimonialCardData: TestimonialCardData[] = [
       logoLight: '/img/testimonials/suborbital.svg',
     },
     quote: `For such a powerful piece of tech I was so impressed by how clear to use the API is. Also running WebContainers inside WebContainers had me 🤯`,
+  },
+  {
+    author: {
+      name: 'DJ',
+      title: 'Founder & CEO @ re:tune',
+    },
+    imgPath: {
+      author: '/img/testimonials/retune-dj.jpg',
+      logoDark: '/img/testimonials/retune.png',
+      logoLight: '/img/testimonials/retune.png',
+    },
+    quote: `At re:tune, we have been building the missing frontend for GPT-3, on a mission to empower everyone to build AI-first software at the speed of thought. <strong>WebContainer sets the stage for our AI-native IDE</strong> - with a copilot that can not only read and write code, but can also understand and operate in the full runtime context across server and client!`,
+  },
+  {
+    author: {
+      name: 'Manus Nijhoff',
+      title: 'Co-founder at <a href="https://touchystudios.com/" target="_blank" rel="nofollow">Touchy Studios</a> & full-stack developer at <a href="https://100k.studio/" target="_blank" rel="nofollow">100k</a>',
+    },
+    imgPath: {
+      author: '/img/testimonials/manus_nijhoff.png',
+    },
+    quote: `Running chess in a terminal, running a terminal in the browser, check mate!<br/><strong>The best position to be in is a creative one and the Stackblitz WebContainers allow that.</strong>`,
   },
 ];
 
