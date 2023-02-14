@@ -267,7 +267,7 @@ export const testimonialCardData: TestimonialCardData[] = [
     imgPath: {
       author: '/img/testimonials/manus_nijhoff.png',
     },
-    quote: `Running chess in a terminal, running a terminal in the browser, check mate!<br/><strong>The best position to be in is a creative one and the Stackblitz WebContainers allow that.</strong>`,
+    quote: `Running chess in a terminal, running a terminal in the browser, check mate!<br/><strong>The best position to be in is a creative one and the StackBlitz WebContainers allow that.</strong>`,
   },
 ];
 
