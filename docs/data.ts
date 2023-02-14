@@ -250,7 +250,7 @@ export const testimonialCardData: TestimonialCardData[] = [
   {
     author: {
       name: 'DJ',
-      title: 'Founder & CEO @ re:tune',
+      title: 'Founder & CEO @ <a href="https://retune.so/" target="_blank" rel="nofollow">re:tune</a>',
     },
     imgPath: {
       author: '/img/testimonials/retune-dj.jpg',
