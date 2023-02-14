@@ -257,7 +257,7 @@ export const testimonialCardData: TestimonialCardData[] = [
       logoDark: '/img/testimonials/retune.png',
       logoLight: '/img/testimonials/retune.png',
     },
-    quote: `At re:tune, we have been building the missing frontend for GPT-3, on a mission to empower everyone to build AI-first software at the speed of thought. <strong>WebContainer sets the stage for our AI-native IDE</strong> - with a copilot that can not only read and write code, but can also understand and operate in the full runtime context across server and client!`,
+    quote: `At re:tune, we have been building the missing frontend for GPT-3, on a mission to empower everyone to build AI-first software at the speed of thought. <strong>WebContainers set the stage for our AI-native IDE</strong> - with a copilot that can not only read and write code, but can also understand and operate in the full runtime context across server and client!`,
   },
   {
     author: {
