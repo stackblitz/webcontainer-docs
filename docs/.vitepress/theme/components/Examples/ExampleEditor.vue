@@ -40,7 +40,7 @@ export default {
   // dependencies by spawning `npm install`</span>
   <span class="code-blue">const</span> install <span class="code-grey">=</span> <span class="code-pink">await</span> webcontainer.spawn(<span class="code-orange">'npm'</span>, [<span class="code-orange">'i'</span>]);
   
-  <span class="code-pink">await</span> install.onExit()<span class="code-grey">;</span></span>
+  <span class="code-pink">await</span> install.exit<span class="code-grey">;</span></span>
     
   <span :class="`step-group ${focusedStep ? 'disabled' : ''} ${focusedStep === 4 ? 'focused' : ''}`" id="step-4"><span class="code-comment">// Once all dependencies have been installed, we can spawn `npm`
   // to run the `dev` script from the project's `package.json`</span>
