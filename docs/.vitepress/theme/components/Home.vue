@@ -25,7 +25,7 @@ defineProps<{
   <div class="section">
     <img src="/img/features/elements-01-nodeLIGHT-02-DARK.png" />
     <h2>Power your web app with<br/>the <strong>WebContainer API</strong></h2>
-    <p>Create unmatched user experiences by integrating Node.js directly into your web app.<br/>Build fully-branded products without connecting to external servers or direcing users away to third-party apps.</p>
+    <p>Create unmatched user experiences by integrating Node.js directly into your web app.<br/>Build fully-branded products without connecting to external servers or directing users away to third-party apps.</p>
     <FeaturesCardList />
   </div>
 
