@@ -1,11 +1,11 @@
 ---
-title: &title Running Proceses
+title: &title Running Processes
 head:
   - ['meta', {property: 'og:title', content: *title}]
   - ['meta', {property: 'og:image', content: 'https://webcontainers.io/img/og/guide-running_commands.png'}]
   - ['meta', {name: 'twitter:title', content: *title}]
 ---
-# Running Proceses
+# Running Processes
 
 This page covers executing commands inside WebContainers.
 
