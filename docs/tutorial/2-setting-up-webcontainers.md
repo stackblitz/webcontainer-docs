@@ -105,7 +105,7 @@ And, `package.json`:
     "nodemon": "latest"
   },
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon --watch './' index.js"
   }
 }
 ```
@@ -151,7 +151,7 @@ app.listen(port, () => {
     "nodemon": "latest"
   },
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon --watch './' index.js"
   }
 }`,
     },
