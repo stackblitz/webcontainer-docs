@@ -15,10 +15,10 @@ This page provides the bare-minimum overview on how to start building with WebCo
 We have prepared a [step-by-step walkthrough](../tutorial/1-building-your-first-webcontainers-app) for you!
 :::
 
-**The WebContainer API starter is the fastest way to explore the API**. Open it in StackBlitz editor:
+**The WebContainer API starter is the fastest way to explore the API**. Open it in StackBlitz editor:  
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://webcontainer.new)
 
-or in Codeflow IDE, our full-fledged web environment:
+or in Codeflow IDE, our full-fledged web environment:  
 [![Open in Codeflow](https://developer.stackblitz.com/img/open_in_codeflow.svg)](https:///pr.new/github.com/stackblitz/webcontainer-api-starter)
 
 If you prefer to develop locally, follow the steps below.
