@@ -56,10 +56,45 @@
   margin-right: 32px;
 }
 
-// -- Customize Navs
+// Customize Navs
 // --------------------------------
-// Sidebar
+// -- Content
+
+// Reduce .VPContent's dependency on calculated sizes
+.VPContent.has-sidebar {
+  @media (min-width: 960px) {
+    padding-left: calc(var(--vp-sidebar-width) + 16px) !important;
+  }
+  @media (min-width: 1440px) {
+    padding-right: 0 !important;
+  }
+}
+
 // --------------------------------
+// -- Aside / Page Table of Contents
+
+// Widen aside
+.VPDoc .aside {
+  @media (min-width: 1380px) {
+    max-width: 300px;
+  }
+}
+
+// Add gap between title and list, but account for hardcoded `outline-marker` `top`
+.VPDocAside .outline-title {
+  margin-block-end: -1px;
+  transform: translateY(-6px);
+}
+
+// Space out links without affecting `outline-marker` too much
+.VPDocAside .outline-link {
+  padding: 6px 0;
+  font-size: 12.5px;
+}
+
+// --------------------------------
+// -- Sidebar
+
 // Use empty space in docs navs more effectively.
 // Using existing default fallback styles where possible to negate calc()-type sizes.
 .VPSidebar {
@@ -69,6 +104,9 @@
   padding-left: var(--vp-new-padding) !important;
   padding-right: var(--vp-new-padding) !important;
   width: var(--vp-sidebar-width) !important;
+  @media (max-width: 1280px) {
+    --vp-sidebar-width: 272px;
+  }
 }
 // Allow .VPLink to take up all horizontal space available
 #VPSidebarNav .group {
