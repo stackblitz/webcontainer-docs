@@ -70,6 +70,21 @@
   }
 }
 
+// Increase body content width if space available.
+.VPDoc.has-aside .content-container {
+  max-width: 840px !important;
+}
+
+// New paragraph styles (effectively docs body text)
+.vp-doc p {
+  font-size: 15px;
+  line-height: 1.94;
+}
+
+.vp-doc p a {
+  display: inline-block;
+}
+
 // --------------------------------
 // -- Aside / Page Table of Contents
 
@@ -103,6 +118,7 @@
   --vp-new-padding: calc(32px - var(--active-indicator-padding));
   padding-left: var(--vp-new-padding) !important;
   padding-right: var(--vp-new-padding) !important;
+  padding-bottom: 32px !important;
   width: var(--vp-sidebar-width) !important;
   @media (max-width: 1280px) {
     --vp-sidebar-width: 272px;
