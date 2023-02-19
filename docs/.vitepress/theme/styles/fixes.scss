@@ -50,8 +50,69 @@
   margin-bottom: -14px;
 }
 
-// move search away from logo
+// Move search away from logo
 .VPNavBarSearch.search {
   justify-content: flex-end;
   margin-right: 32px;
+}
+
+// -- Customize Navs
+// --------------------------------
+// Sidebar
+// --------------------------------
+// Use empty space in docs navs more effectively.
+// Using existing default fallback styles where possible to negate calc()-type sizes.
+.VPSidebar {
+  --active-indicator-padding: 16px;
+  --vp-sidebar-width: 320px;
+  --vp-new-padding: calc(32px - var(--active-indicator-padding));
+  padding-left: var(--vp-new-padding) !important;
+  padding-right: var(--vp-new-padding) !important;
+  width: var(--vp-sidebar-width) !important;
+}
+// Allow .VPLink to take up all horizontal space available
+#VPSidebarNav .group {
+  @media (min-width: 960px) {
+    width: unset;
+  }
+}
+// Hide extraneous visual elements when parent group is collapsed
+// without messing with individual elements themselves. 
+.VPSidebarGroup.collapsed .items {
+  opacity: 0;
+}
+// Align item group container's collapsed border with child item list's
+// first item's top border/box-shadow.
+.VPSidebarGroup.collapsible:not(.collapsed) .items {
+  margin-top: 9px;
+}
+// Align group title with item links
+.VPSidebarGroup .title {
+  padding-left: var(--active-indicator-padding);
+}
+// Ignore top nav and mobile nav
+.VPLink:not(.VPNavBarMenuLink):not(.VPNavScreenMenuLink) {
+  line-height: 1;
+  // New link styles
+  &.link {
+    margin: 0;
+    padding: 9px var(--active-indicator-padding) !important;
+    transition-duration: 0.1s;
+    transition-property: background-color, box-shadow, color;
+    &.active {
+      position: relative;
+      color: var(--vp-c-text-1);
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      background-color: #fff;
+      :root.dark & {
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+        background-color: var(--vp-c-bg);
+      }
+    }
+  }
+}
+.link-text {
+  font-size: 13px !important;
+  line-height: 1.32 !important;
 }
