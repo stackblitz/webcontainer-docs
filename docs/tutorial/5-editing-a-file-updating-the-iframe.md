@@ -47,4 +47,4 @@ And voilà! We have a working editor with the Preview. You've built your own env
 
 ## Next steps
 
-If you'd like to explore the API on your own, you can check out the [API reference](../api) or see the [projects made by our Community](/guides/community-inspirations).
+Our application is now entirely up and running. However, because we have built an application to write a simple Express.js application, it would be nice if we could see the output of all our commands inside our application instead of inside the DevTools console. [In the next step](./6-connect-a-terminal.md), you'll attach a terminal to the WebContainer processes to show the output.
