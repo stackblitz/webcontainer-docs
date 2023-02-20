@@ -96,9 +96,9 @@ Note that it is possible to read the output of this command.
 
 The `output` property is capable of streaming the output.
 
-This means that, for example, by running `pnpm install`, you will get every single line from `pnpm` installing the code:
+This means that, for example, by running `npm install`, you will get every single line from `npm` installing the code:
 
-![Output of pnpm install logged in the dev tools console](./images/7-installing-dependencies.png)
+![Output of npm install logged in the dev tools console](./images/7-installing-dependencies.png)
 
 ::: info Want to learn more about `WritableStream`?
 
@@ -106,9 +106,7 @@ For more information on the `Writable Stream`, check the Deep Dive on the ["Runn
 
 :::
 
-This means that, for example, by running `npm install`, you will get every single line from `npm` installing the code:
 
-![Output of npm install logged in the dev tools console](./images/7-installing-dependencies.png)
 
 ## Next step
 
