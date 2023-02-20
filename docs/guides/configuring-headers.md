@@ -42,21 +42,29 @@ Here are a few helpful resources if you'd like to learn more about these topics:
 
 You can configure headers for all pages in your `_headers` file:
 
-```yaml
+::: code-group
+
+```yaml [_headers]
 /*
   Cross-Origin-Embedder-Policy: require-corp
   Cross-Origin-Opener-Policy: same-origin
 ```
 
+:::
+
 ### Specific page
 
 You can configure headers for a specific page(`/tutorial` in this case) in your `_headers` file:
 
-```yaml
+::: code-group
+
+```yaml [_headers]
 /tutorial
   Cross-Origin-Embedder-Policy: require-corp
   Cross-Origin-Opener-Policy: same-origin
 ```
+
+:::
 
 ## Netlify
 
@@ -64,7 +72,9 @@ You can configure headers for a specific page(`/tutorial` in this case) in your 
 
 You can configure headers for all pages in your `netlify.toml` file:
 
-```yaml
+::: code-group
+
+```yaml [netlify.toml]
 [[headers]]
   for = "/*"
   [headers.values]
@@ -72,17 +82,23 @@ You can configure headers for all pages in your `netlify.toml` file:
     Cross-Origin-Opener-Policy = "same-origin"
 ```
 
+:::
+
 ### Specific page
 
 You can configure headers for a specific page(`/tutorial` in this case) in your `netlify.toml` file:
 
-```yaml
+::: code-group
+
+```yaml [netlify.toml]
 [[headers]]
   for = "/tutorial"
   [headers.values]
     Cross-Origin-Embedder-Policy = "require-corp"
     Cross-Origin-Opener-Policy = "same-origin"
 ```
+
+:::
 
 Read more here about [headers on Netlify](https://docs.netlify.com/routing/headers/).
 
@@ -92,7 +108,9 @@ Read more here about [headers on Netlify](https://docs.netlify.com/routing/heade
 
 You can configure headers for all pages in your `vercel.json` file:
 
-```json
+::: code-group
+
+```json [vercel.json]
 {
   "headers": [
     {
@@ -112,11 +130,15 @@ You can configure headers for all pages in your `vercel.json` file:
 }
 ```
 
+:::
+
 ### Specific page
 
 You can configure headers for a specific page(`/tutorial` in this case) in your `vercel.json` file:
 
-```json
+::: code-group
+
+```json [vercel.json]
 {
   "headers": [
     {
@@ -136,9 +158,13 @@ You can configure headers for a specific page(`/tutorial` in this case) in your 
 }
 ```
 
+:::
+
 Read more here about [headers on Vercel](https://vercel.com/docs/concepts/projects/project-configuration#headers).
 
 # Configuring across popular meta-frameworks
+
+Sometimes, configuring headers in your meta-framework of choice is easier than configuring them in your hosting platform. Here are some guides for popular meta-frameworks:
 
 ## SvelteKit
 
@@ -204,7 +230,9 @@ export const load = ({ setHeaders }) => {
 
 You can configure headers for all pages in your `nuxt.config.js` file:
 
-```js{5-10}
+::: code-group
+
+```js{5-10} [nuxt.config.js]
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   nitro: {
@@ -220,11 +248,15 @@ export default defineNuxtConfig({
 });
 ```
 
+:::
+
 ### Specific page
 
 You can configure headers for a specific page(`/tutorial` in this case) in your `nuxt.config.js` file:
 
-```js{5-10}
+::: code-group
+
+```js{5-10} [nuxt.config.js]
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   nitro: {
@@ -240,11 +272,15 @@ export default defineNuxtConfig({
 });
 ```
 
+:::
+
 ## NextJS
 
 ### All pages
 
 You can configure headers for all pages in your `next.config.js` file:
+
+::: code-group
 
 ```js [next.config.js]
 // https://nextjs.org/docs/api-reference/next.config.js/introduction
@@ -269,9 +305,13 @@ module.exports = {
 };
 ```
 
+:::
+
 ### Specific page
 
 You can configure headers for a specific page(`/tutorial` in this case) in your `next.config.js` file:
+
+::: code-group
 
 ```js [next.config.js]
 // https://nextjs.org/docs/api-reference/next.config.js/introduction
@@ -295,3 +335,5 @@ module.exports = {
   },
 };
 ```
+
+:::
