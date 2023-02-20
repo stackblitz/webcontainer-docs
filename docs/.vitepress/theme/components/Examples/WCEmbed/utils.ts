@@ -6,7 +6,16 @@ export function isWebContainerSupported() {
   const looksLikeChrome = navigator.userAgent.toLowerCase().includes('chrome');
   const looksLikeFirefox = navigator.userAgent.includes('Firefox');
 
-  return hasSharedArrayBuffer && (looksLikeChrome || looksLikeFirefox);
+  if (hasSharedArrayBuffer && (looksLikeChrome || looksLikeFirefox)) {
+    return true;
+  }
+
+  // Allow overriding the support check with localStorage.webcontainer_any_ua = 1
+  try {
+    return Boolean(localStorage.getItem('webcontainer_any_ua'));
+  } catch {
+    return false;
+  }
 }
 
 /**
