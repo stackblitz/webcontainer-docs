@@ -20,7 +20,7 @@ Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
 ```
 
-Let's get these set. Open your `vite.config.js` file (or create it in in your app's root directory if it doesn't exist) and add the following code:
+Let's get these set. Open your `vite.config.js` file (or create it in your app's root directory if it doesn't exist) and add the following code:
 
 ::: code-group
 
@@ -39,14 +39,14 @@ export default defineConfig({
 
 :::
 
-We need to restart the Vite app now. To do so, in your terminal stop the dev server (`ctrl`+`c`). Then, start it again by running `pnpm run dev`. Next, hard reload the page in the browser (`cmd`+`shift`+`r` on Mac and `ctrl`+`shift`+`r` on Windows and Linux). The headers are now enabled.
+We need to restart the Vite app now. To do so, in your terminal stop the dev server (`ctrl`+`c`). Then, start it again by running `npm run dev`. Next, hard reload the page in the browser (`cmd`+`shift`+`r` on Mac and `ctrl`+`shift`+`r` on Windows and Linux). The headers are now enabled.
 
 ## 2. Install WebContainer API package
 
-To add the WebContainer API to your app, install their pnpm package by running the following code in the terminal (in in your app's root directory):
+To add the WebContainer API to your app, install their npm package by running the following code in the terminal (in your app's root directory):
 
 ```bash
-pnpm i @webcontainer/api
+npm i @webcontainer/api
 ```
 
 ## 3. Boot up a WebContainer instance
@@ -114,7 +114,7 @@ And, `package.json`:
 
 So, how to get these files *inside* the WebContainer?
 
-First, in in your app's root directory create a new file called `files.js` where you will store the object containing these files. Later on, you will then pass this object to a method called `mount`.
+First, in your app's root directory create a new file called `files.js` where you will store the object containing these files. Later on, you will then pass this object to a method called `mount`.
 
 While you can keep them in `main.js` we suggest having a separate file in this tutorial for code clarity.
 
