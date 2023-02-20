@@ -56,6 +56,7 @@
   margin-right: 32px;
 }
 
+// --------------------------------
 // Customize Navs
 // --------------------------------
 // -- Content
@@ -72,11 +73,12 @@
 
 // Increase body content width if space available.
 .VPDoc.has-aside .content-container {
-  max-width: 840px !important;
+  max-width: 860px !important;
 }
 
 // New paragraph styles (effectively docs body text)
 .vp-doc p {
+  margin: 24px 0;
   font-size: 15px;
   line-height: 1.94;
 }
@@ -86,26 +88,48 @@
   display: inline-block;
 }
 
-// --------------------------------
-// -- Aside / Page Table of Contents
+.vp-doc code {
+  font-size: 12.5px !important;
+}
 
-// Widen aside
-.VPDoc .aside {
-  @media (min-width: 1380px) {
-    max-width: 300px;
+.vp-code-group .tabs label {
+  font-size: 13px !important;
+  font-weight: 600;
+}
+
+// --------------------------------
+// -- Top
+
+// Remove extraneous fade elements
+.VPNavBar .curtain {
+  display: none;
+}
+
+// Semi-transparent background above content
+.VPNavBar .content-body {
+  background-color: rgba(255,255,255,0.8) !important;
+  backdrop-filter: blur(6px);
+  :root.dark & {
+    background-color: rgba(7,8,11,0.8) !important;
   }
 }
 
-// Add gap between title and list, but account for hardcoded `outline-marker` `top`
-.VPDocAside .outline-title {
-  margin-block-end: -1px;
-  transform: translateY(-6px);
+// Size according to Sidebar width to limit zone affected by nav overlay
+.VPNavBar.has-sidebar .content {
+  --vp-sidebar-width: 320px;
+  padding-left: var(--vp-sidebar-width) !important;
+  @media (max-width: 960px) {
+    --vp-sidebar-width: 32px;
+  }
 }
 
-// Space out links without affecting `outline-marker` too much
-.VPDocAside .outline-link {
-  padding: 6px 0;
-  font-size: 12.5px;
+// Position title/logo to hug left
+.VPNavBar.has-sidebar .title {
+  padding-left: 16px !important;
+  border-bottom: none;
+  @media (max-width: 960px) {
+    padding-left: 0 !important;
+  }
 }
 
 // --------------------------------
@@ -131,7 +155,10 @@
     width: unset;
   }
 }
-// Hide extraneous visual elements when parent group is collapsed
+#VPSidebarNav.nav {
+  margin-top: 8px;
+}
+  // Hide extraneous visual elements when parent group is collapsed
 // without messing with individual elements themselves. 
 .VPSidebarGroup.collapsed .items {
   opacity: 0;
@@ -147,7 +174,7 @@
 }
 // Ignore top nav and mobile nav
 .VPLink:not(.VPNavBarMenuLink):not(.VPNavScreenMenuLink) {
-  line-height: 1;
+  line-height: 1.1;
   // New link styles
   &.link {
     margin: 0;
@@ -170,4 +197,32 @@
 .link-text {
   font-size: 13px !important;
   line-height: 1.32 !important;
+}
+
+// --------------------------------
+// -- Aside / Table of Contents
+
+// Widen aside
+.VPDoc .aside {
+  @media (min-width: 1380px) {
+    max-width: 280px;
+  }
+  @media (min-width: 1500px) {
+    max-width: 332px;
+  }
+  @media (min-width: 1600px) {
+    max-width: 360px;
+  }
+}
+
+// Add gap between title and list, but account for hardcoded `outline-marker` `top`
+.VPDocAside .outline-title {
+  margin-block-end: -1px;
+  transform: translateY(-6px);
+}
+
+// Space out links without affecting `outline-marker` too much
+.VPDocAside .outline-link {
+  padding: 6px 0;
+  font-size: 12.5px;
 }
