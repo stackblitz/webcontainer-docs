@@ -71,19 +71,32 @@
   }
 }
 
-// Increase body content width if space available.
-.VPDoc.has-aside .content-container {
-  max-width: 860px !important;
+// Fill in space to accommodate Sidebar's width changes
+.VPDoc.has-sidebar.has-aside {
+  @media (min-width: 960px) and (max-width: 1500px) {
+    padding-left: 0;
+  }
 }
 
-// New paragraph styles (effectively docs body text)
+// Increase body content width if space available.
+.VPDoc.has-aside .content-container {
+  max-width: 820px !important;
+}
+
+.VPDoc.has-sidebar.has-aside .container > .content {
+  @media (min-width: 1500px) {
+    padding-left: 52px;
+    padding-right: 52px;
+  }
+}
+
+// New body styles
 .vp-doc p {
   margin: 24px 0;
   font-size: 15px;
-  line-height: 1.94;
+  line-height: 1.8;
 }
 
-// Correct full-width transparent links for small content.
 .vp-doc p a {
   display: inline-block;
 }
@@ -95,6 +108,34 @@
 .vp-code-group .tabs label {
   font-size: 13px !important;
   font-weight: 600;
+}
+
+.vp-doc .custom-block {
+  margin: 40px 0 !important;
+  padding: 16px 24px 16px;
+  @media (max-width: 500px) {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+.vp-doc .custom-block p {
+  margin: 2px 0 0;
+  font-size: 14px;
+  line-height: 1.72;
+}
+
+.vp-doc div[class*='language-'] {
+  margin: 32px 0 40px;
+}
+
+.vp-doc .header-anchor {
+  @media (min-width: 960px) {
+    position: absolute;
+    left: -28px;
+    padding: 0 18px;
+    transform: scale(0.94);
+  }
 }
 
 // --------------------------------
@@ -145,8 +186,11 @@
   padding-right: var(--vp-new-padding) !important;
   padding-bottom: 32px !important;
   width: var(--vp-sidebar-width) !important;
-  @media (max-width: 1280px) {
+  @media (max-width: 1500px) {
     --vp-sidebar-width: 272px;
+  }
+  @media (max-width: 960px) {
+    --vp-sidebar-width: 320px;
   }
 }
 // Allow .VPLink to take up all horizontal space available
@@ -204,14 +248,15 @@
 
 // Widen aside
 .VPDoc .aside {
+  padding-left: 0;
   @media (min-width: 1380px) {
-    max-width: 280px;
+    max-width: 248px;
   }
   @media (min-width: 1500px) {
-    max-width: 332px;
+    max-width: 300px;
   }
   @media (min-width: 1600px) {
-    max-width: 360px;
+    max-width: 328px;
   }
 }
 
