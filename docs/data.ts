@@ -11,7 +11,7 @@ export const guideLinks = [
 ];
 
 export const tutorialLinks = [
-  { text: '1. Building your first WebContainer app', link: '/tutorial/1-building-your-first-webcontainers-app' },
+  { text: '1. Build your first WebContainer app', link: '/tutorial/1-build-your-first-webcontainer-app' },
   { text: '2. Setting up WebContainers', link: '/tutorial/2-setting-up-webcontainers' },
   { text: '3. Installing dependencies', link: '/tutorial/3-installing-dependencies' },
   { text: '4. Running dev server', link: '/tutorial/4-running-dev-server' },

@@ -1,13 +1,13 @@
 ---
-title: &title Building your first WebContainer app
+title: &title Build your first WebContainer app
 description: &description In this tutorial, you'll build a plain Vite-based JavaScript app featuring a barebones WebContainers app that loads the whole file system into the container and then runs the Express app. There will be an editable `textarea` on the left, and changes will be reflected instantly in the Preview on the right where you will be able to see the output of the Express server.
 head:
   - ['meta', {property: 'og:title', content: *title}]
-  - ['meta', {property: 'og:image', content: 'https://webcontainers.io/img/og/tutorial-1_building_your_first_webcontainers_app.png'}]
+  - ['meta', {property: 'og:image', content: 'https://webcontainers.io/img/og/tutorial-1_build_your_first_webcontainer_app.png'}]
   - ['meta', {name: 'twitter:title', content: *title}]
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
-# Building your first WebContainer app
+# Build your first WebContainer app
 
 In this tutorial, you'll build a plain [Vite](https://vitejs.dev/)-based JavaScript app featuring a barebones WebContainers app that loads the whole file system into the container and then runs the [Express](https://expressjs.com/) app. You don't need prior experience with Vite, Express, or WebContainers.
 

@@ -93,4 +93,4 @@ async function startDevServer() {
 
 ## Next steps
 
-To further explore the WebContainer API in [our WebContainer API starter](https://webcontainer.new), check the [API Reference](../api) or follow [our tutorial](../tutorial/1-building-your-first-webcontainers-app.md) and build your first WebContainer app.
+To further explore the WebContainer API in [our WebContainer API starter](https://webcontainer.new), check the [API Reference](../api) or follow [our tutorial](../tutorial/1-build-your-first-webcontainer-app.md) and build your first WebContainer app.
