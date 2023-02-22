@@ -370,4 +370,4 @@ await webcontainerInstance.fs.mkdir('this/is/my/nested/folder', { recursive: tru
 
 ## Next steps
 
-Explore WebContainer API in [our WebContainers starter](https://webcontainer.new), explore the [API Reference](../api) or follow [our tutorial](../tutorial/1-building-your-first-webcontainers-app.md) and build your first WebContainer app!
+Explore WebContainer API in [our WebContainers starter](https://webcontainer.new), explore the [API Reference](../api) or follow [our tutorial](../tutorial/1-build-your-first-webcontainer-app.md) and build your first WebContainer app!

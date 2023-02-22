@@ -52,7 +52,7 @@ import ExampleBrowser from './ExampleBrowser.vue';
           <span class="description">Run your development server in-browser.</span>
         </li>
       </ul>
-      <a class="learn-more" href="/tutorial/1-building-your-first-webcontainers-app">
+      <a class="learn-more" href="/tutorial/1-build-your-first-webcontainer-app">
         <span class="icon" />
         <span><strong>Read more</strong> about setting up WebContainer in your web app.</span>
       </a>

@@ -12,7 +12,7 @@ head:
 This page provides the bare-minimum overview on how to start building with WebContainer API.
 
 ::: tip Prefer learning through tutorials?
-We have prepared a [step-by-step walkthrough](../tutorial/1-building-your-first-webcontainers-app) for you!
+We have prepared a [step-by-step walkthrough](../tutorial/1-build-your-first-webcontainer-app) for you!
 :::
 
 **The WebContainer API starter is the fastest way to explore the API**. Open it in StackBlitz editor:  
@@ -116,6 +116,6 @@ Please note that your deployed page must be served over HTTPS. This is not neces
 
 ## Next steps
 
-We also prepared a thorough [step-by-step tutorial](../tutorial/1-building-your-first-webcontainers-app) if you learn best with walkthroughs.
+We also prepared a thorough [step-by-step tutorial](../tutorial/1-build-your-first-webcontainer-app) if you learn best with walkthroughs.
 
 If you'd like to explore the API on your own, you can check out the [API Reference](../api) or see the [projects made by our Community](/guides/community-inspirations).

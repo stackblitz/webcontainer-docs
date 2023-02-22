@@ -49,7 +49,7 @@ To see more examples of how WebContainers have been used so far, check out our [
 To get started:
 
 - check out our [WebContainer starter](https://webcontainer.new)
-- follow our [step-by-step tutorial](/tutorial/1-building-your-first-webcontainers-app) and build your first WebContainer app
+- follow our [step-by-step tutorial](/tutorial/1-build-your-first-webcontainer-app) and build your first WebContainer app
 - reading the [API reference](/api)
 - get inspired by our [Community examples](/guides/community-inspirations)
 
