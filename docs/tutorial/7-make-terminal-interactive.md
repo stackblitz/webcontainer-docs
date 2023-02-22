@@ -49,7 +49,7 @@ Open the `loading.html` file and change the message there as well:
 Use the terminal to run a command!
 ```
 
-TODO insert image
+![The preview window now features the message "Use the terminal to run a command!"](./images/18-use-terminal-prompt.png)
 
 ## 2. Start the shell
 
@@ -80,7 +80,7 @@ async function startShell(terminal) {
 ```
 :::
 
-TODO add screenshot
+![The terminal window now shows the typical terminal prompt](./images/19-terminal-prompt.png)
 
 Now, start the shell by calling the `startShell` function at the end of the event listener:
 
@@ -108,8 +108,6 @@ window.addEventListener('load', async () => {
   startShell(terminal);
 });
 ```
-
-TODO add screenshot
 
 ## 3. Add interactivity to the terminal
 

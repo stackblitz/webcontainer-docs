@@ -199,9 +199,13 @@ async function startDevServer(terminal) {
 ```
 :::
 
-With these changes, you can see the output from both commands: `npm install` and `npm run start`. Try changing the code in the `textarea` - you will see that the dev server restarts because of these changes.
+With these changes, you can see the output from both commands: `npm install` and `npm run start`. 
 
-![The terminal features the output of the npm install and npm run start command](./images/15-npm-start-output.png)
+![The terminal features the output of the npm install and npm run start command](./images/16-npm-start-output.png)
+
+Try changing the code in the `textarea` - you will see that the dev server restarts because of these changes.
+
+![The changed code logs a message "it's alive" and a zombie emoji](./images/17-its-alive.png)
 
 ## Next step
 
