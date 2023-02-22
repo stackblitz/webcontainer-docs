@@ -9,21 +9,22 @@ head:
 ---
 # Connecting a terminal
 
-Your Express app is up and running and the preview updates automatically when making changes through the `textarea`. However, opening the DevTools to see the WebContainers output is a bit annoying. So let's add a terminal which shows the output.
+Your Express app is up and running and the preview window updates automatically when the `textarea` changes. However, opening the DevTools to see the WebContainers output is not the most productive. So let's add a terminal which shows the output.
 
-## 1. Install Xterm.js
+## 1. Install `Xterm.js`
 
-We could print the output of our processes to a simple `div`. The problem is that a process could also print messages with different colors or styles. In order to achieve this, we will use [xterm.js](https://xtermjs.org). Install it by running the following command.
+We could print the output of our processes to a `div`. A process could also print messages with different colors or styles. In order to achieve this, we will use [`Xterm.js`](https://xtermjs.org), which is a terminal frontend component. To install it, run the following command in your terminal:
 
-```
+```bash
 npm install xterm
 ```
 
-## 2. Create the terminal
+## 2. Build terminal scaffolding
 
-In order to show the terminal in our application, we need to add an additional HTML element which we can then use to render the terminal. Open the `main.js` file, scroll to the bottom and add a new `div` which we can use as a parent element for our terminal.
+Your application terminal will be rendered in a new HTML element. In the `main.js` file, find the `querySelector(#app)` portion of your code and add a new `div` like in the example below:
 
-```js {10}
+:::code-group
+```js [main.js] {10}
 document.querySelector('#app').innerHTML = `
   <div class="container">
     <div class="editor">
@@ -36,25 +37,39 @@ document.querySelector('#app').innerHTML = `
   <div class="terminal"></div>
 `;
 ```
+:::
 
-We also need to be able to reference the HTML element. In the same way as we reference our `textarea` and `iframe`, we can add the following line at the bottom of the `main.js` file.
+This element will serve as a parent element for the terminal. You can't see any changes in your app but if you inspect the element in the browser console, you will see it's there:
 
-```js
+
+
+## 3. Set a reference
+
+Let's add a way to reference the `div` which will host the terminal in the same way as you reference our `textarea` and `iframe`. Add the following line at the bottom of the `main.js` file:
+
+:::code-group
+```js [main.js]
 /** @type {HTMLTextAreaElement | null} */
 const terminalEl = document.querySelector('.terminal');
 ```
+:::
 
-Now that we added the DOM node which we can use to render the terminal, we can create a terminal instance and render it.
+## 4. Create a terminal instance
 
-First of all we need to import Xterm.js. Add the import at the top of the `main.js` file.
+Now that you added the DOM node which you can use to render the terminal, create a terminal instance and render it.
 
-```js
+First of all, import `Xterm.js`. Add the import statement at the top of the `main.js` file:
+
+:::code-group
+```js [main.js]
 import { Terminal } from 'xterm'
 ```
+:::
 
-Now we can create a new terminal and attach it to our `terminalEl` that we created before.
+Now create a new terminal and attach it to `terminalEl`:
 
-```js {7-10}
+:::code-group
+```js [main.js] {7-10}
 window.addEventListener('load', async () => {
   textareaEl.value = files['index.js'].file.contents;
   textareaEl.addEventListener('input', (e) => {
@@ -78,24 +93,32 @@ window.addEventListener('load', async () => {
   startDevServer();
 });
 ```
+:::
 
-The reason we set `convertEol` to `true` is to force the cursor to always start at the beginning of the next line. If we don't enable this, the cursor will jump to the next line but does not jump to the start of the new line.
-
-You will notice that the terminal looks a bit weird. So let's fix that first! Xterm.js ships it's own CSS styles and can easily be imported at the top of our `main.js` file.
-
-```js
-import 'xterm/css/xterm.css';
-```
+The reason `convertEol` is set to `true` is to force the cursor to always start at the beginning of the next line. If this is not enabled, the cursor will still jump to the next line but not to its start. At this point, your terminal looks as follows:
 
 TODO insert screenshot
 
-## 3. Send output to the terminal
+## 5. Style the terminal
 
-Now that our terminal is entirely setup, we can start redirecting the output of the WebContainer processes to that terminal instead of writing it to the DevTools console.
+The terminal looks a bit plain now. Fortunately, `Xterm.js` ships its own CSS styles and can be imported at the top of our `main.js` file.
 
-To do that, we need to get hold of the `terminal` instance inside the `installDependencies` and `startDevServer` methods. We can do this by simply passing `terminal` as an argument to those methods.
+:::code-group
+```js [main.js]
+import 'xterm/css/xterm.css';
+```
+:::
 
-```js {16,21}
+TODO insert screenshot
+
+## 6. Send output to the terminal
+
+Now that the terminal is set up, you can start redirecting the output of the WebContainer processes to that terminal instead of writing it to the DevTools console in the browser.
+
+To do that, get hold of the `terminal` instance inside the `installDependencies` and `startDevServer` methods. Yous can do this by passing `terminal` as an argument to those methods.
+
+:::code-group
+```js [main.js] {16,21}
 window.addEventListener('load', async () => {
   textareaEl.value = files['index.js'].file.contents;
   textareaEl.addEventListener('input', (e) => {
@@ -119,10 +142,12 @@ window.addEventListener('load', async () => {
   startDevServer(terminal);
 });
 ```
+:::
 
-Inside the `installDependencies` method, we now have a reference to the terminal instance. Instead of printing the data to the DevTools console, we can write it to the terminal instead.
+Next, let's print the data to the terminal since we have a reference to the terminal instance:
 
-```js {4,9}
+:::code-group
+```js [main.js] {4,9}
 /**
  * @param {Terminal} terminal
  */
@@ -138,14 +163,17 @@ async function installDependencies(terminal) {
   return installProcess.exit;
 }
 ```
+:::
 
-When you refresh the page, you will now see that the output of `npm install` is now shown in our the terminal we just created.
+Refresh the page and you should now see that the output of `npm install` is now shown in our the terminal you just created!
 
 TODO insert screenshot
 
-In order to show the output of the `npm run start` command, we can make identical changes for the `startDevServer` method.
+Now, let's make identical changes for the `startDevServer` method to show the output of the `npm run start` command:
 
-```js {4,10-16}
+:::code-group
+
+```js [main.js] {4,10-16}
 /**
  * @param {Terminal} terminal
  */
@@ -169,13 +197,14 @@ async function startDevServer(terminal) {
   });
 }
 ```
+:::
 
-Now that we made these changes, we not only see the output of the `npm install` command, but also from the `npm run start` command. When changing the code through the `textarea`, you will also see that the dev server restarts because of the changes you made.
+With these changes, you can see the output from both commands: `npm install` and `npm run start`. Try changing the code in the `textarea` - you will see that the dev server restarts because of these changes.
 
 TODO insert screenshot
 
 ## Next step
 
-The output is now visible in a terminal inside your web application. This improves the user experience because the user can now see what is going on and doesn't have to open the DevTools console anymore.
+The output is now visible in a terminal in your web application. This step improves User Experience as your users can now see what is going on and don't have to open the DevTools console anymore 🥳
 
-The terminal is currently only a view for the output. [In the next step](./7-make-terminal-interactive.md), we'll make the terminal interactive allowing you to run your own commands from within your application.
+The terminal is currently only capable of showing the output. [In the next step](./7-make-terminal-interactive.md), you'll make the terminal interactive, which will allow you to run your own commands from within your application!
