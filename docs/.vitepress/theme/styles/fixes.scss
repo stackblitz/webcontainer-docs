@@ -146,6 +146,11 @@
   display: none;
 }
 
+// Correct width on non-docs pages
+.VPNavBar .container {
+  max-width: unset;
+}
+
 // Semi-transparent background above content
 .VPNavBar .content-body {
   background-color: rgba(255,255,255,0.8) !important;
