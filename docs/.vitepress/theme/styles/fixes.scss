@@ -206,7 +206,7 @@
 // Using existing default fallback styles where possible to negate calc()-type sizes.
 .VPSidebar {
   --active-indicator-padding: 16px;
-  --vp-sidebar-width: 320px;
+  --vp-sidebar-width: 308px;
   --vp-new-padding: calc(32px - var(--active-indicator-padding));
   padding-left: var(--vp-new-padding) !important;
   padding-right: var(--vp-new-padding) !important;
@@ -216,7 +216,7 @@
     --vp-sidebar-width: 272px;
   }
   @media (max-width: 960px) {
-    --vp-sidebar-width: 320px;
+    --vp-sidebar-width: 308px;
   }
 }
 // Allow .VPLink to take up all horizontal space available
