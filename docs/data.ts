@@ -11,11 +11,11 @@ export const guideLinks = [
 ];
 
 export const tutorialLinks = [
-  { text: '1. Build your first WebContainer app', link: '/tutorial/1-building-your-first-webcontainers-app' },
-  { text: '2. Set up WebContainers', link: '/tutorial/2-setting-up-webcontainers' },
-  { text: '3. Install dependencies', link: '/tutorial/3-installing-dependencies' },
-  { text: '4. Run dev server', link: '/tutorial/4-running-dev-server' },
-  { text: '5. Edit & save files', link: '/tutorial/5-editing-a-file-updating-the-iframe' },
+  { text: '1. Building your first WebContainer app', link: '/tutorial/1-building-your-first-webcontainers-app' },
+  { text: '2. Setting up WebContainers', link: '/tutorial/2-setting-up-webcontainers' },
+  { text: '3. Installing dependencies', link: '/tutorial/3-installing-dependencies' },
+  { text: '4. Running dev server', link: '/tutorial/4-running-dev-server' },
+  { text: '5. Editing & saving a file', link: '/tutorial/5-editing-a-file-updating-the-iframe' },
 ];
 
 export const homeExternalLinks = [
