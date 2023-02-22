@@ -39,9 +39,9 @@ document.querySelector('#app').innerHTML = `
 ```
 :::
 
-This element will serve as a parent element for the terminal. You can't see any changes in your app but if you inspect the element in the browser console, you will see it's there:
+This element will serve as a parent element for the terminal. You can't see any changes in your app but if you inspect the element in the browser DevTools, you will see it's there:
 
-
+![An app with the browser DevTools open featuring the terminal element](./images/12-terminal-div.png)
 
 ## 3. Set a reference
 
@@ -97,7 +97,7 @@ window.addEventListener('load', async () => {
 
 The reason `convertEol` is set to `true` is to force the cursor to always start at the beginning of the next line. If this is not enabled, the cursor will still jump to the next line but not to its start. At this point, your terminal looks as follows:
 
-TODO insert screenshot
+![An app with a black rectangle at the bottom](./images/13-hooked-up-terminal.png)
 
 ## 5. Style the terminal
 
@@ -109,7 +109,7 @@ import 'xterm/css/xterm.css';
 ```
 :::
 
-TODO insert screenshot
+![The black rectangle at the bottom now has the cursor and takes the whole div width](./images/14-terminal-full-page-width.png)
 
 ## 6. Send output to the terminal
 
@@ -167,7 +167,7 @@ async function installDependencies(terminal) {
 
 Refresh the page and you should now see that the output of `npm install` is now shown in our the terminal you just created!
 
-TODO insert screenshot
+![The terminal features the output of the npm install command](./images/15-npm-install-output.png)
 
 Now, let's make identical changes for the `startDevServer` method to show the output of the `npm run start` command:
 
@@ -201,7 +201,7 @@ async function startDevServer(terminal) {
 
 With these changes, you can see the output from both commands: `npm install` and `npm run start`. Try changing the code in the `textarea` - you will see that the dev server restarts because of these changes.
 
-TODO insert screenshot
+![The terminal features the output of the npm install and npm run start command](./images/15-npm-start-output.png)
 
 ## Next step
 

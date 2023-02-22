@@ -296,6 +296,8 @@ With this code, you notify the process that a resize event happened and then you
 
 TODO attach animated screenshot?
 
+To see the end product, check [this demo](https://stackblitz.com/edit/stackblitz-webcontainer-api-starter-with-terminal?file=main.js).
+
 ## Next steps
 
 If you'd like to explore the API on your own, you can check out the [API reference](../api) or see the [projects made by our Community](/guides/community-inspirations).
