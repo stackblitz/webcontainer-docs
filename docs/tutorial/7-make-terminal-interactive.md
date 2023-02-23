@@ -248,7 +248,7 @@ You can now see that the text is properly wrapped to the width of the terminal. 
 
 The last piece of code that you added equipped the terminal element on your app with the ability to resize. What's actually happening is that the `cols` and `rows` of the `Terminal` instance from `Xterm.js` are recalculated and updated. The last problem to address is that if you  make the window wider again, the terminal does not redraw the text to fit the new dimensions. 
 
-![The browser window is now wide but the line stays wrapped up](./images/23-line-still-wrapped-up)
+![The browser window is now wide but the line stays wrapped up](./images/23-line-still-wrapped-up.png)
 
 In order to make the terminal fully responsive, you can use the [`resize`](/api#▸-resize) method on the WebContainer shell process.
 
@@ -293,7 +293,7 @@ window.addEventListener('load', async () => {
 
 With this code, you notify the process that a resize event happened and then you pass in the new dimensions of the terminal. This causes the process to redraw the screen again.
 
-![The browser window is now wide and the line is resized](./images/24-line-resizes)
+![The browser window is now wide and the line is resized](./images/24-line-resizes.png)
 
 To see the end product, check [this demo](https://stackblitz.com/edit/stackblitz-webcontainer-api-starter-with-terminal?file=main.js).
 
