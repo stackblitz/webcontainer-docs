@@ -53,12 +53,7 @@ Use the terminal to run a command!
 
 ## 2. Start the shell
 
-To make the terminal a bit more usuable, we could spawn `jsh`.
-
-:::details What is `jsh`?
-Here's a quote from the [jsh docs](https://www.npmjs.com/package/jsh):
-> `jsh` is a small JavaScript library (with no dependencies!) that provides helper aliases and functions that are similar to Bash syntax, allowing you to write shell scripts in JavaScript / Node.js that are simple and familiar.
-:::
+To make the terminal a bit more usuable, we could spawn `jsh`, a custom shell that comes out of the box with WebContainer API.
 
 Using `jsh` serves as an alternative to spawning commands separately. Create a new function called `startShell` which will write the output stream of the process to the `Xterm.js` terminal instance:
 
