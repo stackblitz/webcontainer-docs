@@ -7,7 +7,7 @@ head:
   - ['meta', {name: 'twitter:title', content: *title}]
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
-# Setting up WebContainers
+# {{ $frontmatter.title }}
 
 Now that the scaffolding for your app is done, you'll make the dev server capable of running WebContainers and then, you'll boot up the WebContainers with your files.
 
