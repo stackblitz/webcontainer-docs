@@ -293,7 +293,7 @@ window.addEventListener('load', async () => {
 
 With this code, you notify the process that a resize event happened and then you pass in the new dimensions of the terminal. This causes the process to redraw the screen again.
 
-![The browser window is now wide and the line is resized](./images/23-line-resizes)
+![The browser window is now wide and the line is resized](./images/24-line-resizes)
 
 To see the end product, check [this demo](https://stackblitz.com/edit/stackblitz-webcontainer-api-starter-with-terminal?file=main.js).
 
