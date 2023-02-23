@@ -143,15 +143,16 @@ async function startShell(terminal) {
 The first thing you do here is getting hold of a writer by using [`WritableStream.getWriter`](https://developer.mozilla.org/en-US/docs/Web/API/WritableStream/getWriter). Calling this method will lock the input stream which means that noone else can get another writer to that process. After you have your writer, you can listen for input received by the terminal. Every time you type a character in the terminal, the [`onData`](http://xtermjs.org/docs/api/terminal/classes/terminal/#ondata) handler is called. Inside that handler you can write the data to the `input` stream of our process.
 :::
 
-With this small change, you hooked up your terminal to the shell running in the WebContainer process. This means that you can now also send input to the process and run commands. You can now manually run `npm install && npm run start` or run any other command.
+With this change, you hooked up your terminal to the shell running in the WebContainer process. This means that you can now also send input to the process and run commands. You can now manually run `npm install && npm run start` or run any other command.
 
-TODO insert screenshot
+![The commands typed in the terminal](./images/20-typing.png)
+
 
 ## 4. Add `xterm-addon-fit`
 
 You might've noticed that resizing the window doesn't redraw the terminal output. For instance, if you make the window very small, lines that are too long should wrap to the next line. For example, look at the highlightened line:
 
-TODO Add screenshot
+![The browser window is very narrow now and the terminal features a line that either disappears or when highlightened sticks out](./images/21-line-sticking-out.png)
 
 To fix this, you'll need to make the WebContainer process aware of the size of the terminal.
 
@@ -241,13 +242,13 @@ async function startShell(terminal) {
 
 You can now see that the text is properly wrapped to the width of the terminal. Compare the same highlightened line now:
 
-TODO Insert screenshot?
+![The same line now wraps up](./images/22-line-wrapping-up.png)
 
 ## 7. Make output lines responsive
 
 The last piece of code that you added equipped the terminal element on your app with the ability to resize. What's actually happening is that the `cols` and `rows` of the `Terminal` instance from `Xterm.js` are recalculated and updated. The last problem to address is that if you  make the window wider again, the terminal does not redraw the text to fit the new dimensions. 
 
-TODO Insert screenshot?
+![The browser window is now wide but the line stays wrapped up](./images/23-line-still-wrapped-up)
 
 In order to make the terminal fully responsive, you can use the [`resize`](/api#▸-resize) method on the WebContainer shell process.
 
@@ -292,7 +293,7 @@ window.addEventListener('load', async () => {
 
 With this code, you notify the process that a resize event happened and then you pass in the new dimensions of the terminal. This causes the process to redraw the screen again.
 
-TODO attach animated screenshot?
+![The browser window is now wide and the line is resized](./images/23-line-resizes)
 
 To see the end product, check [this demo](https://stackblitz.com/edit/stackblitz-webcontainer-api-starter-with-terminal?file=main.js).
 
