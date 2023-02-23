@@ -47,4 +47,4 @@ And voilà! We have a working editor with the Preview. You've built your own env
 
 ## Next steps
 
-Our application is now entirely up and running. However, because we have built an application to write a simple Express.js application, it would be nice if we could see the output of all our commands inside our application instead of inside the DevTools console. [In the next step](./6-connect-a-terminal.md), you'll attach a terminal to the WebContainer processes to show the output.
+Your application is now entirely up and running. However, it would be nice if you could see the output of all the commands inside your application instead of inside the DevTools console. [In the next step](./6-connect-a-terminal.md), you'll attach a terminal to the WebContainer processes to show the output.
