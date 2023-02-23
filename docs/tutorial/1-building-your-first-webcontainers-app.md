@@ -114,9 +114,9 @@ document.querySelector('#app').innerHTML = `
 
 :::
 
-Our page now features three boxes:
+Our page now features two boxes:
 
-![A page with a rectanglular box on top of two bigger rectangular boxes. The top one reads "I'm a textarea". The bottom one on the left is empty and the one of the right reads "Installing dependencies..."](./images/3-scaffolding.png)
+![A page with two rectanglular boxes: a small one on top of a bigger one. The top one reads "I'm a textarea". The bottom one reads "Installing dependencies..."](./images/3-scaffolding.png)
 
 Let's make it look nicer now. Replace the contents of `style.css` with the following code:
 
