@@ -7,7 +7,7 @@ head:
   - ['meta', {name: 'twitter:title', content: *title}]
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
-# Installing dependencies
+# {{ $frontmatter.title }}
 
 You can run various commands inside WebContainers like, for example, `npm install` as follows:
 
