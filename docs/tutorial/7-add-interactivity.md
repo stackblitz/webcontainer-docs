@@ -1,13 +1,13 @@
 ---
-title: &title Make terminal interactive
+title: &title Add interactivity
 description: &description Your Express is up and running and we connected a terminal to the output of the WebContainer processes. Let's make the terminal more interactive allowing the user to run it's own commands.
 head:
   - ['meta', {property: 'og:title', content: *title}]
-  - ['meta', {property: 'og:image', content: 'https://webcontainers.io/img/og/tutorial-5_editing_a_file_updating_the_iframe.png'}]
+  - ['meta', {property: 'og:image', content: 'https://webcontainers.io/img/og/tutorial-7_add_interactivity.png'}]
   - ['meta', {name: 'twitter:title', content: *title}]
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
-# Make terminal interactive
+# Add interactivity
 
 The terminal in your application capable to print the logs with proper formatting. It doesn't, however, accept user input. It would be nice if we could convert this experience to a real terminal which allows you to install other packages, and run different commands... Let's get started!
 

@@ -3,11 +3,11 @@ title: &title Connect a terminal
 description: &description Your Express is up and running and the Preview window reflects the changes made through the `textarea`. Let's add a terminal to show the output of our running processes.
 head:
   - ['meta', {property: 'og:title', content: *title}]
-  - ['meta', {property: 'og:image', content: 'https://webcontainers.io/img/og/tutorial-5_editing_a_file_updating_the_iframe.png'}]
+  - ['meta', {property: 'og:image', content: 'https://webcontainers.io/img/og/tutorial-6_connect_a_terminal.png'}]
   - ['meta', {name: 'twitter:title', content: *title}]
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
-# Connecting a terminal
+# Connect a terminal
 
 Your Express app is up and running and the preview window updates automatically when the `textarea` changes. However, opening the DevTools to see the WebContainers output is not the most productive. So let's add a terminal which shows the output.
 

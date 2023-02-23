@@ -7,7 +7,7 @@ head:
   - ['meta', {name: 'twitter:title', content: *title}]
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
-# Editing a file and updating the iframe
+# {{ $frontmatter.title }}
 
 Your Express app is up and running in WebContainers, but if you edit the `textarea`, the changes are not reflected in the Preview window at all. Let's change that.
 
