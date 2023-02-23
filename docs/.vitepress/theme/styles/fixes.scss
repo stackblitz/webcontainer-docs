@@ -50,8 +50,255 @@
   margin-bottom: -14px;
 }
 
-// move search away from logo
+// Move search away from logo
 .VPNavBarSearch.search {
   justify-content: flex-end;
   margin-right: 32px;
+}
+
+// --------------------------------
+// Customize Navs
+// --------------------------------
+// -- Content
+
+// Reduce .VPContent's dependency on calculated sizes
+.VPContent.has-sidebar {
+  @media (min-width: 960px) {
+    padding-left: calc(var(--vp-sidebar-width) + 16px) !important;
+  }
+  @media (min-width: 1440px) {
+    padding-right: 0 !important;
+  }
+}
+
+// Fill in space to accommodate Sidebar's width changes
+.VPDoc.has-sidebar.has-aside {
+  @media (min-width: 960px) and (max-width: 1500px) {
+    padding-left: 0;
+  }
+}
+
+// Increase body content width if space available.
+.VPDoc.has-aside .content-container {
+  max-width: 820px !important;
+}
+
+.VPDoc.has-sidebar.has-aside .container > .content {
+  @media (min-width: 1500px) {
+    padding-left: 52px;
+    padding-right: 52px;
+  }
+}
+
+// New body styles
+.vp-doc p {
+  margin: 24px 0;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.vp-doc p a {
+  display: inline-block;
+}
+
+.vp-doc code {
+  font-size: 12.5px !important;
+}
+
+.vp-code-group .tabs label {
+  font-size: 13px !important;
+  font-weight: 600;
+}
+
+.vp-doc .custom-block {
+  margin: 40px 0 !important;
+  padding: 16px 24px 16px;
+  @media (max-width: 500px) {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+.vp-doc .custom-block p {
+  margin: 2px 0 0;
+  font-size: 14px;
+  line-height: 1.72;
+}
+
+.vp-doc div[class*='language-'] {
+  margin: 32px 0 40px;
+}
+
+.vp-doc .header-anchor {
+  @media (min-width: 960px) {
+    position: absolute;
+    left: -28px;
+    padding: 0 18px;
+    transform: scale(0.94);
+  }
+}
+
+// --------------------------------
+// -- Top
+
+// Remove extraneous fade elements
+.VPNavBar .curtain {
+  display: none;
+}
+
+// Correct width on non-docs pages
+.VPNavBar .container {
+  max-width: unset;
+}
+
+// Semi-transparent background above content
+.VPNavBar .content-body {
+  background-color: rgba(255,255,255,0.8) !important;
+  backdrop-filter: blur(6px);
+  :root.dark & {
+    background-color: rgba(7,8,11,0.8) !important;
+  }
+}
+
+// Size according to Sidebar width to limit zone affected by nav overlay
+.VPNavBar.has-sidebar .content {
+  --vp-sidebar-width: 320px;
+  padding-left: var(--vp-sidebar-width) !important;
+  padding-right: 32px !important;
+  @media (max-width: 960px) {
+    --vp-sidebar-width: 32px;
+    padding-right: 0 !important;
+  }
+}
+
+// Position title/logo to hug left
+.VPNavBar.has-sidebar .title {
+  padding-left: 16px !important;
+  border-bottom: none;
+  @media (max-width: 960px) {
+    padding-left: 0 !important;
+  }
+}
+
+// Restyle top NavBarMenu links
+.VPNavBarMenu.menu {
+  height: calc(100% - 16px);
+}
+
+.VPNavBarMenu.menu a {
+  font-size: 13px;
+  margin: 0 4px;
+  opacity: 0.8;
+  transition-duration: 0.1s;
+  transition-property: color, opacity, box-shadow;
+  opacity: 0.7;
+  &:hover:not(.active) {
+    opacity: 1;
+    color: var(--vp-c-text-1);
+  }
+}
+
+.VPNavBarMenuLink.active {
+  color: var(--vp-c-text-1) !important;
+  box-shadow: inset 0 -1px 0 0 var(--vp-c-brand);
+  opacity: 1 !important;
+}
+
+// --------------------------------
+// -- Sidebar
+
+// Use empty space in docs navs more effectively.
+// Using existing default fallback styles where possible to negate calc()-type sizes.
+.VPSidebar {
+  --active-indicator-padding: 16px;
+  --vp-sidebar-width: 308px;
+  --vp-new-padding: calc(32px - var(--active-indicator-padding));
+  padding-left: var(--vp-new-padding) !important;
+  padding-right: var(--vp-new-padding) !important;
+  padding-bottom: 32px !important;
+  width: var(--vp-sidebar-width) !important;
+  @media (max-width: 1500px) {
+    --vp-sidebar-width: 272px;
+  }
+  @media (max-width: 960px) {
+    --vp-sidebar-width: 308px;
+  }
+}
+// Allow .VPLink to take up all horizontal space available
+#VPSidebarNav .group {
+  @media (min-width: 960px) {
+    width: unset;
+  }
+}
+#VPSidebarNav.nav {
+  margin-top: 8px;
+}
+  // Hide extraneous visual elements when parent group is collapsed
+// without messing with individual elements themselves. 
+.VPSidebarGroup.collapsed .items {
+  opacity: 0;
+}
+// Align item group container's collapsed border with child item list's
+// first item's top border/box-shadow.
+.VPSidebarGroup.collapsible:not(.collapsed) .items {
+  margin-top: 9px;
+}
+// Align group title with item links
+.VPSidebarGroup .title {
+  padding-left: var(--active-indicator-padding);
+}
+// Ignore top nav and mobile nav
+.VPLink:not(.VPNavBarMenuLink):not(.VPNavScreenMenuLink) {
+  line-height: 1.1;
+  // New link styles
+  &.link {
+    margin: 0;
+    padding: 9px var(--active-indicator-padding) !important;
+    transition-duration: 0.1s;
+    transition-property: background-color, box-shadow, color;
+    &.active {
+      position: relative;
+      color: var(--vp-c-text-1);
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      background-color: #fff;
+      :root.dark & {
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+        background-color: var(--vp-c-bg);
+      }
+    }
+  }
+}
+.link-text {
+  font-size: 13px !important;
+  line-height: 1.32 !important;
+}
+
+// --------------------------------
+// -- Aside / Table of Contents
+
+// Widen aside
+.VPDoc .aside {
+  padding-left: 0;
+  @media (min-width: 1380px) {
+    max-width: 248px;
+  }
+  @media (min-width: 1500px) {
+    max-width: 300px;
+  }
+  @media (min-width: 1600px) {
+    max-width: 328px;
+  }
+}
+
+// Add gap between title and list, but account for hardcoded `outline-marker` `top`
+.VPDocAside .outline-title {
+  margin-block-end: -1px;
+  transform: translateY(-6px);
+}
+
+// Space out links without affecting `outline-marker` too much
+.VPDocAside .outline-link {
+  padding: 6px 0;
+  font-size: 12.5px;
 }

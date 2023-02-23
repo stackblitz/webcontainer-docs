@@ -261,8 +261,13 @@ img {
 
 <!-- global on current page only -->
 <style lang="scss">
+.VPNavBar .content-body,
 .VPNavBar.fill .content-body {
   background-color: transparent !important;
+  backdrop-filter: none;
+  :root.dark & {
+    background-color: transparent !important;
+  }
 }
 .VPNavBar {
   transition: 0.2s ease !important;
