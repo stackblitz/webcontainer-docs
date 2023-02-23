@@ -1,6 +1,6 @@
 ---
 title: &title Add interactivity
-description: &description Your Express is up and running and we connected a terminal to the output of the WebContainer processes. Let's make the terminal more interactive allowing the user to run it's own commands.
+description: &description Your Express is up and runningand the terminal shows the output of the WebContainer processes. Let's make the terminal more interactive allowing the user to run its own commands.
 head:
   - ['meta', {property: 'og:title', content: *title}]
   - ['meta', {property: 'og:image', content: 'https://webcontainers.io/img/og/tutorial-7_add_interactivity.png'}]
@@ -9,11 +9,11 @@ head:
 ---
 # Add interactivity
 
-The terminal in your application capable to print the logs with proper formatting. It doesn't, however, accept user input. It would be nice if we could convert this experience to a real terminal which allows you to install other packages, and run different commands... Let's get started!
+The terminal in your application prints logs with proper formatting. It doesn't, however, accept user input just yet. It would be nice if you could convert this experience to a real terminal which would allow you to install other packages or run different commands... Let's get started!
 
 ## 1. Remove code
 
-Isn't the best feeling when as a developer you can remove code which isn't necessary anymore? In this step, you can remove both the `installDependencies` and `startDevServer` methods! You won't need them as now it's your user who will type and run the commands.
+Isn't it the best feeling when as a developer you get to remove code which isn't necessary anymore? In this step, you can remove both the `installDependencies` and `startDevServer` methods! You won't need them anymore as now it's your user who will type and run the commands.
 
 The only thing that you'd need to keep is the listener for the `server-ready` event, which now will look as following:
 
@@ -111,7 +111,7 @@ window.addEventListener('load', async () => {
 
 ## 3. Add interactivity to the terminal
 
-It's still not possible to actually do anything with the terminal. If you try writing in the terminal, nothing will print as it only renders output and still does not yet accept input. Let's change that!
+It's still not possible to actually do anything inside the terminal. If you try typing there, nothing will print as it only renders the output and still doesn't yet accept the input. Let's change that!
 
 Just like the [`output`](/api#▸-output-readablestream-string) property of the WebContainer process is a [`ReadableStream`](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream), the [`input`](/api#▸-input-writablestream-string) property of the process is a [`WritableStream`](https://developer.mozilla.org/en-US/docs/Web/API/WritableStream). By writing data to the writable `input` stream, that data is sent to the WebContainer process.
 
@@ -143,14 +143,14 @@ async function startShell(terminal) {
 The first thing you do here is getting hold of a writer by using [`WritableStream.getWriter`](https://developer.mozilla.org/en-US/docs/Web/API/WritableStream/getWriter). Calling this method will lock the input stream which means that noone else can get another writer to that process. After you have your writer, you can listen for input received by the terminal. Every time you type a character in the terminal, the [`onData`](http://xtermjs.org/docs/api/terminal/classes/terminal/#ondata) handler is called. Inside that handler you can write the data to the `input` stream of our process.
 :::
 
-With this change, you hooked up your terminal to the shell running in the WebContainer process. This means that you can now also send input to the process and run commands. You can now manually run `npm install && npm run start` or run any other command.
+With this change, you hooked up your terminal to the shell running in the WebContainer process. This means that now you can also send input to the process and run commands. You can now manually run `npm install && npm run start` or run any other command. Try it yourself!
 
 ![The commands typed in the terminal](./images/20-typing.png)
 
 
 ## 4. Add `xterm-addon-fit`
 
-You might've noticed that resizing the window doesn't redraw the terminal output. For instance, if you make the window very small, lines that are too long should wrap to the next line. For example, look at the highlightened line:
+You might've noticed that resizing the window doesn't redraw the terminal output. If you make the window very narrow, lines that are too long don't wrap to the next line, which is a good UX practice. For example, look at the highlightened line:
 
 ![The browser window is very narrow now and the terminal features a line that either disappears or when highlightened sticks out](./images/21-line-sticking-out.png)
 
@@ -171,8 +171,6 @@ And import it at the top of your `main.js` file.
 import { FitAddon } from 'xterm-addon-fit';
 ```
 :::
-
-## 5. Resize the terminal
 
 Next, create a new `FitAddon` instance and load it into the terminal.
 
@@ -208,11 +206,11 @@ window.addEventListener('load', async () => {
 ```
 :::
 
-Notice that the `fit()` method is also called on the addon immediately after attaching the terminal to the DOM to make sure that the terminal takes up the entire height and width of the `div` terminal element.
+Notice that the `fit()` method is also called on the `fitAddon` immediately after attaching the terminal to the DOM. This is to make sure that the terminal takes up the entire height and width of the `div` terminal element.
 
-## 6. Resize the output lines
+## 5. Resize the output lines
 
-The terminal itself now has proper dimensions, but the WebContainer process that runs the shell is still not aware of what the exact dimensions are. To fix that, pass in the dimensions when spawning the WebContainer process.
+Now, the terminal itself has proper dimensions, but the WebContainer process that runs the shell is still not aware of what the exact dimensions are. To fix that, pass in the dimensions when spawning the WebContainer process.
 
 :::code-group
 ```js [main.js] {3-6}
@@ -244,9 +242,9 @@ You can now see that the text is properly wrapped to the width of the terminal. 
 
 ![The same line now wraps up](./images/22-line-wrapping-up.png)
 
-## 7. Make output lines responsive
+## 6. Make output lines responsive
 
-The last piece of code that you added equipped the terminal element on your app with the ability to resize. What's actually happening is that the `cols` and `rows` of the `Terminal` instance from `Xterm.js` are recalculated and updated. The last problem to address is that if you  make the window wider again, the terminal does not redraw the text to fit the new dimensions. 
+The last piece of code that you added equipped the terminal element the ability to resize. What's actually happening is that the `cols` and `rows` of the `Terminal` instance from `Xterm.js` are recalculated and updated. The last problem to address is that if you  make the window wider again, the terminal does not redraw the text to fit the new dimensions. 
 
 ![The browser window is now wide but the line stays wrapped up](./images/23-line-still-wrapped-up.png)
 
@@ -295,7 +293,7 @@ With this code, you notify the process that a resize event happened and then you
 
 ![The browser window is now wide and the line is resized](./images/24-line-resizes.png)
 
-To see the end product, check [this demo](https://stackblitz.com/edit/stackblitz-webcontainer-api-starter-with-terminal?file=main.js).
+And - that's it! You have a fully working terminal 🥳 To see the end product, check [this demo](https://stackblitz.com/edit/stackblitz-webcontainer-api-starter-with-terminal?file=main.js).
 
 ## Next steps
 
