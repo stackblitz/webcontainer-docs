@@ -7,7 +7,7 @@ head:
   - ['meta', {name: 'twitter:title', content: *title}]
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
-# Build your first WebContainer app
+# {{ $frontmatter.title }}
 
 In this tutorial, you'll build a plain [Vite](https://vitejs.dev/)-based JavaScript app featuring a barebones WebContainers app that loads the whole file system into the container and then runs the [Express](https://expressjs.com/) app. You don't need prior experience with Vite, Express, or WebContainers.
 
