@@ -13,7 +13,7 @@ Your Express app is up and running and the preview window updates automatically 
 
 ## 1. Install `Xterm.js`
 
-The output of the processes will be printed to a `div` and the messages will feature different colors or styles. In order to achieve this, we will use [`Xterm.js`](https://xtermjs.org), which is a terminal frontend component. To install it, run the following command in your development terminal:
+The terminal frontend component that we will use is [`Xterm.js`](https://xtermjs.org). It's the same terminal that is used by Visual Studio Code and many other web-based IDEs. To install it, run the following command in your development terminal:
 
 ```bash
 npm install xterm
@@ -211,6 +211,6 @@ Try changing the code in the `textarea` - you will see that the dev server resta
 
 ## Next step
 
-The output is now visible in a terminal in your web application. This step improves User Experience - your users no longer have to open the DevTools console to see what's going on 🥳
+The output is now visible in a terminal in your web application. This step improves User Experience - your users no longer have to open the DevTools console to see what's going on 🥳.
 
 The terminal is currently only capable of showing the output. [In the next step](./7-add-interactivity.md), you'll make it interactive, which will allow you to run your own commands from within your application!
