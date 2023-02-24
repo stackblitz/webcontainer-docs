@@ -295,7 +295,7 @@
 .vp-doc .custom-block {
   margin: 44px 0;
   padding: 32px 32px;
-  padding-left: 72px;
+  padding-left: 76px;
   border: none;
   border-radius: 8px;
   box-shadow:
@@ -326,22 +326,27 @@
   &.info {
     --block-border-color: var(--vp-custom-block-info-border);
     --block-icon-color: var(--vp-custom-block-info-text);
+    --block-icon-url: url('/icons/fa-books-light.svg');
   }
   &.tip {
     --block-border-color: var(--vp-custom-block-tip-border);
     --block-icon-color: var(--vp-custom-block-tip-text);
+    --block-icon-url: url('/icons/fa-sparkles-regular.svg');
   }
   &.warning {
     --block-border-color: var(--vp-custom-block-warning-border);
     --block-icon-color: var(--vp-custom-block-warning-text);
+    --block-icon-url: url('/icons/fa-triangle-exclamation-regular.svg');
   }
   &.danger {
     --block-border-color: var(--vp-custom-block-danger-border);
     --block-icon-color: var(--vp-custom-block-danger-text);
+    --block-icon-url: url('/icons/fa-triangle-exclamation-regular.svg');
   }
   &.details {
     --block-border-color: var(--vp-custom-block-details-border);
     --block-icon-color: var(--vp-custom-block-details-text);
+    --block-icon-url: url('/icons/fa-gear.svg');
   }
 }
 
@@ -373,8 +378,14 @@ h2 + .custom-block {
       width: 24px;
       height: 24px;
       background-color: var(--block-icon-color);
-      -webkit-mask-image: url('/icons/fa-gear.svg');
-      mask-image: url('/icons/fa-gear.svg');
+      -webkit-mask-image: var(--block-icon-url);
+              mask-image: var(--block-icon-url);
+      -webkit-mask-position: center;
+              mask-position: center;
+      -webkit-mask-repeat: no-repeat;
+              mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+              mask-size: contain;
       @media (max-width: 500px) {
         left: -40px;
       }

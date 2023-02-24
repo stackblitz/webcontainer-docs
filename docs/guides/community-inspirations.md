@@ -9,6 +9,15 @@ head:
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
 
+<script setup lang="ts">
+import CommunityInspirations from '@theme/components/WCUsedByProjects/CommunityInspirations.vue';
+</script>
+
+<!-- <Home
+  :externalLinks="homeExternalLinks"
+  :footerSections="footerSections"
+/> -->
+
 # {{ $frontmatter.title }}
 
 This page is a tribute to our Community who have been using WebContainers over the past two years - and who have been building with WebContainer API since it was released in June 2022 in a private alpha. Here are some of the projects that are powered by it.
@@ -18,6 +27,8 @@ Have a project you'd like us to showcase here and on our social media? Reach out
 :::
 
 ## Projects built with WebContainers
+
+<CommunityInspirations />
 
 ### Tutorial: SvelteKit
 
