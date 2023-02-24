@@ -272,118 +272,181 @@ export const testimonialCardData: TestimonialCardData[] = [
 ];
 
 export type CommunityProjectCategory = 'ai'|'game'|'ide'|'lowCode'|'tutorial';
-export type CommunityProjectDescriptionType = 'image'|'text'|'video';
+// export type CommunityProjectDescriptionType = 'image'|'text'|'video';
 
-export interface CommunityProjectDescriptionItem {
-  type: CommunityProjectDescriptionType;
-  content: string;
-  itemUrl?: string;
-  thumbnailUrl?: string;
-}
+// export interface CommunityProjectDescriptionItem {
+//   type: CommunityProjectDescriptionType;
+//   content: string;
+//   itemUrl?: string;
+//   thumbnailUrl?: string;
+// }
 
-export interface CommunityProject {
+export interface CommunityProjectCardData {
   category: CommunityProjectCategory;
-  descriptionItems: CommunityProjectDescriptionItem[];
+  description: string;
   title: string;
+  itemUrl: string;
+  thumbnailUrl: string;
 }
 
-export const communityProjects: CommunityProject[] = [
+export const communityProjectCardData: CommunityProjectCardData[] = [
   {
     category: 'tutorial',
     title: 'SvelteKit',
-    descriptionItems: [
-      {
-        type: 'text',
-        content: 'A full educational experience of learning Svelte in the browser. <a href="https://learn.svelte.dev/tutorial/welcome-to-svelte" target="_blank" rel="nofollow">Try it yourself!</a>',
-        itemUrl: 'https://learn.svelte.dev/tutorial/welcome-to-svelte',
-        thumbnailUrl: '/img/svelte-screen-light.png',
-      },
-      {
-        type: 'video',
-        content: 'Curious why Svelte decided to go full-in with WebContainers? Hear <a href="https://twitter.com/Rich_Harris" target="_blank" rel="nofollow">Rich Harris</a> explain it in his talk <a href="https://www.youtube.com/watch?v=RwBolXX9Pis&t=578s" target="_blank" rel="nofollow">"Fullstack Documentation"</a> delivered at JSNation 2022:',
-        itemUrl: 'https://www.youtube.com/watch?v=RwBolXX9Pis&t=578s',
-        thumbnailUrl: '/img/community/rich_harris_talk.png',
-      },
-    ],
+    description: 'A full educational experience of learning Svelte in the browser.',
+    itemUrl: 'https://learn.svelte.dev/tutorial/welcome-to-svelte',
+    thumbnailUrl: '/img/svelte-screen-light.png',
   },
   {
     category: 'ide',
     title: 'Codeflow',
-    descriptionItems: [
-      {
-        type: 'image',
-        content: '<a href="https://developers.stackblitz.com/codeflow" target="_blank" rel="nofollow">Codeflow IDE</a> is a full-featured version of the desktop Visual Studio Code IDE supporting git commands, desktop extensions and a Node.js development server with terminal. This docs site was built entirely in <a href="https://developers.stackblitz.com/codeflow" target="_blank" rel="nofollow">Codeflow IDE</a>.',
-        itemUrl: 'https://developers.stackblitz.com/codeflow',
-        thumbnailUrl: '/img/community/codeflow.png',
-      },
-      {
-        type: 'video',
-        content: `Here's a Keynote from <a href="https://twitter.com/ericsimons40" target="_blank" rel="nofollow">Eric Simons</a>, the CEO of StackBlitz, <a href="https://www.youtube.com/watch?v=Ea1zJD5uQRg" target="_blank" rel="nofollow">announcing Codeflow</a> at ViteConf 2022:`,
-        itemUrl: 'https://www.youtube.com/watch?v=Ea1zJD5uQRg',
-        thumbnailUrl: '/img/community/eric_simons_talk.png',
-      },
-      {
-        type: 'text',
-        content: `Read more about StackBlitz and Codeflow in this Newstack article: <a href="https://thenewstack.io/stackblitz-launches-codeflow-and-announces-figma-investment/" target="_blank" rel="nofollow">"StackBlitz Launches Codeflow and Announces Figma Investment"</a>`,
-      },
-    ],    
+    description: 'Codeflow IDE</a> is a full-featured version of the desktop Visual Studio Code IDE supporting git commands, desktop extensions and a Node.js development server with terminal.',
+    itemUrl: 'https://developers.stackblitz.com/codeflow',
+    thumbnailUrl: '/img/community/codeflow.png',
   },
   {
     category: 'ai',
     title: 're:tune',
-    descriptionItems: [
-      {
-        type: 'image',
-        content: `The missing frontend for GPT-3, on a mission to empower everyone to build AI-first software at the speed of thought. <a href="https://retune.so/" target="_blank" rel="nofollow">re:tune</a> is on a mission to set the stage for AI-native IDEs - building GPT-3 powered apps, without writing any code.`,
-        itemUrl: 'https://retune.so/',
-        thumbnailUrl: '/img/community/re_tune.png',
-
-      },
-    ],
+    description: `The missing frontend for GPT-3, on a mission to empower everyone to build AI-first software at the speed of thought.`,
+    itemUrl: 'https://retune.so/',
+    thumbnailUrl: '/img/community/re_tune.png',
   },
   {
     category: 'game',
     title: 'schachnovelle',
-    descriptionItems: [
-      {
-        type: 'image',
-        content: `A command line chess game written in Node.js. <a href="https://gitlab.com/manegame/schachnovelle" target="_blank" rel="nofollow">Explore it yourself!</a><br/>As Manus Nijhoff, the author of this chess game, puts it, “If you've got nothing better to do than waste time in the terminal, StackBlitz is there with you!”`,
-        itemUrl: 'https://www.npmjs.com/package/schachnovelle',
-        thumbnailUrl: '/img/community/chess.png',
-      },
-    ],
+    description: `A command line chess game written in Node.js.`,
+    itemUrl: 'https://www.npmjs.com/package/schachnovelle',
+    thumbnailUrl: '/img/community/chess.png',
   },
   {
     category: 'lowCode',
     title: 'Web Publisher',
-    descriptionItems: [
-      {
-        type: 'image',
-        content: `A publishing tool that makes editing docs or blogs pleasant thanks to a realtime preview of the changes. In fact, you can try it yourself by <a href="https://stackblitz.com/~/github.com/stackblitz/webcontainer-docs/edit/main/docs/guides/community-inspirations.md?initialPath=%2Fguides%2Fcommunity-inspirations" target="_blank" rel="nofollow">editing this page!</a>`,
-        itemUrl: 'https://stackblitz.com/~/github.com/stackblitz/webcontainer-docs/edit/main/docs/guides/community-inspirations.md?initialPath=%2Fguides%2Fcommunity-inspirations',
-        thumbnailUrl: '/img/community/web_publisher.png',
-      },
-      {
-        type: 'video',
-        content: `Here's a talk from 2022 Next.js Conf by <a href="https://twitter.com/sylwiavargas" target="_blank" rel="nofollow">Sylwia Vargas</a>, a Developer Advocate at StackBlitz, about <a href="http://localhost:5173/guides/www.youtube.com/watch?v=B4rqK-o1QZw" target="_blank" rel="nofollow">making your docs editing experience easier</a> at ViteConf 2022:`,
-        itemUrl: 'https://www.youtube.com/watch?v=B4rqK-o1QZw',
-        thumbnailUrl: '/img/community/sylwia_vargas_talk.png',
-      },
-    ],
+    description: `A publishing tool that makes editing docs or blogs pleasant thanks to a realtime preview of the changes.`,
+    itemUrl: 'https://stackblitz.com/~/github.com/stackblitz/webcontainer-docs/edit/main/docs/guides/community-inspirations.md?initialPath=%2Fguides%2Fcommunity-inspirations',
+    thumbnailUrl: '/img/community/web_publisher.png',
   },
   {
     category: 'tutorial',
     title: `Tech Educator's Toolkit`,
-    descriptionItems: [
-      {
-        type: 'image',
-        content: `Tech Educator's Toolkit is an early exploration of WebContainer API and of a new way to write interactive tutorials. Watch this talk from <a href="https://twitter.com/jutanium" target="_blank" rel="nofollow">Dan Jutan</a> from ViteConf 2022 to see it in action:`,
-        itemUrl: 'https://www.youtube.com/watch?v=R-1y3Ti3ng4',
-        thumbnailUrl: '/img/community/dan_jutan_talk.png',
-      },
-    ],
-  },
+    description: `Tech Educator's Toolkit is an early exploration of WebContainer API and of a new way to write interactive tutorials.`,
+    itemUrl: 'https://www.youtube.com/watch?v=R-1y3Ti3ng4',
+    thumbnailUrl: '/img/community/dan_jutan_talk.png',
+  }
 ];
+
+// export type CommunityProjectCategory = 'ai'|'game'|'ide'|'lowCode'|'tutorial';
+// export type CommunityProjectDescriptionType = 'image'|'text'|'video';
+
+// export interface CommunityProjectDescriptionItem {
+//   type: CommunityProjectDescriptionType;
+//   content: string;
+//   itemUrl?: string;
+//   thumbnailUrl?: string;
+// }
+
+// export interface CommunityProject {
+//   category: CommunityProjectCategory;
+//   descriptionItems: CommunityProjectDescriptionItem[];
+//   title: string;
+// }
+
+// export const communityProjects: CommunityProject[] = [
+//   {
+//     category: 'tutorial',
+//     title: 'SvelteKit',
+//     descriptionItems: [
+//       {
+//         type: 'text',
+//         content: 'A full educational experience of learning Svelte in the browser. <a href="https://learn.svelte.dev/tutorial/welcome-to-svelte" target="_blank" rel="nofollow">Try it yourself!</a>',
+//         itemUrl: 'https://learn.svelte.dev/tutorial/welcome-to-svelte',
+//         thumbnailUrl: '/img/svelte-screen-light.png',
+//       },
+//       {
+//         type: 'video',
+//         content: 'Curious why Svelte decided to go full-in with WebContainers? Hear <a href="https://twitter.com/Rich_Harris" target="_blank" rel="nofollow">Rich Harris</a> explain it in his talk <a href="https://www.youtube.com/watch?v=RwBolXX9Pis&t=578s" target="_blank" rel="nofollow">"Fullstack Documentation"</a> delivered at JSNation 2022:',
+//         itemUrl: 'https://www.youtube.com/watch?v=RwBolXX9Pis&t=578s',
+//         thumbnailUrl: '/img/community/rich_harris_talk.png',
+//       },
+//     ],
+//   },
+//   {
+//     category: 'ide',
+//     title: 'Codeflow',
+//     descriptionItems: [
+//       {
+//         type: 'image',
+//         content: '<a href="https://developers.stackblitz.com/codeflow" target="_blank" rel="nofollow">Codeflow IDE</a> is a full-featured version of the desktop Visual Studio Code IDE supporting git commands, desktop extensions and a Node.js development server with terminal. This docs site was built entirely in <a href="https://developers.stackblitz.com/codeflow" target="_blank" rel="nofollow">Codeflow IDE</a>.',
+//         itemUrl: 'https://developers.stackblitz.com/codeflow',
+//         thumbnailUrl: '/img/community/codeflow.png',
+//       },
+//       {
+//         type: 'video',
+//         content: `Here's a Keynote from <a href="https://twitter.com/ericsimons40" target="_blank" rel="nofollow">Eric Simons</a>, the CEO of StackBlitz, <a href="https://www.youtube.com/watch?v=Ea1zJD5uQRg" target="_blank" rel="nofollow">announcing Codeflow</a> at ViteConf 2022:`,
+//         itemUrl: 'https://www.youtube.com/watch?v=Ea1zJD5uQRg',
+//         thumbnailUrl: '/img/community/eric_simons_talk.png',
+//       },
+//       {
+//         type: 'text',
+//         content: `Read more about StackBlitz and Codeflow in this Newstack article: <a href="https://thenewstack.io/stackblitz-launches-codeflow-and-announces-figma-investment/" target="_blank" rel="nofollow">"StackBlitz Launches Codeflow and Announces Figma Investment"</a>`,
+//       },
+//     ],    
+//   },
+//   {
+//     category: 'ai',
+//     title: 're:tune',
+//     descriptionItems: [
+//       {
+//         type: 'image',
+//         content: `The missing frontend for GPT-3, on a mission to empower everyone to build AI-first software at the speed of thought. <a href="https://retune.so/" target="_blank" rel="nofollow">re:tune</a> is on a mission to set the stage for AI-native IDEs - building GPT-3 powered apps, without writing any code.`,
+//         itemUrl: 'https://retune.so/',
+//         thumbnailUrl: '/img/community/re_tune.png',
+
+//       },
+//     ],
+//   },
+//   {
+//     category: 'game',
+//     title: 'schachnovelle',
+//     descriptionItems: [
+//       {
+//         type: 'image',
+//         content: `A command line chess game written in Node.js. <a href="https://gitlab.com/manegame/schachnovelle" target="_blank" rel="nofollow">Explore it yourself!</a><br/>As Manus Nijhoff, the author of this chess game, puts it, “If you've got nothing better to do than waste time in the terminal, StackBlitz is there with you!”`,
+//         itemUrl: 'https://www.npmjs.com/package/schachnovelle',
+//         thumbnailUrl: '/img/community/chess.png',
+//       },
+//     ],
+//   },
+//   {
+//     category: 'lowCode',
+//     title: 'Web Publisher',
+//     descriptionItems: [
+//       {
+//         type: 'image',
+//         content: `A publishing tool that makes editing docs or blogs pleasant thanks to a realtime preview of the changes. In fact, you can try it yourself by <a href="https://stackblitz.com/~/github.com/stackblitz/webcontainer-docs/edit/main/docs/guides/community-inspirations.md?initialPath=%2Fguides%2Fcommunity-inspirations" target="_blank" rel="nofollow">editing this page!</a>`,
+//         itemUrl: 'https://stackblitz.com/~/github.com/stackblitz/webcontainer-docs/edit/main/docs/guides/community-inspirations.md?initialPath=%2Fguides%2Fcommunity-inspirations',
+//         thumbnailUrl: '/img/community/web_publisher.png',
+//       },
+//       {
+//         type: 'video',
+//         content: `Here's a talk from 2022 Next.js Conf by <a href="https://twitter.com/sylwiavargas" target="_blank" rel="nofollow">Sylwia Vargas</a>, a Developer Advocate at StackBlitz, about <a href="http://localhost:5173/guides/www.youtube.com/watch?v=B4rqK-o1QZw" target="_blank" rel="nofollow">making your docs editing experience easier</a> at ViteConf 2022:`,
+//         itemUrl: 'https://www.youtube.com/watch?v=B4rqK-o1QZw',
+//         thumbnailUrl: '/img/community/sylwia_vargas_talk.png',
+//       },
+//     ],
+//   },
+//   {
+//     category: 'tutorial',
+//     title: `Tech Educator's Toolkit`,
+//     descriptionItems: [
+//       {
+//         type: 'image',
+//         content: `Tech Educator's Toolkit is an early exploration of WebContainer API and of a new way to write interactive tutorials. Watch this talk from <a href="https://twitter.com/jutanium" target="_blank" rel="nofollow">Dan Jutan</a> from ViteConf 2022 to see it in action:`,
+//         itemUrl: 'https://www.youtube.com/watch?v=R-1y3Ti3ng4',
+//         thumbnailUrl: '/img/community/dan_jutan_talk.png',
+//       },
+//     ],
+//   },
+// ];
 
 export const footerSections = [
   {
