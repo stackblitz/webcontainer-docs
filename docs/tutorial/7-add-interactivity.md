@@ -71,6 +71,7 @@ async function startShell(terminal) {
       },
     })
   );
+  return shellProcess;
 };
 ```
 :::
@@ -229,6 +230,8 @@ async function startShell(terminal) {
   terminal.onData((data) => {
     input.write(data);
   });
+
+  return shellProcess;
 }
 ```
 :::
