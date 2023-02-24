@@ -76,8 +76,6 @@ async function startShell(terminal) {
 ```
 :::
 
-![The terminal window now shows the typical terminal prompt](./images/19-terminal-prompt.png)
-
 Now, start the shell by calling the `startShell` function at the end of the event listener:
 
 ```js {21}
@@ -104,6 +102,8 @@ window.addEventListener('load', async () => {
   startShell(terminal);
 });
 ```
+
+![The terminal window now shows the typical terminal prompt](./images/19-terminal-prompt.png)
 
 ## 3. Add interactivity to the terminal
 
