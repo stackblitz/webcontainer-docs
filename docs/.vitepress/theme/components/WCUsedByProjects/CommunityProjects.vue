@@ -11,7 +11,7 @@ onMounted(() => {
 
 <template>
   <div class="community-projects">
-    <a v-for="project of communityProjectCardData" class="project-item" href="#">
+    <a v-for="project of communityProjectCardData" class="project-item" :href="project.itemUrl">
       <Card>
         <div class="item-content">
           <img :src="project.thumbnailUrl" />
