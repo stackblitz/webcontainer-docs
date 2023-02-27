@@ -7,7 +7,7 @@ head:
   - ['meta', {name: 'twitter:title', content: *title}]
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
-# Editing a file and updating the iframe
+# {{ $frontmatter.title }}
 
 Your Express app is up and running in WebContainers, but if you edit the `textarea`, the changes are not reflected in the Preview window at all. Let's change that.
 
@@ -47,4 +47,4 @@ And voilà! We have a working editor with the Preview. You've built your own env
 
 ## Next steps
 
-If you'd like to explore the API on your own, you can check out the [API reference](../api) or see the [projects made by our Community](/guides/community-inspirations).
+Your application is now entirely up and running. However, it would be nice if you could see the output of all the commands inside your application instead of inside the DevTools console. [In the next step](./6-connect-a-terminal.md), you'll attach a terminal to the WebContainer processes to show the output.

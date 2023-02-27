@@ -16,6 +16,8 @@ export const tutorialLinks = [
   { text: '3. Installing dependencies', link: '/tutorial/3-installing-dependencies' },
   { text: '4. Running dev server', link: '/tutorial/4-running-dev-server' },
   { text: '5. Editing & saving a file', link: '/tutorial/5-editing-a-file-updating-the-iframe' },
+  { text: '6. Connect a terminal', link: '/tutorial/6-connect-a-terminal' },
+  { text: '7. Add interactivity', link: '/tutorial/7-add-interactivity' },
 ];
 
 export const communityProjectsLinks = [

@@ -7,7 +7,7 @@ head:
   - ['meta', {name: 'twitter:title', content: *title}]
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
-# Running dev server
+# {{ $frontmatter.title }}
 
 Now that your app is able to install dependencies, you can run the dev server. Let's add some code that will:
 
