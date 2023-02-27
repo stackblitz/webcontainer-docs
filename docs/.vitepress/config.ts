@@ -22,6 +22,12 @@ const SIDEBAR_DEFAULT = [
     items: data.tutorialLinks,
   },
   {
+    text: 'Community Projects',
+    collapsible: true,
+    collapsed: true,
+    items: data.communityProjectsLinks,
+  },
+  {
     items: [{ text: 'API Reference', link: '/api' }],
   },
   {
@@ -87,6 +93,7 @@ export default defineConfig({
       '/api': SIDEBAR_DEFAULT,
       '/enterprise': SIDEBAR_DEFAULT,
       '/contact': SIDEBAR_DEFAULT,
+      '/community-projects': SIDEBAR_DEFAULT,
     },
     editLink: {
       pattern: 'https://pr.new/stackblitz/webcontainer-docs/edit/main/docs/:path',

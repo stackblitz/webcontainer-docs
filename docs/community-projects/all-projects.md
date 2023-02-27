@@ -1,5 +1,5 @@
 ---
-title: &title Community Inspirations
+title: &title Community Projects
 description: &description See what our Community have built with WebContainer API.
 outline: [2, 3]
 head:

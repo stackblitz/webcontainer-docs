@@ -7,7 +7,7 @@ export const guideLinks = [
   { text: 'Troubleshooting', link: '/guides/troubleshooting'},
   { text: 'Browser Support', link: '/guides/browser-support' },
   { text: 'Browser Configuration', link: '/guides/browser-config' },
-  { text: 'Community Inspirations', link: '/guides/community-inspirations' },
+  // { text: 'Community Inspirations', link: '/guides/community-inspirations' },
 ];
 
 export const tutorialLinks = [
@@ -16,6 +16,16 @@ export const tutorialLinks = [
   { text: '3. Installing dependencies', link: '/tutorial/3-installing-dependencies' },
   { text: '4. Running dev server', link: '/tutorial/4-running-dev-server' },
   { text: '5. Editing & saving a file', link: '/tutorial/5-editing-a-file-updating-the-iframe' },
+];
+
+export const communityProjectsLinks = [
+  { text: 'All Projects', link: '/community-projects/all-projects' },
+  { text: 'Codeflow', link: '/community-projects/codeflow' },
+  { text: 're:tune', link: '/community-projects/retune' },
+  { text: 'schachnovelle', link: '/community-projects/schachnovelle' },
+  { text: 'SvelteKit', link: '/community-projects/sveltekit' },
+  { text: `Tech Educator's Toolkit`, link: '/community-projects/tech-educators-toolkit' },
+  { text: 'Web Publisher', link: '/community-projects/web-publisher' },
 ];
 
 export const homeExternalLinks = [
