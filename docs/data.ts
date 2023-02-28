@@ -314,7 +314,7 @@ export const communityProjectCategories: CommunityProjectCategories = {
     title: 'Tutorial',
     titlePlural: 'Tutorials',
   },
-}
+};
 
 export interface CommunityProjectCardData {
   category: CommunityProjectCategory;

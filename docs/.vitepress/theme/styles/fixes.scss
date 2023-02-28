@@ -418,3 +418,16 @@ h2 + .custom-block {
     margin-bottom: 0;
   }
 }
+
+
+// --------------------------------
+// Community Projects
+
+.community-project-screenshot {
+  max-width: 800px;
+  border-radius: 12px;
+  overflow: hidden;
+  img {
+    margin: 0 !important;
+  }
+}
