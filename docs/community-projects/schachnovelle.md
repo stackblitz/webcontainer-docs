@@ -16,6 +16,6 @@ import CommunityProjectTitle from '@theme/components/CommunityProjects/Community
 
 A command line chess game written in Node.js. [Explore it yourself!](https://gitlab.com/manegame/schachnovelle)
 
-[![Command line chess game](/img/community/chess.png)](https://www.npmjs.com/package/schachnovelle)
+[![Command line chess game](/img/community/chess.png)](https://www.npmjs.com/package/schachnovelle){.community-project-screenshot}
 
 As [Manus Nijhoff](https://manusnijhoff.nl/), the author of this chess game, puts it, “If you've got nothing better to do than waste time in the terminal, StackBlitz is there with you!”

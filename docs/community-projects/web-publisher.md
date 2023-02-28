@@ -16,7 +16,8 @@ import CommunityProjectTitle from '@theme/components/CommunityProjects/Community
 
 A publishing tool that makes editing docs or blogs pleasant thanks to a realtime preview of the changes. In fact, you can try it yourself by [editing this page](https://stackblitz.com/~/github.com/stackblitz/webcontainer-docs/edit/main/docs/guides/community-inspirations.md?initialPath=%2Fguides%2Fcommunity-inspirations)!
 
-[![Web Publisher](/img/community/web_publisher.png)](https://stackblitz.com/~/github.com/stackblitz/webcontainer-docs/edit/main/docs/guides/community-inspirations.md?initialPath=%2Fguides%2Fcommunity-inspirations)
+[![Web Publisher](/img/community/web_publisher.png)](https://stackblitz.com/~/github.com/stackblitz/webcontainer-docs/edit/main/docs/guides/community-inspirations.md?initialPath=%2Fguides%2Fcommunity-inspirations){.community-project-screenshot}
 
 Here's a talk from 2022 Next.js Conf by [Sylwia Vargas](https://twitter.com/sylwiavargas), a Developer Advocate at StackBlitz, about [making your docs editing experience easier](www.youtube.com/watch?v=B4rqK-o1QZw) at ViteConf 2022:
-[![A still from Sylwia Vargas' talk](/img/community/sylwia_vargas_talk.png)](https://www.youtube.com/watch?v=B4rqK-o1QZw)
+
+[![A still from Sylwia Vargas' talk](/img/community/sylwia_vargas_talk.png)](https://www.youtube.com/watch?v=B4rqK-o1QZw){.community-project-screenshot}

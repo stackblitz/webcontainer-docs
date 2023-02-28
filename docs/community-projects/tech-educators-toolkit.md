@@ -16,4 +16,4 @@ import CommunityProjectTitle from '@theme/components/CommunityProjects/Community
 
 Tech Educator's Toolkit is an early exploration of WebContainer API and of a new way to write interactive tutorials. Watch this talk from [Dan Jutan](https://twitter.com/jutanium) from ViteConf 2022 to see it in action:
 
-[![A still from Dan Jutan's talk](/img/community/dan_jutan_talk.png)](https://www.youtube.com/watch?v=R-1y3Ti3ng4)
+[![A still from Dan Jutan's talk](/img/community/dan_jutan_talk.png)](https://www.youtube.com/watch?v=R-1y3Ti3ng4){.community-project-screenshot}

@@ -20,4 +20,4 @@ A full educational experience of learning Svelte in the browser. [Try it yoursel
 
 Are you curious why Svelte decided to go full-in with WebContainers? Hear [Rich Harris](https://twitter.com/Rich_Harris) explain it in his talk ["Fullstack Documentation"](https://www.youtube.com/watch?v=RwBolXX9Pis&t=578s) delivered at JSNation 2022:
 
-[![A still from Rich Harris' talk](/img/community/rich_harris_talk.png)](https://www.youtube.com/watch?v=RwBolXX9Pis&t=578s)
+[![A still from Rich Harris' talk](/img/community/rich_harris_talk.png)](https://www.youtube.com/watch?v=RwBolXX9Pis&t=578s){.community-project-screenshot}

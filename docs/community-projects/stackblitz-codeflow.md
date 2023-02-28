@@ -16,9 +16,10 @@ import CommunityProjectTitle from '@theme/components/CommunityProjects/Community
 
 [Codeflow IDE](https://developers.stackblitz.com/codeflow) is a full-featured version of the desktop Visual Studio Code IDE supporting git commands, desktop extensions and a Node.js development server with terminal. This entire docs site was built entirely in [Codeflow IDE](https://developers.stackblitz.com/codeflow).
 
-[![Codeflow IDE](/img/community/codeflow.png)](https://developers.stackblitz.com/codeflow)
+[![Codeflow IDE](/img/community/codeflow.png)](https://developers.stackblitz.com/codeflow){.community-project-screenshot}
 
 Here's a Keynote from [Eric Simons](https://twitter.com/ericsimons40), the CEO of StackBlitz, [announcing Codeflow](https://www.youtube.com/watch?v=Ea1zJD5uQR) at ViteConf 2022:
-[![A still from Eric Simons' talk](/img/community/eric_simons_talk.png)](https://www.youtube.com/watch?v=Ea1zJD5uQRg)
+
+[![A still from Eric Simons' talk](/img/community/eric_simons_talk.png)](https://www.youtube.com/watch?v=Ea1zJD5uQRg){.community-project-screenshot}
 
 Read more about StackBlitz and Codeflow in this Newstack article: ["StackBlitz Launches Codeflow and Announces Figma Investment"](https://thenewstack.io/stackblitz-launches-codeflow-and-announces-figma-investment/)
