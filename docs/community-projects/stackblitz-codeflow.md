@@ -8,10 +8,11 @@ head:
   - ['meta', {name: 'twitter:title', content: *title}]
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
+<script setup lang="ts">
+import CommunityProjectTitle from '@theme/components/CommunityProjects/CommunityProjectTitle.vue';
+</script>
 
-# StackBlitz Codeflow
-
-### Online IDE
+<CommunityProjectTitle title="StackBlitz Codeflow" category="ide" />
 
 [Codeflow IDE](https://developers.stackblitz.com/codeflow) is a full-featured version of the desktop Visual Studio Code IDE supporting git commands, desktop extensions and a Node.js development server with terminal. This entire docs site was built entirely in [Codeflow IDE](https://developers.stackblitz.com/codeflow).
 

@@ -8,10 +8,11 @@ head:
   - ['meta', {name: 'twitter:title', content: *title}]
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
+<script setup lang="ts">
+import CommunityProjectTitle from '@theme/components/CommunityProjects/CommunityProjectTitle.vue';
+</script>
 
-# re:tune
-
-### AI
+<CommunityProjectTitle title="re:tune" category="ai" />
 
 The missing frontend for GPT-3, on a mission to empower everyone to build AI-first software at the speed of thought.
 

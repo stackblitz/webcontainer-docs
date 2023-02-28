@@ -8,10 +8,11 @@ head:
   - ['meta', {name: 'twitter:title', content: *title}]
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
+<script setup lang="ts">
+import CommunityProjectTitle from '@theme/components/CommunityProjects/CommunityProjectTitle.vue';
+</script>
 
-# SvelteKit
-
-### Tutorial
+<CommunityProjectTitle title="SvelteKit" category="tutorial" />
 
 A full educational experience of learning Svelte in the browser. [Try it yourself!](https://learn.svelte.dev/tutorial/welcome-to-svelte)
 

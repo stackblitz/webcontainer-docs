@@ -8,10 +8,11 @@ head:
   - ['meta', {name: 'twitter:title', content: *title}]
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
+<script setup lang="ts">
+import CommunityProjectTitle from '@theme/components/CommunityProjects/CommunityProjectTitle.vue';
+</script>
 
-# StackBlitz Web Publisher
-
-### Low-Code
+<CommunityProjectTitle title="StackBlitz Web Publisher" category="lowCode" />
 
 A publishing tool that makes editing docs or blogs pleasant thanks to a realtime preview of the changes. In fact, you can try it yourself by [editing this page](https://stackblitz.com/~/github.com/stackblitz/webcontainer-docs/edit/main/docs/guides/community-inspirations.md?initialPath=%2Fguides%2Fcommunity-inspirations)!
 

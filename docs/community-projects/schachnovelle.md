@@ -8,10 +8,11 @@ head:
   - ['meta', {name: 'twitter:title', content: *title}]
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
+<script setup lang="ts">
+import CommunityProjectTitle from '@theme/components/CommunityProjects/CommunityProjectTitle.vue';
+</script>
 
-# schachnovelle
-
-### Game
+<CommunityProjectTitle title="schachnovelle" category="game" />
 
 A command line chess game written in Node.js. [Explore it yourself!](https://gitlab.com/manegame/schachnovelle)
 

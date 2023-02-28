@@ -284,6 +284,37 @@ export const testimonialCardData: TestimonialCardData[] = [
 ];
 
 export type CommunityProjectCategory = 'ai'|'game'|'ide'|'lowCode'|'tutorial';
+export type CommunityProjectCategories = { [project in CommunityProjectCategory]: {
+  rgb: string;
+  title: string;
+  titlePlural?: string;
+}};
+
+export const communityProjectCategories: CommunityProjectCategories = {
+  ai: {
+    rgb: '255, 140, 0',
+    title: 'AI',
+  },
+  game: {
+    rgb: '188, 94, 255',
+    title: 'Game',
+    titlePlural: 'Games',
+  },
+  ide: {
+    rgb: '31, 143, 255',
+    title: 'Browser IDE',
+    titlePlural: 'Browser IDEs',
+  },
+  lowCode: {
+    rgb: '255, 9, 255',
+    title: 'Low-Code',
+  },
+  tutorial: {
+    rgb: '0, 188, 185',
+    title: 'Tutorial',
+    titlePlural: 'Tutorials',
+  },
+}
 
 export interface CommunityProjectCardData {
   category: CommunityProjectCategory;

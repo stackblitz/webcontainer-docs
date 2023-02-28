@@ -8,9 +8,8 @@ head:
   - ['meta', {name: 'twitter:title', content: *title}]
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
-
 <script setup lang="ts">
-import CommunityProjects from '@theme/components/WCUsedByProjects/CommunityProjects.vue';
+import CommunityProjects from '@theme/components/CommunityProjects/CommunityProjects.vue';
 </script>
 
 # {{ $frontmatter.title }}
