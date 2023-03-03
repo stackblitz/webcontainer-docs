@@ -424,10 +424,20 @@ h2 + .custom-block {
 // Community Projects
 
 .community-project-screenshot {
-  max-width: 800px;
+  width: 100%;
   border-radius: 12px;
   overflow: hidden;
   img {
+    max-width: min(100%, 800px);
     margin: 0 !important;
+  }
+  // @media screen and (max-width: 1160px) {
+  @media screen and (max-height: 768px) {
+    max-width: 680px;
+    max-height: 352px;
+  }
+  @media screen and (max-width: 960px) {
+    max-width: 680px;
+    max-height: 352px;
   }
 }
