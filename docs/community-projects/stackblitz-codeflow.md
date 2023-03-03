@@ -11,6 +11,7 @@ head:
 <script setup lang="ts">
 import PageHeading from '@theme/components/CommunityProjects/CommunityProjectPageHeading.vue';
 import Screenshot from '@theme/components/CommunityProjects/CommunityProjectScreenshot.vue';
+import ArticleLink from '@theme/components/CommunityProjects/CommunityProjectArticleLink.vue';
 </script>
 
 <PageHeading title="StackBlitz Codeflow" category="ide" />
@@ -22,5 +23,12 @@ import Screenshot from '@theme/components/CommunityProjects/CommunityProjectScre
 Here's a Keynote from [Eric Simons](https://twitter.com/ericsimons40), the CEO of StackBlitz, [announcing Codeflow](https://www.youtube.com/watch?v=Ea1zJD5uQR) at ViteConf 2022:
 
 [![A still from Eric Simons' talk](/img/community/eric_simons_talk.png)](https://www.youtube.com/watch?v=Ea1zJD5uQRg){.community-project-screenshot}
+
+<ArticleLink
+  imgSrc="/img/community/codeflow-stackblitz-figma.jpg"
+  title="StackBlitz Launches Codeflow and Announces Figma Investment"
+  body="Read more about StackBlitz and Codeflow in this Newstack article"
+  href="https://thenewstack.io/stackblitz-launches-codeflow-and-announces-figma-investment/"
+/>
 
 Read more about StackBlitz and Codeflow in this Newstack article: ["StackBlitz Launches Codeflow and Announces Figma Investment"](https://thenewstack.io/stackblitz-launches-codeflow-and-announces-figma-investment/)
