@@ -9,13 +9,14 @@ head:
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
 <script setup lang="ts">
-import CommunityProjectTitle from '@theme/components/CommunityProjects/CommunityProjectTitle.vue';
+import PageHeading from '@theme/components/CommunityProjects/CommunityProjectPageHeading.vue';
+import Screenshot from '@theme/components/CommunityProjects/CommunityProjectScreenshot.vue';
 </script>
 
-<CommunityProjectTitle title="schachnovelle" category="game" />
+<PageHeading title="schachnovelle" category="game" />
 
 A command line chess game written in Node.js. [Explore it yourself!](https://gitlab.com/manegame/schachnovelle)
 
-[![Command line chess game](/img/community/chess.png)](https://www.npmjs.com/package/schachnovelle){.community-project-screenshot}
+<Screenshot src="/img/community/chess.png" alt="Command line chess game" href="https://www.npmjs.com/package/schachnovelle" />
 
 As [Manus Nijhoff](https://manusnijhoff.nl/), the author of this chess game, puts it, “If you've got nothing better to do than waste time in the terminal, StackBlitz is there with you!”

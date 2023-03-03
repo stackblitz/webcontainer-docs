@@ -9,14 +9,15 @@ head:
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
 <script setup lang="ts">
-import CommunityProjectTitle from '@theme/components/CommunityProjects/CommunityProjectTitle.vue';
+import PageHeading from '@theme/components/CommunityProjects/CommunityProjectPageHeading.vue';
+import Screenshot from '@theme/components/CommunityProjects/CommunityProjectScreenshot.vue';
 </script>
 
-<CommunityProjectTitle title="StackBlitz Codeflow" category="ide" />
+<PageHeading title="StackBlitz Codeflow" category="ide" />
 
 [Codeflow IDE](https://developers.stackblitz.com/codeflow) is a full-featured version of the desktop Visual Studio Code IDE supporting git commands, desktop extensions and a Node.js development server with terminal. This entire docs site was built entirely in [Codeflow IDE](https://developers.stackblitz.com/codeflow).
 
-[![Codeflow IDE](/img/community/codeflow.png)](https://developers.stackblitz.com/codeflow){.community-project-screenshot}
+<Screenshot src="/img/community/codeflow.png" alt="Codeflow IDE" href="https://developers.stackblitz.com/codeflow" />
 
 Here's a Keynote from [Eric Simons](https://twitter.com/ericsimons40), the CEO of StackBlitz, [announcing Codeflow](https://www.youtube.com/watch?v=Ea1zJD5uQR) at ViteConf 2022:
 

@@ -9,14 +9,15 @@ head:
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
 <script setup lang="ts">
-import CommunityProjectTitle from '@theme/components/CommunityProjects/CommunityProjectTitle.vue';
+import PageHeading from '@theme/components/CommunityProjects/CommunityProjectPageHeading.vue';
+import Screenshot from '@theme/components/CommunityProjects/CommunityProjectScreenshot.vue';
 </script>
 
-<CommunityProjectTitle title="StackBlitz Web Publisher" category="lowCode" />
+<PageHeading title="StackBlitz Web Publisher" category="lowCode" />
 
 A publishing tool that makes editing docs or blogs pleasant thanks to a realtime preview of the changes. In fact, you can try it yourself by [editing this page](https://stackblitz.com/~/github.com/stackblitz/webcontainer-docs/edit/main/docs/guides/community-inspirations.md?initialPath=%2Fguides%2Fcommunity-inspirations)!
 
-[![Web Publisher](/img/community/web_publisher.png)](https://stackblitz.com/~/github.com/stackblitz/webcontainer-docs/edit/main/docs/guides/community-inspirations.md?initialPath=%2Fguides%2Fcommunity-inspirations){.community-project-screenshot}
+<Screenshot src="/img/community/web_publisher.png" alt="Web Publisher" href="https://stackblitz.com/~/github.com/stackblitz/webcontainer-docs/edit/main/docs/community-projects/web-publisher.md?initialPath=%2Fcommunity-projects%2Fweb-publisher" />
 
 Here's a talk from 2022 Next.js Conf by [Sylwia Vargas](https://twitter.com/sylwiavargas), a Developer Advocate at StackBlitz, about [making your docs editing experience easier](www.youtube.com/watch?v=B4rqK-o1QZw) at ViteConf 2022:
 

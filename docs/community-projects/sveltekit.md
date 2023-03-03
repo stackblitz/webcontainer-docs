@@ -9,14 +9,15 @@ head:
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
 <script setup lang="ts">
-import CommunityProjectTitle from '@theme/components/CommunityProjects/CommunityProjectTitle.vue';
+import PageHeading from '@theme/components/CommunityProjects/CommunityProjectPageHeading.vue';
+import Screenshot from '@theme/components/CommunityProjects/CommunityProjectScreenshot.vue';
 </script>
 
-<CommunityProjectTitle title="SvelteKit" category="tutorial" />
+<PageHeading title="SvelteKit" category="tutorial" />
 
 A full educational experience of learning Svelte in the browser. [Try it yourself!](https://learn.svelte.dev/tutorial/welcome-to-svelte)
 
-[![SvelteKit Tutorial](/img/svelte-screen-light.png)](https://learn.svelte.dev/tutorial/welcome-to-svelte){.community-project-screenshot}
+<Screenshot src="/img/svelte-screen-light.png" alt="SvelteKit Tutorial" href="https://learn.svelte.dev/tutorial/welcome-to-svelte" />
 
 Are you curious why Svelte decided to go full-in with WebContainers? Hear [Rich Harris](https://twitter.com/Rich_Harris) explain it in his talk ["Fullstack Documentation"](https://www.youtube.com/watch?v=RwBolXX9Pis&t=578s) delivered at JSNation 2022:
 

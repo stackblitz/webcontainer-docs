@@ -24,7 +24,7 @@ export default {
 </script>
 
 <template>
-  <div class="community-project-title">
+  <div class="community-project-page-heading">
 
     <a class="mock-breadcrumbs" href="/community-projects/all-projects">Community Projects /</a>
 
@@ -38,7 +38,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
-.community-project-title {
+.community-project-page-heading {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
