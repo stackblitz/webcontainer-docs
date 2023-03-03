@@ -49,7 +49,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  :root.dark & {
+  :root.dark &.has-bg {
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.4);
   }
   &:not(.has-bg)::before {
