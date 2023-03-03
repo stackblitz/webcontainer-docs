@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { projectsUsingWCCardData } from '../../../../data';
-import CardList from '@theme/components/CardLists/CardList.vue';
+import CardSingleList from '@theme/components/CardLists/CardList.vue';
 import ProjectsUsingWCCard from './ProjectsUsingWCCard.vue';
 </script>
 

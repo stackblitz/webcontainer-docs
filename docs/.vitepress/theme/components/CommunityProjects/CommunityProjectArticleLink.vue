@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import Card from '@theme/components/CardLists/Card.vue';
+  import CardSingle from '@theme/components/CardLists/CardSingle.vue';
   defineProps<{
     title?: string;
     body: string;
@@ -10,7 +10,7 @@
 
 <template>
   <div class="community-project-article-link">
-    <Card :href="href" target="_blank">
+    <CardSingle :href="href" target="_blank">
       <div class="card-body" :class="imgSrc && 'has-bg'">
         <div class="icon" :style="imgSrc && {backgroundImage: `url('${imgSrc}`}" :class="imgSrc && 'has-bg'"/>
         <div class="content">
@@ -18,7 +18,7 @@
           <span class="body" :class="!title && 'no-title'">{{ body }}</span>
         </div>
       </div>
-    </Card>
+    </CardSingle>
   </div>
 </template>
 

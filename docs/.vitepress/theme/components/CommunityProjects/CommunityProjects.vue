@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { communityProjectCardData, communityProjectCategories as categories } from '../../../../data';
 import type { CommunityProjectCategory } from '../../../../data';
-import Card from '@theme/components/CardLists/Card.vue';
+import CardSingle from '@theme/components/CardLists/CardSingle.vue';
 </script>
 <script lang="ts">
 export default {

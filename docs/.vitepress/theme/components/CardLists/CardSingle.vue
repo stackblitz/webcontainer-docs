@@ -5,8 +5,10 @@
 </script>
 
 <template>
-  <div class="card" :class="href && 'link'">
-    <a v-if="href" :href="href" class="card__link" target="_blank" rel="nofollow" />
+  <a v-if="href" :href="href" class="card link" target="_blank" rel="nofollow">
+    <slot />
+  </a>
+  <div class="card" v-else>
     <slot />
   </div>
 </template>
@@ -56,13 +58,5 @@
       background-color: rgba(185, 222, 255, 0.06);
     }
   }
-}
-
-.card__link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 </style>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { TestimonialCardData } from '../../../../data';
-import Card from '@theme/components/CardLists/Card.vue';
+import CardSingle from '@theme/components/CardLists/CardSingle.vue';
 defineProps<{
   testimonial: TestimonialCardData,
   width?: number,
