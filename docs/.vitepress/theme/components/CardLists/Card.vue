@@ -1,14 +1,12 @@
-<script>
-export default {
- props: ['href', 'target']
-}
+<script setup lang="ts">
+  defineProps<{
+    href?: string;
+  }>();
 </script>
 
 <template>
-  <a v-if="href" :href="href" class="card link" :target="target === '_blank' && target" :rel="target === '_blank' && 'nofollow'">
-    <slot />
-  </a>
-  <div class="card" v-else>
+  <div class="card" :class="href && 'link'">
+    <a v-if="href" :href="href" class="card__link" target="_blank" rel="nofollow" />
     <slot />
   </div>
 </template>
@@ -58,5 +56,13 @@ export default {
       background-color: rgba(185, 222, 255, 0.06);
     }
   }
+}
+
+.card__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 </style>
