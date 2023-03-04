@@ -9,8 +9,8 @@ head:
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
 <script setup lang="ts">
-import PageHeading from '@theme/components/CommunityProjects/CommunityProjectPageHeading.vue';
-import Screenshot from '@theme/components/CommunityProjects/CommunityProjectScreenshot.vue';
+import PageHeading from '@theme/components/Helpers/CommunityProjectPageHeading.vue';
+import Screenshot from '@theme/components/Helpers/Screenshot.vue';
 </script>
 
 <PageHeading title="schachnovelle" category="game" />

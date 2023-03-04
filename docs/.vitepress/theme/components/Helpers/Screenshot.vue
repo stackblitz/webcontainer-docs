@@ -7,7 +7,7 @@
 </script>
 
 <template>
-  <div class="community-project-screenshot">
+  <div class="screenshot">
     <a v-if="href" :href="href" target="_blank" rel="nofollow">
       <img :src="src" :alt="alt" />
     </a>
@@ -16,7 +16,7 @@
 </template>
 
 <style scoped lang="scss">
-.community-project-screenshot {
+.screenshot {
   width: 100%;
   max-width: 760px;
   margin: 36px 0 52px;

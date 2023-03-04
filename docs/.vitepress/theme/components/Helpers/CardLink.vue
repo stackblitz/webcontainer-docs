@@ -31,7 +31,7 @@ export default {
 </script>
 
 <template>
-  <div class="community-project-article-link">
+  <div class="card-link">
     <CardSingle :href="href" target="_blank">
       <div class="card-body" :class="imgSrc && 'has-bg'">
         <div
@@ -52,7 +52,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
-.community-project-article-link {
+.card-link {
   display: flex;
   margin: 32px 0;
 }

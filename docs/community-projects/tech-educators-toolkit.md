@@ -9,7 +9,7 @@ head:
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
 <script setup lang="ts">
-import PageHeading from '@theme/components/CommunityProjects/CommunityProjectPageHeading.vue';
+import PageHeading from '@theme/components/Helpers/CommunityProjectPageHeading.vue';
 import VideoLink from '@theme/components/Helpers/VideoLink.vue';
 </script>
 
