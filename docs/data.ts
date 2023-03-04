@@ -283,6 +283,8 @@ export const testimonialCardData: TestimonialCardData[] = [
   },
 ];
 
+export type CardLinkIcon = 'article'|'video';
+
 export type CommunityProjectCategory = 'ai'|'game'|'ide'|'lowCode'|'tutorial';
 export type CommunityProjectCategories = { [project in CommunityProjectCategory]: {
   rgb: string;

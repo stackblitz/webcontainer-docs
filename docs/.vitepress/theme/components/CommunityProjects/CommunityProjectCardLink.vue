@@ -1,18 +1,47 @@
 <script setup lang="ts">
   import CardSingle from '@theme/components/CardLists/CardSingle.vue';
+  import type { CardLinkIcon } from '../../../../data';
+
   defineProps<{
-    title?: string;
     body: string;
     href: string;
-    imgSrc: string
+    imgSrc?: string
+    title?: string;
+    type?: CardLinkIcon;
   }>();
+</script>
+<script lang="ts">
+export default {
+  data() {
+    return {
+      iconImg: this.getIconImgFromType(this.type)
+    }
+  },
+  methods: {
+    getIconImgFromType(type: CardLinkIcon | undefined) {
+      if (!type) return undefined;
+      const imgUrls: {[icon in CardLinkIcon]: string} = {
+        article: '/icons/fa-newspaper-regular.svg',
+        video: '/icons/fa-gear.svg'
+      }
+      return `url('${imgUrls[type]}')`;
+    }
+  }
+}
 </script>
 
 <template>
   <div class="community-project-article-link">
     <CardSingle :href="href" target="_blank">
       <div class="card-body" :class="imgSrc && 'has-bg'">
-        <div class="icon" :style="imgSrc && {backgroundImage: `url('${imgSrc}`}" :class="imgSrc && 'has-bg'"/>
+        <div
+          class="icon"
+          :class="imgSrc && 'has-bg', (!imgSrc && !title) && 'small'"
+          :style="{
+            '--icon-img': iconImg,
+            backgroundImage: imgSrc && `url('${imgSrc}`,
+          }"
+        />
         <div class="content">
           <span v-if="title" class="title">{{ title }}</span>
           <span class="body" :class="!title && 'no-title'">{{ body }}</span>
@@ -39,10 +68,11 @@
 }
 
 .icon {
+  --icon-img: v-bind(iconImg);
   position: relative;
   display: flex;
-  min-width: 152px;
-  width: 152px;
+  min-width: 120px;
+  width: 120px;
   height: 92px;
   margin: 8px;
   border-radius: 8px;
@@ -52,6 +82,10 @@
   :root.dark &.has-bg {
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.4);
   }
+  &.has-bg {
+    min-width: 152px;
+    width: 152px;
+  }
   &:not(.has-bg)::before {
     content: '';
     position: absolute;
@@ -60,8 +94,8 @@
     width: 100%;
     height: 100%;
     background-color: var(--vp-c-text-3);
-    -webkit-mask-image: url('/icons/fa-newspaper-regular.svg');
-            mask-image: url('/icons/fa-newspaper-regular.svg');
+    -webkit-mask-image: var(--icon-img);
+            mask-image: var(--icon-img);
     -webkit-mask-position: center;
             mask-position: center;
     -webkit-mask-repeat: no-repeat;
@@ -69,8 +103,17 @@
     -webkit-mask-size: 40px;
             mask-size: 40px;
   }
+
+  &.small {
+    width: 100px;
+    min-width: 100px;
+    height: 64px;
+    &:not(.has-bg)::before {
+      -webkit-mask-size: 32px;
+              mask-size: 32px;
+    }
+  }
   @media screen and (max-width: 500px) {
-    // position: absolute;
     display: none;
   }
 }

@@ -11,7 +11,7 @@ head:
 <script setup lang="ts">
 import PageHeading from '@theme/components/CommunityProjects/CommunityProjectPageHeading.vue';
 import Screenshot from '@theme/components/CommunityProjects/CommunityProjectScreenshot.vue';
-import ArticleLink from '@theme/components/CommunityProjects/CommunityProjectArticleLink.vue';
+import CardLink from '@theme/components/CommunityProjects/CommunityProjectCardLink.vue';
 </script>
 
 <PageHeading title="StackBlitz Codeflow" category="ide" />
@@ -24,11 +24,12 @@ Here's a Keynote from [Eric Simons](https://twitter.com/ericsimons40), the CEO o
 
 [![A still from Eric Simons' talk](/img/community/eric_simons_talk.png)](https://www.youtube.com/watch?v=Ea1zJD5uQRg){.community-project-screenshot}
 
-<ArticleLink
+<CardLink
   imgSrc="/img/community/codeflow-stackblitz-figma.jpg"
   title="StackBlitz Launches Codeflow and Announces Figma Investment"
   body="Read more about StackBlitz and Codeflow in this Newstack article"
   href="https://thenewstack.io/stackblitz-launches-codeflow-and-announces-figma-investment/"
+  type="article"
 />
 
 Read more about StackBlitz and Codeflow in this Newstack article: ["StackBlitz Launches Codeflow and Announces Figma Investment"](https://thenewstack.io/stackblitz-launches-codeflow-and-announces-figma-investment/)
