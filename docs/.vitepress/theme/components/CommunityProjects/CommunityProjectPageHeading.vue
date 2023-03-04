@@ -48,6 +48,7 @@ export default {
     display: flex;
     align-items: center;
     gap: 32px;
+    margin-bottom: 8px;
   }
 }
 

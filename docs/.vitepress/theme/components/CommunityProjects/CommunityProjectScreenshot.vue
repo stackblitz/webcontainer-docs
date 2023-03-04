@@ -19,9 +19,12 @@
 .community-project-screenshot {
   width: 100%;
   max-width: 760px;
-  margin: 32px 0;
+  margin: 36px 0 52px;
   border-radius: 8px;
   overflow: hidden;
+  :root:not(.dark) & {
+    border: solid 1px rgba(0,0,0,0.05);
+  }
   a,
   & > img {
     max-width: min(100%, 800px);

@@ -3,7 +3,7 @@
   import type { CardLinkIcon } from '../../../../data';
 
   defineProps<{
-    body: string;
+    body?: string;
     href: string;
     imgSrc?: string
     title?: string;
@@ -22,7 +22,7 @@ export default {
       if (!type) return undefined;
       const imgUrls: {[icon in CardLinkIcon]: string} = {
         article: '/icons/fa-newspaper-regular.svg',
-        video: '/icons/fa-gear.svg'
+        video: '/icons/fa-youtube.svg'
       }
       return `url('${imgUrls[type]}')`;
     }
@@ -36,7 +36,7 @@ export default {
       <div class="card-body" :class="imgSrc && 'has-bg'">
         <div
           class="icon"
-          :class="imgSrc && 'has-bg', (!imgSrc && !title) && 'small'"
+          :class="imgSrc && 'has-bg', (!imgSrc && (!title || !body)) && 'small', type === 'video' && 'is-video'"
           :style="{
             '--icon-img': iconImg,
             backgroundImage: imgSrc && `url('${imgSrc}`,
@@ -68,11 +68,12 @@ export default {
 }
 
 .icon {
+  position: relative;
   --icon-img: v-bind(iconImg);
   position: relative;
   display: flex;
-  min-width: 120px;
-  width: 120px;
+  min-width: 100px;
+  width: 100px;
   height: 92px;
   margin: 8px;
   border-radius: 8px;
@@ -82,26 +83,10 @@ export default {
   :root.dark &.has-bg {
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.4);
   }
+  
   &.has-bg {
     min-width: 152px;
     width: 152px;
-  }
-  &:not(.has-bg)::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--vp-c-text-3);
-    -webkit-mask-image: var(--icon-img);
-            mask-image: var(--icon-img);
-    -webkit-mask-position: center;
-            mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
-    -webkit-mask-size: 40px;
-            mask-size: 40px;
   }
 
   &.small {
@@ -113,14 +98,49 @@ export default {
               mask-size: 32px;
     }
   }
+
+  &:not(.has-bg)::before,
+  &.has-bg.is-video::before {
+    --icon-mask-size: 32px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.14s ease;
+    background-color: var(--vp-c-text-3);
+    -webkit-mask-image: var(--icon-img);
+            mask-image: var(--icon-img);
+    -webkit-mask-position: center;
+            mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-size: var(--icon-mask-size);
+            mask-size: var(--icon-mask-size);
+    .card-body:hover & {
+      background-color: var(--vp-c-text-2);
+    }
+  }
+  &.has-bg.is-video::before {
+    --icon-mask-size: 44px;
+    background-color: rgba(255,255,255,0.9);
+    z-index: 99;
+    .card-body:hover & {
+      background-color: #fff;
+    }
+  }
+
   @media screen and (max-width: 500px) {
     display: none;
   }
 }
+
 .content {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  max-width: 550px;
   padding: 24px 48px 24px 0;
   color: var(--vp-c-text-1);
   @media screen and (max-width: 500px) {

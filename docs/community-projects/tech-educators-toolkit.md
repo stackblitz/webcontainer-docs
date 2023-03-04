@@ -10,11 +10,17 @@ head:
 ---
 <script setup lang="ts">
 import PageHeading from '@theme/components/CommunityProjects/CommunityProjectPageHeading.vue';
-import Screenshot from '@theme/components/CommunityProjects/CommunityProjectScreenshot.vue';
+import VideoLink from '@theme/components/Helpers/VideoLink.vue';
 </script>
 
 <PageHeading title="Tech Educator's Toolkit" category="tutorial" />
 
-Tech Educator's Toolkit is an early exploration of WebContainer API and of a new way to write interactive tutorials. Watch this talk from [Dan Jutan](https://twitter.com/jutanium) from ViteConf 2022 to see it in action:
+Tech Educator's Toolkit is an early exploration of WebContainer API and of a new way to write interactive tutorials.
 
-<Screenshot src="/img/community/dan_jutan_talk.png" alt="A still from Dan Jutan's talk" href="https://www.youtube.com/watch?v=R-1y3Ti3ng4" />
+<VideoLink
+  imgSrc="/img/community/dan_jutan_talk.png"
+  title="Tech Educator's Toolkit - ViteConf 2022"
+  body="Watch this talk from Dan Jutan from ViteConf 2022 to see it in action."
+  href="https://www.youtube.com/watch?v=R-1y3Ti3ng4"
+/>
+<!-- Watch this talk from [Dan Jutan](https://twitter.com/jutanium) from ViteConf 2022 to see it in action: -->
