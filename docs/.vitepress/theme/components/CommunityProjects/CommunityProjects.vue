@@ -121,7 +121,6 @@ export default {
     max-height: 214px;
     object-fit: cover;
     object-position: center 0;
-    // width: auto;
     margin: 0;
     border-radius: 8px;
     :root:not(.dark) & {

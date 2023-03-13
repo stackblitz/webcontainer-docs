@@ -1,13 +1,13 @@
 <script setup lang="ts">
   import CardSingle from '@theme/components/CardLists/CardSingle.vue';
-  import type { CardLinkIcon } from '../../../../data';
+  import type { CardLinkType } from '../../../../data';
 
   defineProps<{
     body?: string;
     href: string;
     imgSrc?: string
     title?: string;
-    type?: CardLinkIcon;
+    type?: CardLinkType;
   }>();
 </script>
 <script lang="ts">
@@ -18,9 +18,9 @@ export default {
     }
   },
   methods: {
-    getIconImgFromType(type: CardLinkIcon | undefined) {
+    getIconImgFromType(type: CardLinkType | undefined) {
       if (!type) return undefined;
-      const imgUrls: {[icon in CardLinkIcon]: string} = {
+      const imgUrls: {[icon in CardLinkType]: string} = {
         article: '/icons/fa-newspaper-regular.svg',
         video: '/icons/fa-youtube.svg'
       }

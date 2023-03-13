@@ -1,12 +1,12 @@
 <script setup lang="ts">
-  import { communityProjectCategories as categories } from '../../../../data';
-  import type { CommunityProjectCategory } from '../../../../data';
-  
-  defineProps<{
-    title: string;
-    category: CommunityProjectCategory;
-    showAnchor?: boolean;
-  }>();
+import { communityProjectCategories as categories } from '../../../../data';
+import type { CommunityProjectCategory } from '../../../../data';
+
+defineProps<{
+  title: string;
+  category: CommunityProjectCategory;
+  showAnchor?: boolean;
+}>();
 </script>
 <script lang="ts">
 export default {
