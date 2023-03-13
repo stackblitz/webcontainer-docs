@@ -7,12 +7,12 @@ defineProps<{ feature: FeaturesCardData }>();
 </script>
 
 <template>
-  <Card>
+  <CardSingle>
     <div class="feature-card" :style="{backgroundImage: `url(${isDark ? feature.bgImgDark : feature.bgImgLight})`}">
       <h4>{{ feature.title }}</h4>
       <p v-html="feature.description" />
     </div>
-  </Card>
+  </CardSingle>
 </template>
 
 <style scoped lang="scss">

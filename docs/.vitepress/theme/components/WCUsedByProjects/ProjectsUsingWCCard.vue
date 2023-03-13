@@ -6,7 +6,7 @@ defineProps<{ project: ProjectsUsingWCCardData }>();
 
 <template>
   <!-- <Card :url="project.url"> -->
-  <Card>
+  <CardSingle>
     <div class="project-card">
       <div class="project-img dark" :style="{backgroundImage: `url('${project.imgPath.dark}')`}" />
       <div class="project-img light" :style="{backgroundImage: `url('${project.imgPath.light}')`}" />
@@ -16,7 +16,7 @@ defineProps<{ project: ProjectsUsingWCCardData }>();
         <a class="project-link" :href="project.url" target="_blank" rel="nofollow">{{ project.urlTitle }}</a>
       </div>
     </div>
-  </Card>
+  </CardSingle>
 </template>
 
 <style scoped lang="scss">
