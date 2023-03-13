@@ -12,6 +12,9 @@ head:
 import PageHeading from '@theme/components/Helpers/CommunityProjectPageHeading.vue';
 import Screenshot from '@theme/components/Helpers/Screenshot.vue';
 import VideoLink from '@theme/components/Helpers/VideoLink.vue';
+import AttributionLinks from '@theme/components/Helpers/AttributionLinks.vue';
+import { people } from '@theme/data';
+const { RICH_HARRIS } = people;
 </script>
 
 <PageHeading title="SvelteKit" category="tutorial" />
@@ -26,4 +29,4 @@ A full educational experience of learning Svelte in the browser. [Try it yoursel
   body="Hear Rich Harris explain it in his talk Fullstack Documentation delivered at JSNation 2022."
   href="https://www.youtube.com/watch?v=RwBolXX9Pis&t=578s"
 />
-<!-- Are you curious why Svelte decided to go full-in with WebContainers? Hear [Rich Harris](https://twitter.com/Rich_Harris) explain it in his talk ["Fullstack Documentation"](https://www.youtube.com/watch?v=RwBolXX9Pis&t=578s) delivered at JSNation 2022: -->
+<AttributionLinks :attributions="[RICH_HARRIS]" />

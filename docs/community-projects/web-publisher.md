@@ -12,6 +12,9 @@ head:
 import PageHeading from '@theme/components/Helpers/CommunityProjectPageHeading.vue';
 import Screenshot from '@theme/components/Helpers/Screenshot.vue';
 import VideoLink from '@theme/components/Helpers/VideoLink.vue';
+import AttributionLinks from '@theme/components/Helpers/AttributionLinks.vue';
+import { people } from '@theme/data';
+const { SYLWIA_VARGAS } = people;
 </script>
 
 <PageHeading title="StackBlitz Web Publisher" category="lowCode" />
@@ -26,4 +29,4 @@ A publishing tool that makes editing docs or blogs pleasant thanks to a realtime
   body="Watch this talk from Next.js Conf 2022 by Sylwia Vargas, a Developer Advocate at StackBlitz, about making your docs editing experience easier."
   href="https://youtube.com/watch?v=B4rqK-o1QZw"
 />
-<!-- Here's a talk from 2022 Next.js Conf by [Sylwia Vargas](https://twitter.com/sylwiavargas), a Developer Advocate at StackBlitz, about [making your docs editing experience easier](www.youtube.com/watch?v=B4rqK-o1QZw) at ViteConf 2022: -->
+<AttributionLinks :attributions="[SYLWIA_VARGAS]" />

@@ -11,6 +11,9 @@ head:
 <script setup lang="ts">
 import PageHeading from '@theme/components/Helpers/CommunityProjectPageHeading.vue';
 import VideoLink from '@theme/components/Helpers/VideoLink.vue';
+import AttributionLinks from '@theme/components/Helpers/AttributionLinks.vue';
+import { people } from '@theme/data';
+const { DAN_JUTAN } = people;
 </script>
 
 <PageHeading title="Tech Educator's Toolkit" category="tutorial" />
@@ -23,4 +26,4 @@ Tech Educator's Toolkit is an early exploration of WebContainer API and of a new
   body="Watch this talk from Dan Jutan from ViteConf 2022 to see it in action."
   href="https://www.youtube.com/watch?v=R-1y3Ti3ng4"
 />
-<!-- Watch this talk from [Dan Jutan](https://twitter.com/jutanium) from ViteConf 2022 to see it in action: -->
+<AttributionLinks :attributions="[DAN_JUTAN]" />

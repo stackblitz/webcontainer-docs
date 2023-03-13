@@ -155,6 +155,22 @@ export const projectsUsingWCCardData: ProjectsUsingWCCardData[] = [
   },
 ];
 
+const PEOPLE = {
+  DAN_JUTAN: 'DAN_JUTAN',
+  ERIC_SIMONS: 'ERIC_SIMONS',
+  RICH_HARRIS: 'RICH_HARRIS',
+  SYLWIA_VARGAS: 'SYLWIA_VARGAS',
+} as const;
+export type PeopleKeys = keyof typeof PEOPLE;
+
+export interface Person {
+  name: string;
+  href: string;
+  hrefAlias?: string;
+  imgPath?: string;
+  title?: string;
+}
+
 export interface TestimonialCardData {
   author: {
     name: string;

@@ -13,6 +13,9 @@ import PageHeading from '@theme/components/Helpers/CommunityProjectPageHeading.v
 import Screenshot from '@theme/components/Helpers/Screenshot.vue';
 import ArticleLink from '@theme/components/Helpers/ArticleLink.vue';
 import VideoLink from '@theme/components/Helpers/VideoLink.vue';
+import AttributionLinks from '@theme/components/Helpers/AttributionLinks.vue';
+import { people } from '@theme/data';
+const { ERIC_SIMONS } = people;
 </script>
 
 <PageHeading title="StackBlitz Codeflow" category="ide" />
@@ -27,7 +30,7 @@ import VideoLink from '@theme/components/Helpers/VideoLink.vue';
   body="Watch the Keynote from Eric Simons, CEO of StackBlitz, announcing Codeflow at ViteConf 2022"
   href="https://www.youtube.com/watch?v=Ea1zJD5uQRg"
 />
-<!-- Here's a Keynote from [Eric Simons](https://twitter.com/ericsimons40), the CEO of StackBlitz, [announcing Codeflow](https://www.youtube.com/watch?v=Ea1zJD5uQR) at ViteConf 2022: -->
+<AttributionLinks :attributions="[ERIC_SIMONS]" />
 
 <ArticleLink
   imgSrc="/img/community/codeflow-stackblitz-figma.jpg"

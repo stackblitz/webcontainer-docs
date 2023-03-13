@@ -1,11 +1,12 @@
 <script setup lang="ts">
   defineProps<{
     href?: string;
+    size?: 'small';
   }>();
 </script>
 
 <template>
-  <a v-if="href" :href="href" class="card link" target="_blank" rel="nofollow">
+  <a v-if="href" :href="href" class="card link" :class="size === 'small' && 'small'" target="_blank" rel="nofollow">
     <slot />
   </a>
   <div class="card" v-else>
@@ -57,6 +58,9 @@
         inset 0 0 0 1px rgba(193, 228, 255, 0.12);
       background-color: rgba(185, 222, 255, 0.06);
     }
+  }
+  &.small:hover {
+    transform: none;
   }
 }
 </style>
