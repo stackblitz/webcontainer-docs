@@ -49,7 +49,7 @@ export default {
       class="project-item"
       :href="project.itemUrl"
     >
-      <Card>
+      <CardSingle>
         <div class="item-content">
           <img :src="project.thumbnailUrl" />
 
@@ -62,7 +62,7 @@ export default {
           </div>
 
         </div>
-      </Card>
+      </CardSingle>
     </a>
   </template>
   </div>

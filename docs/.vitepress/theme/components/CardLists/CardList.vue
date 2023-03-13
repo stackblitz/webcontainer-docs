@@ -20,7 +20,6 @@ defineProps<{
   justify-content: center;
   grid-template-columns: repeat(var(--columns), var(--width));
   gap: var(--gap);
-  max-width: var(--content-max-width);
   margin: 0 auto;
   padding: 0 16px;
   @media (max-width: 500px) {
