@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { featuresCardData } from '../../../../data';
+import { featuresCardData } from '@theme/data/home';
 import CardList from '@theme/components/CardLists/CardList.vue';
 import FeaturesCard from './FeaturesCard.vue';
 </script>

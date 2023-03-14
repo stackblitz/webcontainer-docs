@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ProjectsUsingWCCardData } from '../../../../data';
+import type { ProjectsUsingWCCardData } from '@theme/data/home';
 import CardSingle from '@theme/components/CardLists/CardSingle.vue';
 defineProps<{ project: ProjectsUsingWCCardData }>();
 </script>

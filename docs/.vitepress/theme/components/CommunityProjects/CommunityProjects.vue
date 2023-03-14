@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { communityProjectCardData, communityProjectCategories as categories } from '../../../../data';
-import type { CommunityProjectCategory } from '../../../../data';
+import { communityProjectCardData, communityProjectCategories as categories } from '@theme/data/community-projects';
+import type { CommunityProjectCategory } from '@theme/data/community-projects';
 import CardSingle from '@theme/components/CardLists/CardSingle.vue';
 </script>
 <script lang="ts">

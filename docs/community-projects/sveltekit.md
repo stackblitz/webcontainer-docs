@@ -13,7 +13,7 @@ import PageHeading from '@theme/components/Helpers/CommunityProjectPageHeading.v
 import Screenshot from '@theme/components/Helpers/Screenshot.vue';
 import VideoLink from '@theme/components/Helpers/VideoLink.vue';
 import AttributionLinks from '@theme/components/Helpers/AttributionLinks.vue';
-import { people } from '@theme/data';
+import { people } from '@theme/data/people';
 const { RICH_HARRIS } = people;
 </script>
 

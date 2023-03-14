@@ -12,7 +12,7 @@ head:
 import PageHeading from '@theme/components/Helpers/CommunityProjectPageHeading.vue';
 import VideoLink from '@theme/components/Helpers/VideoLink.vue';
 import AttributionLinks from '@theme/components/Helpers/AttributionLinks.vue';
-import { people } from '@theme/data';
+import { people } from '@theme/data/people';
 const { DAN_JUTAN } = people;
 </script>
 

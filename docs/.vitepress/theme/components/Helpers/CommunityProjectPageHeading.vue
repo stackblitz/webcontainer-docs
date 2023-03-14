@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { communityProjectCategories as categories } from '../../../../data';
-import type { CommunityProjectCategory } from '../../../../data';
+import { communityProjectCategories as categories } from '@theme/data/community-projects';
+import type { CommunityProjectCategory } from '@theme/data/community-projects';
 
 defineProps<{
   title: string;

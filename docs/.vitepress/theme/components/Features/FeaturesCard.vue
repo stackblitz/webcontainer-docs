@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useData }from 'vitepress';
 import CardSingle from '@theme/components/CardLists/CardSingle.vue';
-import type { FeaturesCardData } from '../../../../data';
+import type { FeaturesCardData } from '@theme/data/home';
 const { isDark } = useData();
 defineProps<{ feature: FeaturesCardData }>();
 </script>

@@ -14,7 +14,7 @@ import Screenshot from '@theme/components/Helpers/Screenshot.vue';
 import ArticleLink from '@theme/components/Helpers/ArticleLink.vue';
 import VideoLink from '@theme/components/Helpers/VideoLink.vue';
 import AttributionLinks from '@theme/components/Helpers/AttributionLinks.vue';
-import { people } from '@theme/data';
+import { people } from '@theme/data/people';
 const { ERIC_SIMONS } = people;
 </script>
 

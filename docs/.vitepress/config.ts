@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 import mdFootnote from 'markdown-it-footnote';
 // import { defineConfig, type HeadConfig } from 'vitepress';
 import { defineConfig, type HeadConfig } from 'vitepress';
-import * as data from '../data';
+import * as links from './theme/data/links';
 // @ts-check
 /** @type {import('vitepress').UserConfig} */
 
@@ -13,25 +13,25 @@ const SIDEBAR_DEFAULT = [
     text: 'Guides',
     collapsible: true,
     collapsed: false,
-    items: data.guideLinks,
+    items: links.guideLinks,
   },
   {
     text: 'Tutorial',
     collapsible: true,
     collapsed: false,
-    items: data.tutorialLinks,
-  },
-  {
-    text: 'Community Projects',
-    collapsible: true,
-    collapsed: true,
-    items: data.communityProjectsLinks,
+    items: links.tutorialLinks,
   },
   {
     items: [{ text: 'API Reference', link: '/api' }],
   },
   {
     items: [{ text: 'Enterprise', link: '/enterprise' }],
+  },
+  {
+    text: 'Community Projects',
+    collapsible: true,
+    collapsed: true,
+    items: links.communityProjectsLinks,
   },
   {
     items: [{ text: 'Contact', link: '/contact' }],

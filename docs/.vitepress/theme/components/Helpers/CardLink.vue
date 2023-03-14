@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import CardSingle from '@theme/components/CardLists/CardSingle.vue';
-  import type { CardLinkType } from '../../../../data';
+  import type { CardLinkType } from '@theme/data/community-projects';
 
   defineProps<{
     body?: string;

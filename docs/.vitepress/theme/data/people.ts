@@ -1,4 +1,18 @@
-import type { PeopleKeys, Person } from '../../data';
+export interface Person {
+  name: string;
+  href: string;
+  hrefAlias?: string;
+  imgPath?: string;
+  title?: string;
+}
+
+const PEOPLE = {
+  DAN_JUTAN: 'DAN_JUTAN',
+  ERIC_SIMONS: 'ERIC_SIMONS',
+  RICH_HARRIS: 'RICH_HARRIS',
+  SYLWIA_VARGAS: 'SYLWIA_VARGAS',
+} as const;
+type PeopleKeys = keyof typeof PEOPLE;
 
 export const people: {[key in PeopleKeys]: Person} = {
   DAN_JUTAN: {
