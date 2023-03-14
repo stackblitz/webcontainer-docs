@@ -146,7 +146,7 @@ With this change, you hooked up your terminal to the shell running in the WebCon
 
 ## 4. Add `xterm-addon-fit`
 
-You might've noticed that resizing the window doesn't redraw the terminal output. If you make the window very narrow, lines that are too long don't wrap to the next line, which is a good UX practice. For example, look at the highlightened line:
+You might've noticed that resizing the window doesn't redraw the terminal output. If you make the window very narrow, lines that are too long don't wrap to the next line, which is not a good UX practice. For example, look at the highlightened line:
 
 ![The browser window is very narrow now and the terminal features a line that either disappears or when highlightened sticks out](./images/21-line-sticking-out.png)
 
