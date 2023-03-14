@@ -1,6 +1,5 @@
 import dotenv from 'dotenv';
 import mdFootnote from 'markdown-it-footnote';
-// import { defineConfig, type HeadConfig } from 'vitepress';
 import { defineConfig, type HeadConfig } from 'vitepress';
 import * as links from './theme/data/links';
 // @ts-check
