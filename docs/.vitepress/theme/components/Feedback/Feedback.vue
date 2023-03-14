@@ -3,6 +3,7 @@ import { watch, ref } from 'vue';
 import { useRoute } from 'vitepress';
 import LoadingIcon from '@theme/components/Icons/LoadingIcon.vue';
 import { sendEvent } from '@theme/scripts/gtag';
+import CardSingle from '@theme/components/CardLists/CardSingle.vue';
 
 enum FeedbackState {
   START = 'START',
@@ -71,22 +72,32 @@ watch(
 
 <template>
     <div class="feedbackContainer">
+
       <form name="webcontainer-api-doc-feedback" data-netlify="true" hidden>
         <textarea name="feedback"></textarea>
         <input name="wasHelpful" />
         <input name="page" />
       </form>
+
       <template v-if="currentState === FeedbackState.START">
         <p class="title">Was this page helpful?</p>
         <div class="buttonContainer">
-          <button class="button" @click="onButtonClick(FeedbackState.YES)">
-            <span class="icon thumbsUp"></span> Yes
-          </button>
-          <button class="button" @click="onButtonClick(FeedbackState.NO)">
-            <span class="icon thumbsDown"></span>No
-          </button>
+
+          <CardSingle link>
+            <button class="button" @click="onButtonClick(FeedbackState.YES)">
+              <span class="icon thumbsUp"></span> Yes
+            </button>
+          </CardSingle>
+
+          <CardSingle link>
+            <button class="button" @click="onButtonClick(FeedbackState.NO)">
+              <span class="icon thumbsDown"></span>No
+            </button>
+          </CardSingle>
+
         </div>
       </template>
+
       <template v-else-if="[FeedbackState.YES, FeedbackState.NO].includes(currentState)">
         <form
           class="form"
@@ -113,31 +124,37 @@ watch(
           <p v-if="hasError" class="error">Sorry, something went wrong. Please try it again later.</p>
         </form>
       </template>
+
       <template v-else-if="currentState === FeedbackState.END">
         <p class="end">Thank you for helping improve our documentation! &#9829;</p>
       </template>
+
     </div>
   </template>
 
 <style scoped lang="scss">
 .feedbackContainer {
-  margin-block-start: 50px;
+  margin-block-start: 100px;
+  margin-block-end: -8px;
+  padding-block-start: 20px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   background-color: var(--vp-c-bg);
+  border-top: solid 1px var(--vp-c-bg-soft);
 }
 
 .buttonContainer {
   display: flex;
-  gap: 16px;
+  gap: 4px;
 }
 
 .title {
-  font-weight: 700;
-  font-size: 18px;
+  color: var(--vp-c-text-2);
+  font-weight: 600;
+  font-size: 13px;
 }
 
 .label {
@@ -148,37 +165,47 @@ watch(
 .button {
   display: flex;
   align-items: center;
-  gap: 10px;
-  background-color: var(--vp-c-brand);
-  color: var(--vp-c-bg);
-  border-radius: 6px;
-  padding: 4px 10px;
+  gap: 8px;
+  color: var(--vp-c-text-2);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 12px;
 
   &:disabled {
     opacity: 0.4;
     cursor: not-allowed;
   }
-
   &:hover {
-    background-color: var(--vp-c-brand-dark);
+    color: var(--vp-c-text-1);
+    background-color: rgba(255,255,255,0.5);
+  }
+
+  :root.dark &:hover {
+    background-color: var(--vp-c-bg-soft);
   }
 }
 
 .icon {
   display: block;
-  width: 16px;
-  height: 16px;
-  background-color: var(--vp-c-bg);
+  width: 12px;
+  height: 12px;
+  background-color: var(--vp-c-text-3);
 }
 
 .thumbsUp {
   -webkit-mask: url('/icons/fa-thumbs-up.svg') center/contain no-repeat;
   mask: url('/icons/fa-thumbs-up.svg') center/contain no-repeat;
 }
+.button:hover .thumbsUp {
+  background-color: rgb(0, 185, 163);
+}
 
 .thumbsDown {
   -webkit-mask: url('/icons/fa-thumbs-down.svg') center/contain no-repeat;
   mask: url('/icons/fa-thumbs-down.svg') center/contain no-repeat;
+}
+.button:hover .thumbsDown {
+  background-color: rgb(246, 96, 151);
 }
 
 .form {

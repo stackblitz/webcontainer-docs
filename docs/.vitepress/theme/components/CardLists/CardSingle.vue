@@ -2,6 +2,7 @@
   defineProps<{
     href?: string;
     size?: 'small';
+    link?: boolean;
   }>();
 </script>
 
@@ -9,7 +10,7 @@
   <a v-if="href" :href="href" class="card link" :class="size === 'small' && 'small'" target="_blank" rel="nofollow">
     <slot />
   </a>
-  <div class="card" v-else>
+  <div v-else class="card" :class="link && 'link small'">
     <slot />
   </div>
 </template>
