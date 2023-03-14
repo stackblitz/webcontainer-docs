@@ -421,6 +421,26 @@ h2 + .custom-block {
 
 
 // --------------------------------
+// Footer / Above Footer
+
+.VPLink.link.edit-link-button {
+  gap: 4px;
+  font-size: 13px;
+  svg {
+    transform: scale(0.92);
+  }
+}
+
+.content-container footer.VPDocFooter {
+  margin-top: 20px;
+}
+
+.edit-info {
+  padding-bottom: 24px !important;
+}
+
+
+// --------------------------------
 // Community Projects
 
 .community-project-screenshot {

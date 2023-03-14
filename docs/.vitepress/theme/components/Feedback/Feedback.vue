@@ -160,7 +160,7 @@ watch(
 .feedbackContainer {
   --icon-color-green: rgb(0, 185, 163);
   --icon-color-red: rgb(246, 96, 151);
-  margin-block-start: 100px;
+  margin-block-start: 84px;
   margin-block-end: -8px;
   padding-block-start: 20px;
   display: flex;
