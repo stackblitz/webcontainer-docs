@@ -51,7 +51,7 @@ export default {
           }"
         />
         <div class="content" :class="(type === 'podcast' || type === 'repositoryGithub') && 'is-small'">
-          <span v-if="title" class="title">{{ title }}</span>
+          <span v-if="title" class="title" :class="!body && 'solo'">{{ title }}</span>
           <span class="body" :class="!title && 'no-title'">{{ body }}</span>
         </div>
       </div>
@@ -188,10 +188,13 @@ export default {
   }
 }
 .title {
-  margin-top: 4px;
+  margin-top: 2px;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.24;
+  &.solo {
+    margin-top: 6px;
+  }
   @media screen and (max-width: 500px) {
     font-size: 15px;
   }
