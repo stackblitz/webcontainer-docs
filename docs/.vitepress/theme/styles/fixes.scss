@@ -473,7 +473,7 @@ h2 + .custom-block {
   font-size: 14px;
   font-weight: 500;
   @media screen and (max-width: 960px) {
-    padding: 16px 24px !important;
+    padding: 64px 24px 16px !important;
     padding-right: 0 !important;
   }
 
@@ -481,6 +481,9 @@ h2 + .custom-block {
     margin-bottom: 16px !important;
     color: var(--vp-c-text-1) !important;
     font-size: 16px;
+    @media screen and (max-width: 500px) {
+      font-size: 14px !important;
+    }
   }
 
   &::before {
