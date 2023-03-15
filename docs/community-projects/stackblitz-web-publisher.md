@@ -11,8 +11,6 @@ head:
 <script setup lang="ts">
 import PageHeading from '@theme/components/Helpers/CommunityProjectPageHeading.vue';
 import Screenshot from '@theme/components/Helpers/Screenshot.vue';
-import PodcastLink from '@theme/components/Helpers/PodcastLink.vue';
-import RepositoryLink from '@theme/components/Helpers/RepositoryLink.vue';
 import VideoLink from '@theme/components/Helpers/VideoLink.vue';
 import AttributionLinks from '@theme/components/Helpers/AttributionLinks.vue';
 import { people } from '@theme/data/people';
