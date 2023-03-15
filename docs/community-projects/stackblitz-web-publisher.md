@@ -22,9 +22,9 @@ const { SYLWIA_VARGAS } = people;
 A publishing tool which makes editing docs, blogs and other markdown-driven projects more pleasant for developers, and accessible for non-developers.  
 See a real-time view of your changes as you edit, and push to your repository seamlessly, with only a few clicks.
 
-In fact, you can try it yourself by [editing this page](https://stackblitz.com/~/github.com/stackblitz/webcontainer-docs/edit/main/docs/community-projects/stackblitz-web-publisher.md?initialPath=%2Fcommunity-projects%2Fweb-publisher)!
+In fact, you can try it yourself by [editing this page](https://stackblitz.com/~/github.com/stackblitz/webcontainer-docs/edit/main/docs/community-projects/stackblitz-web-publisher.md?initialPath=%2Fcommunity-projects%2Fstackblitz-web-publisher)!
 
-<Screenshot src="/img/community/web_publisher.png" alt="Web Publisher" href="https://stackblitz.com/~/github.com/stackblitz/webcontainer-docs/edit/main/docs/community-projects/web-publisher.md?initialPath=%2Fcommunity-projects%2Fweb-publisher" />
+<Screenshot src="/img/community/web_publisher.png" alt="Web Publisher" href="https://stackblitz.com/~/github.com/stackblitz/webcontainer-docs/edit/main/docs/community-projects/stackblitz-web-publisher.md?initialPath=%2Fcommunity-projects%2Fstackblitz-web-publisher" />
 
 <VideoLink
   imgSrc="/img/community/web_publisher_talk.png"
