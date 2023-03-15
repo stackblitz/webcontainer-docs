@@ -24,7 +24,7 @@ export const communityProjectsLinks = [
   { text: 're:tune', link: '/community-projects/retune' },
   { text: 'schachnovelle', link: '/community-projects/schachnovelle' },
   { text: 'StackBlitz Codeflow', link: '/community-projects/stackblitz-codeflow' },
-  { text: 'StackBlitz Web Publisher', link: '/community-projects/web-publisher' },
+  { text: 'StackBlitz Web Publisher', link: '/community-projects/stackblitz-web-publisher' },
   { text: 'SvelteKit', link: '/community-projects/sveltekit' },
   { text: `Tech Educator's Toolkit`, link: '/community-projects/tech-educators-toolkit' },
 ];

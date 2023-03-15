@@ -22,6 +22,8 @@ export default {
       if (!type) return undefined;
       const imgUrls: {[icon in CardLinkType]: string} = {
         article: '/icons/fa-newspaper-regular.svg',
+        podcast: '/icons/fa-podcast-solid.svg',
+        repositoryGithub: '/icons/fa-github.svg',
         video: '/icons/fa-youtube.svg'
       }
       return `url('${imgUrls[type]}')`;
@@ -36,13 +38,19 @@ export default {
       <div class="card-body" :class="imgSrc && 'has-bg'">
         <div
           class="icon"
-          :class="imgSrc && 'has-bg', (!imgSrc && (!title || !body)) && 'small', type === 'video' && 'is-video'"
+          :class="
+            imgSrc && 'has-bg',
+            (!imgSrc && (!title || !body)) && 'small',
+            type === 'video' && 'is-video',
+            (type === 'podcast') && 'is-podcast',
+            (type === 'repositoryGithub') && 'is-repositoryGithub'
+          "
           :style="{
             '--icon-img': iconImg,
             backgroundImage: imgSrc && `url('${imgSrc}`,
           }"
         />
-        <div class="content">
+        <div class="content" :class="(type === 'podcast' || type === 'repositoryGithub') && 'is-small'">
           <span v-if="title" class="title">{{ title }}</span>
           <span class="body" :class="!title && 'no-title'">{{ body }}</span>
         </div>
@@ -100,6 +108,8 @@ export default {
   }
 
   &:not(.has-bg)::before,
+  &.has-bg.is-podcast::before,
+  &.has-bg.is-repositoryGithub::before,
   &.has-bg.is-video::before {
     --icon-mask-size: 32px;
     content: '';
@@ -122,12 +132,35 @@ export default {
       background-color: var(--vp-c-text-2);
     }
   }
+  &.has-bg.is-podcast::before,
+  &.has-bg.is-repositoryGithub::before,
   &.has-bg.is-video::before {
     --icon-mask-size: 44px;
     background-color: rgba(255,255,255,0.9);
     z-index: 99;
     .card-body:hover & {
       background-color: #fff;
+    }
+  }
+
+  &.is-podcast:not(.has-bg),
+  &.is-repositoryGithub:not(.has-bg) {
+    width: 84px;
+    min-width: 84px;
+    height: 48px;
+    &::before {
+      -webkit-mask-size: 28px;
+              mask-size: 28px;
+    }
+  }
+  &.is-podcast.small,
+  &.is-repositoryGithub.small {
+    width: 64px;
+    min-width: 64px;
+    height: 48px;
+    &::before {
+      -webkit-mask-size: 24px;
+      mask-size: 24px;
     }
   }
 
@@ -143,6 +176,10 @@ export default {
   max-width: 550px;
   padding: 24px 48px 24px 0;
   color: var(--vp-c-text-1);
+  &.is-small {
+    padding: 16px 48px 16px 0;
+  }
+
   @media screen and (max-width: 500px) {
     padding: 24px;
   }
@@ -151,7 +188,7 @@ export default {
   }
 }
 .title {
-  margin-top: 2px;
+  margin-top: 4px;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.24;

@@ -1,4 +1,4 @@
-export type CardLinkType = 'article'|'video';
+export type CardLinkType = 'article'|'podcast'|'repositoryGithub'|'video';
 
 export type CommunityProjectCategory = 'ai'|'game'|'ide'|'lowCode'|'tutorial';
 export type CommunityProjectCategories = { [project in CommunityProjectCategory]: {
