@@ -238,7 +238,7 @@
   // New link styles
   &.link {
     margin: 0;
-    padding: 9px var(--active-indicator-padding) !important;
+    padding: 8px var(--active-indicator-padding) !important;
     transition-duration: 0.1s;
     transition-property: background-color, box-shadow, color;
     &.active {
