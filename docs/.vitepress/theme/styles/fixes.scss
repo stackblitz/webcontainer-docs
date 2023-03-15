@@ -419,7 +419,6 @@ h2 + .custom-block {
   }
 }
 
-
 // --------------------------------
 // Footer / Above Footer
 
@@ -438,7 +437,6 @@ h2 + .custom-block {
 .edit-info {
   padding-bottom: 24px !important;
 }
-
 
 // --------------------------------
 // Community Projects
@@ -459,5 +457,50 @@ h2 + .custom-block {
   @media screen and (max-width: 960px) {
     max-width: 680px;
     max-height: 352px;
+  }
+}
+
+// --------------------------------
+// Twitter Tweet Embed
+
+.twitter-tweet {
+  position: relative;
+  display: block;
+  max-width: 640px;
+  padding: 64px 32px 16px !important;
+  margin: 52px 0 !important;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  font-weight: 500;
+  @media screen and (max-width: 960px) {
+    padding: 16px 24px !important;
+    padding-right: 0 !important;
+  }
+
+  & > p {
+    margin-bottom: 16px !important;
+    color: var(--vp-c-text-1) !important;
+    font-size: 16px;
+  }
+
+  &::before {
+    --twitter-icon-mask-size: 26px;
+    --twitter-icon-img: url('/icons/fa-twitter.svg');
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: 32px;
+    width: var(--twitter-icon-mask-size);
+    height: var(--twitter-icon-mask-size);
+    transition: background-color 0.14s ease;
+    background-color: #1DA1F2;
+    -webkit-mask-image: var(--twitter-icon-img);
+            mask-image: var(--twitter-icon-img);
+    -webkit-mask-position: center;
+            mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+            mask-size: cover;
   }
 }
