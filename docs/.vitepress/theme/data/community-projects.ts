@@ -73,7 +73,7 @@ export const communityProjectCardData: CommunityProjectCardData[] = [
   {
     category: 'lowCode',
     title: 'Web Publisher',
-    description: `A publishing tool which makes editing docs, blogs and other markdown-driven projects more pleasant for developers, and inviting for non-developers.`,
+    description: `A publishing tool which makes editing docs, blogs and other markdown-driven projects more pleasant for developers, and accessible for non-developers.`,
     itemUrl: '/community-projects/stackblitz-web-publisher',
     thumbnailUrl: '/img/community/web_publisher.png',
   },
