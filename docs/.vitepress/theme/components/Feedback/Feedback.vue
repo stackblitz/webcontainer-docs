@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { watch, ref } from 'vue';
+import { watch, ref, nextTick } from 'vue';
 import { useRoute } from 'vitepress';
 import LoadingIcon from '@theme/components/Icons/LoadingIcon.vue';
 import { sendEvent } from '@theme/scripts/gtag';
@@ -26,8 +26,7 @@ function onButtonClick(value: FeedbackState.YES | FeedbackState.NO) {
     return;
   }
   currentState.value = value;
-  setTimeout(() => document.getElementById('feedback')?.focus());
-  // setTimeout(() => this.$refs.feedbackTextarea.focus());
+  nextTick(() => feedbackTextarea.value?.focus());
 }
 
 function cancelForm() {
