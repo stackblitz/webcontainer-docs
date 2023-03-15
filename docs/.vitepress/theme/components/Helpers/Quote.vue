@@ -10,7 +10,7 @@
   <blockquote>
     <span v-if="!quote" class="quote"><slot /></span>
     <span v-if="quote" class="quote">{{ quote }}</span>
-    <a class="author" :href="author.href">
+    <a class="author" :href="author.href" target="_blank" rel="nofollow">
       <div v-if="author.imgPath" class="author__avatar"
         :style="{ backgroundImage: author.imgPath && `url('${author.imgPath}` }"
       />
@@ -43,7 +43,7 @@ blockquote {
   }
   &::before {
     position: absolute;
-    margin-left: -9px;
+    margin-left: -8px;
   }
 }
 
