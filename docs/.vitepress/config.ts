@@ -75,8 +75,6 @@ export default defineConfig({
   themeConfig: {
     siteTitle: false,
     logo: {
-      // light: '/img/theme/webcontainer_api-logo-light-teal.svg',
-      // dark: '/img/theme/webcontainer_api-logo-dark-teal.svg',
       light: '/img/theme/webcontainer_api-logo-light-blackwhite.svg',
       dark: '/img/theme/webcontainer_api-logo-dark-blackwhite.svg',
     },
