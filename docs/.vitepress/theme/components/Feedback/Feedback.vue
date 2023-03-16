@@ -15,7 +15,7 @@ enum FeedbackState {
 const route = useRoute();
 const currentState = ref(FeedbackState.START);
 const feedback = ref('');
-const feedbackTextarea = ref(null);
+const feedbackTextarea = ref<HTMLInputElement | null>(null);
 const isSending = ref(false);
 const hasError = ref(false);
 
