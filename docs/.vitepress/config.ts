@@ -1,8 +1,7 @@
 import dotenv from 'dotenv';
 import mdFootnote from 'markdown-it-footnote';
-// import { defineConfig, type HeadConfig } from 'vitepress';
 import { defineConfig, type HeadConfig } from 'vitepress';
-import * as data from '../data';
+import * as links from './theme/data/links';
 // @ts-check
 /** @type {import('vitepress').UserConfig} */
 
@@ -13,19 +12,25 @@ const SIDEBAR_DEFAULT = [
     text: 'Guides',
     collapsible: true,
     collapsed: false,
-    items: data.guideLinks,
+    items: links.guideLinks,
   },
   {
     text: 'Tutorial',
     collapsible: true,
     collapsed: false,
-    items: data.tutorialLinks,
+    items: links.tutorialLinks,
   },
   {
     items: [{ text: 'API Reference', link: '/api' }],
   },
   {
     items: [{ text: 'Enterprise', link: '/enterprise' }],
+  },
+  {
+    text: 'Community Projects',
+    collapsible: true,
+    collapsed: true,
+    items: links.communityProjectsLinks,
   },
   {
     items: [{ text: 'Contact', link: '/contact' }],
@@ -70,8 +75,6 @@ export default defineConfig({
   themeConfig: {
     siteTitle: false,
     logo: {
-      // light: '/img/theme/webcontainer_api-logo-light-teal.svg',
-      // dark: '/img/theme/webcontainer_api-logo-dark-teal.svg',
       light: '/img/theme/webcontainer_api-logo-light-blackwhite.svg',
       dark: '/img/theme/webcontainer_api-logo-dark-blackwhite.svg',
     },
@@ -87,6 +90,7 @@ export default defineConfig({
       '/api': SIDEBAR_DEFAULT,
       '/enterprise': SIDEBAR_DEFAULT,
       '/contact': SIDEBAR_DEFAULT,
+      '/community-projects': SIDEBAR_DEFAULT,
     },
     editLink: {
       pattern: 'https://pr.new/stackblitz/webcontainer-docs/edit/main/docs/:path',

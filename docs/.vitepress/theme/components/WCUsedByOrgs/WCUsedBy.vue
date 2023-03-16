@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { wcUsedBy } from '../../../../data';
+  import { wcUsedBy } from '@theme/data/home';
   import { useData }from 'vitepress';
   const { isDark } = useData();
 </script>

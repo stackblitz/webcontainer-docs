@@ -238,7 +238,7 @@
   // New link styles
   &.link {
     margin: 0;
-    padding: 9px var(--active-indicator-padding) !important;
+    padding: 8px var(--active-indicator-padding) !important;
     transition-duration: 0.1s;
     transition-property: background-color, box-shadow, color;
     &.active {
@@ -286,6 +286,7 @@
 .VPDocAside .outline-link {
   padding: 6px 0;
   font-size: 12.5px;
+  transition-duration: 0.1s;
 }
 
 
@@ -295,7 +296,7 @@
 .vp-doc .custom-block {
   margin: 44px 0;
   padding: 32px 32px;
-  padding-left: 72px;
+  padding-left: 76px;
   border: none;
   border-radius: 8px;
   box-shadow:
@@ -326,22 +327,27 @@
   &.info {
     --block-border-color: var(--vp-custom-block-info-border);
     --block-icon-color: var(--vp-custom-block-info-text);
+    --block-icon-url: url('/icons/fa-books-light.svg');
   }
   &.tip {
     --block-border-color: var(--vp-custom-block-tip-border);
     --block-icon-color: var(--vp-custom-block-tip-text);
+    --block-icon-url: url('/icons/fa-sparkles-regular.svg');
   }
   &.warning {
     --block-border-color: var(--vp-custom-block-warning-border);
     --block-icon-color: var(--vp-custom-block-warning-text);
+    --block-icon-url: url('/icons/fa-triangle-exclamation-regular.svg');
   }
   &.danger {
     --block-border-color: var(--vp-custom-block-danger-border);
     --block-icon-color: var(--vp-custom-block-danger-text);
+    --block-icon-url: url('/icons/fa-triangle-exclamation-regular.svg');
   }
   &.details {
     --block-border-color: var(--vp-custom-block-details-border);
     --block-icon-color: var(--vp-custom-block-details-text);
+    --block-icon-url: url('/icons/fa-gear.svg');
   }
 }
 
@@ -373,8 +379,14 @@ h2 + .custom-block {
       width: 24px;
       height: 24px;
       background-color: var(--block-icon-color);
-      -webkit-mask-image: url('/icons/fa-gear.svg');
-      mask-image: url('/icons/fa-gear.svg');
+      -webkit-mask-image: var(--block-icon-url);
+              mask-image: var(--block-icon-url);
+      -webkit-mask-position: center;
+              mask-position: center;
+      -webkit-mask-repeat: no-repeat;
+              mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+              mask-size: contain;
       @media (max-width: 500px) {
         left: -40px;
       }
@@ -404,5 +416,94 @@ h2 + .custom-block {
   margin: 24px 0;
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+// --------------------------------
+// Footer / Above Footer
+
+.VPLink.link.edit-link-button {
+  gap: 4px;
+  font-size: 13px;
+  svg {
+    transform: scale(0.92);
+  }
+}
+
+.content-container footer.VPDocFooter {
+  margin-top: 20px;
+}
+
+.edit-info {
+  padding-bottom: 24px !important;
+}
+
+// --------------------------------
+// Community Projects
+
+.community-project-screenshot {
+  width: 100%;
+  max-width: 760px;
+  border-radius: 12px;
+  overflow: hidden;
+  img {
+    max-width: min(100%, 800px);
+    margin: 0 !important;
+  }
+  @media screen and (max-height: 768px) {
+    max-width: 680px;
+    max-height: 352px;
+  }
+  @media screen and (max-width: 960px) {
+    max-width: 680px;
+    max-height: 352px;
+  }
+}
+
+// --------------------------------
+// Twitter Tweet Embed
+
+.twitter-tweet {
+  position: relative;
+  display: block;
+  max-width: 640px;
+  padding: 64px 32px 16px !important;
+  margin: 52px 0 !important;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  font-weight: 500;
+  @media screen and (max-width: 960px) {
+    padding: 64px 24px 16px !important;
+    padding-right: 0 !important;
+  }
+
+  & > p {
+    margin-bottom: 16px !important;
+    color: var(--vp-c-text-1) !important;
+    font-size: 16px;
+    @media screen and (max-width: 500px) {
+      font-size: 14px !important;
+    }
+  }
+
+  &::before {
+    --twitter-icon-mask-size: 26px;
+    --twitter-icon-img: url('/icons/fa-twitter.svg');
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: 32px;
+    width: var(--twitter-icon-mask-size);
+    height: var(--twitter-icon-mask-size);
+    transition: background-color 0.14s ease;
+    background-color: #1DA1F2;
+    -webkit-mask-image: var(--twitter-icon-img);
+            mask-image: var(--twitter-icon-img);
+    -webkit-mask-position: center;
+            mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+            mask-size: cover;
   }
 }

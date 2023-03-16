@@ -9,7 +9,6 @@ import WCHelloWorld from '@theme/components/Examples/WCHelloWorld.vue';
 import ProjectsUsingWCCardList from '@theme/components/WCUsedByProjects/ProjectsUsingWCCardList.vue';
 
 defineProps<{
-  externalLinks: any[];
   footerSections: any[];
 }>();
 </script>
@@ -29,7 +28,6 @@ defineProps<{
     <FeaturesCardList />
   </div>
 
-  <!-- <div class="section example"> -->
   <div class="section">
     <h3>Set up in only a few steps</h3>
     <WCHelloWorld />

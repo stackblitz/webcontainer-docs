@@ -1,18 +1,18 @@
 <script setup lang="ts">
 import { useData }from 'vitepress';
-import Card from '@theme/components/CardLists/Card.vue';
-import type { FeaturesCardData } from '../../../../data';
+import CardSingle from '@theme/components/CardLists/CardSingle.vue';
+import type { FeaturesCardData } from '@theme/data/home';
 const { isDark } = useData();
 defineProps<{ feature: FeaturesCardData }>();
 </script>
 
 <template>
-  <Card>
+  <CardSingle>
     <div class="feature-card" :style="{backgroundImage: `url(${isDark ? feature.bgImgDark : feature.bgImgLight})`}">
       <h4>{{ feature.title }}</h4>
       <p v-html="feature.description" />
     </div>
-  </Card>
+  </CardSingle>
 </template>
 
 <style scoped lang="scss">

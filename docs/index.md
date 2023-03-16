@@ -23,10 +23,7 @@ hero:
 <script setup lang="ts">
 import Home from '@theme/components/Home.vue';
 
-import { homeExternalLinks, footerSections } from './data';
+import { footerSections } from '@theme/data/links';
 </script>
 
-<Home
-  :externalLinks="homeExternalLinks"
-  :footerSections="footerSections"
-/>
+<Home :footerSections="footerSections" />

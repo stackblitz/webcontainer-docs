@@ -77,7 +77,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { testimonialCardData } from '../../../../data';
+import { testimonialCardData } from '@theme/data/home';
 import CardList from '@theme/components/CardLists/CardList.vue';
 import TestimonialCard from './TestimonialCard.vue';
 </script>

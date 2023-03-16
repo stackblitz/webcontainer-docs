@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { TestimonialCardData } from '../../../../data';
-import Card from '@theme/components/CardLists/Card.vue';
+import type { TestimonialCardData } from '@theme/data/home';
+import CardSingle from '@theme/components/CardLists/CardSingle.vue';
 defineProps<{
   testimonial: TestimonialCardData,
   width?: number,
@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <Card>
+  <CardSingle>
     <div class="testimonial-card" :style="width ? {'--card-width': `${width}px`} : {}">
       <img v-if="testimonial.imgPath?.logo" class="company-logo" :src="testimonial.imgPath?.logo" />
       <img v-if="testimonial.imgPath?.logoLight" class="company-logo-theme light" :src="testimonial.imgPath?.logoLight" />
@@ -24,7 +24,7 @@ defineProps<{
         </div>
       </div>
     </div>
-  </Card>
+  </CardSingle>
 </template>
 
 <style scoped lang="scss">

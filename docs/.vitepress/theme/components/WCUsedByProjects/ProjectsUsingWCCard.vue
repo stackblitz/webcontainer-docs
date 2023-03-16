@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import type { ProjectsUsingWCCardData } from '../../../../data';
-import Card from '@theme/components/CardLists/Card.vue';
+import type { ProjectsUsingWCCardData } from '@theme/data/home';
+import CardSingle from '@theme/components/CardLists/CardSingle.vue';
 defineProps<{ project: ProjectsUsingWCCardData }>();
 </script>
 
 <template>
   <!-- <Card :url="project.url"> -->
-  <Card>
+  <CardSingle>
     <div class="project-card">
       <div class="project-img dark" :style="{backgroundImage: `url('${project.imgPath.dark}')`}" />
       <div class="project-img light" :style="{backgroundImage: `url('${project.imgPath.light}')`}" />
@@ -16,7 +16,7 @@ defineProps<{ project: ProjectsUsingWCCardData }>();
         <a class="project-link" :href="project.url" target="_blank" rel="nofollow">{{ project.urlTitle }}</a>
       </div>
     </div>
-  </Card>
+  </CardSingle>
 </template>
 
 <style scoped lang="scss">
