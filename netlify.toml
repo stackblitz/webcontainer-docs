@@ -3,3 +3,5 @@
   [headers.values]
     Cross-Origin-Embedder-Policy = "require-corp"
     Cross-Origin-Opener-Policy = "same-origin"
+[build.processing.html]
+  minify = false
