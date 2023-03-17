@@ -1,6 +1,6 @@
 ---
 title: &title WebContainers Browser Support
-description: &description For WebContainers, we support desktop Chromium-based browsers out of the box, and Firefox in alpha state.
+description: &description WebContainers are supported on desktop Chromium-based browsers out of the box, as well as on Safari 16.4 TP and Firefox, which both are in beta.
 head:
   - ['meta', {property: 'og:title', content: *title}] 
   - ['meta', {property: 'og:image', content: 'https://webcontainers.io/img/og/guide-browser_support.png'}]
@@ -12,7 +12,7 @@ head:
 
 _Last update: February 2023_
 
-**TL;DR** For WebContainers, we support desktop Chromium-based browsers out of the box, and Firefox in alpha state. If you have issues with supported browsers, [check your browser configuration](./browser-config).
+**TL;DR** WebContainers are supported on desktop Chromium-based browsers out of the box, as well as on Safari 16.4 TP and Firefox, which both are in beta. If you have issues with supported browsers, [check your browser configuration](./browser-config).
 
 :::warning Note
 There is a reported Chrome regression on Macbooks with M1 chip, which also affects the speed of some larger projects on WebContainers. Learn more about this issue in these bug reports: [issue 1228686](https://bugs.chromium.org/p/chromium/issues/detail?id=1228686) and [issue 1356099](https://bugs.chromium.org/p/chromium/issues/detail?id=1356099).
@@ -22,7 +22,7 @@ There is a reported Chrome regression on Macbooks with M1 chip, which also affec
 
 StackBlitz requires some of the latest additions to the Web Platform to work correctly when running WebContainers-based projects. Most important among them are **[`SharedArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)** and **[cross-origin isolation](https://developer.mozilla.org/en-US/docs/Web/API/crossOriginIsolated)**.
 
-`SharedArrayBuffer`s (SABs) allow simultaneous access to a chunk of memory from multiple different workers. This is a powerful feature that was [disabled temporarily](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) in light of potential security issues. Cross-origin isolation is the key to enabling SABs: by properly configuring some of the headers and controlling which resources are served to browsers, a site can be considered `crossOriginIsolated` or, in other words, secure enough to use SABs. Both features are enabled in Chromium-based browsers (Chrome, Brave, Edge) and Firefox.
+`SharedArrayBuffer`s (SABs) allow simultaneous access to a chunk of memory from multiple different workers. This is a powerful feature that was [disabled temporarily](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) in light of potential security issues. Cross-origin isolation is the key to enabling SABs: by properly configuring some of the headers and controlling which resources are served to browsers, a site can be considered `crossOriginIsolated` or, in other words, secure enough to use SABs. Both features are enabled in Chromium-based browsers (Chrome, Brave, Edge), Safari 16.4 TP, and Firefox.
 
 However, for cross-origin isolation to work for our use case, you need to be able to embed arbitrary resources: to be able to write and test your web application seamlessly, regardless of which images or scripts you choose to include. For this to work, a [new mode](https://github.com/WICG/credentiallessness) of cross-origin isolation that allows this is needed.
 
@@ -62,9 +62,11 @@ In addition to this, there might be [other runtime incompatibilities](#runtime-d
 
 ## Safari
 
-Safari recently shipped support for `SharedArrayBuffer` and cross-origin isolation in a somewhat [buggy state](https://bugs.webkit.org/show_bug.cgi?id=238442). In addition to this, it is still lacking a few other features which prevents us from shipping a working environment such as:
+Starting with Safari 16.4 TP, WebContainers are in beta for Safari.
+
+Older versions of the browser are still lacking a few other features necessary for WebContainers to run, such as:
 
 * [Atomics.waitAsync](https://github.com/tc39/proposal-atomics-wait-async)
-* [Lookbehind in regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/guides/Regular_Expressions/Assertions)
+* [Lookbehind in regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
 
-Note that none of above can be pollyfilled.
+These cannot be pollyfilled.
