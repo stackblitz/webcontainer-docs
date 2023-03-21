@@ -9,3 +9,6 @@
   minify = false
 [build.processing.html]
   minify = false
+# If skip_processing = true, all other settings are ignored
+[build.processing]
+  skip_processing = true
