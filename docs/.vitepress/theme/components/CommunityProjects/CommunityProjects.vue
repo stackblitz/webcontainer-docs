@@ -9,7 +9,9 @@ export default {
   data() {
     return {
       selectedCategories: {},
-      communityProjects: communityProjectCardData ? communityProjectCardData : null
+      communityProjects: !Object.keys(this.selectedCategories).length
+        ? communityProjectCardData
+        : communityProjectCardData.filter(project => Object.keys(this.selectedCategories).includes(project.category))
     }
   },
   methods: {
@@ -44,10 +46,9 @@ export default {
     </button>
   </div>
 
-  <div class="community-projects" v-if="communityProjects">
-    <template v-for="(project, index) in communityProjects">
-      <a v-if="Object.keys(selectedCategories).includes(project.category) || Object.keys(selectedCategories).length === 0"
-        :key="index"
+  <div class="community-projects">
+    <template v-for="project in communityProjects">
+      <a
         class="project-item"
         :href="project.itemUrl"
       >
