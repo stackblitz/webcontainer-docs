@@ -46,7 +46,7 @@ export default {
 
   <div class="community-projects" v-if="communityProjects">
     <template v-for="(project, index) in communityProjects">
-      <a v-if="!Object.keys(selectedCategories).length || Object.keys(selectedCategories).includes(project.category)"
+      <a v-if="Object.keys(selectedCategories).includes(project.category) || !Object.keys(selectedCategories).length"
         :key="index"
         class="project-item"
         :href="project.itemUrl"
