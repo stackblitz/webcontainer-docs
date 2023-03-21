@@ -8,7 +8,8 @@ export default {
   props: {},
   data() {
     return {
-      selectedCategories: {}
+      selectedCategories: {},
+      communityProjects: communityProjectCardData
     }
   },
   methods: {
@@ -44,7 +45,7 @@ export default {
   </div>
 
   <div class="community-projects">
-    <template v-for="(project, index) in communityProjectCardData">
+    <template v-for="(project, index) in communityProjects">
       <a v-if="!Object.keys(selectedCategories).length || Object.keys(selectedCategories).includes(project.category)"
         :key="index"
         class="project-item"
