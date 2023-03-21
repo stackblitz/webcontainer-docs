@@ -58,6 +58,7 @@ export default {
             <div class="item-description">
               <div class="description-heading">
                 <span class="project-title">{{ project.title }}</span>
+                <span class="project-title">{{ project.category }}</span>
                 <span class="project-category" :style="{'--category-rgb': categories[project.category].rgb}">{{ categories[project.category].title }}</span>
               </div>
               <p v-html="project.description" />
