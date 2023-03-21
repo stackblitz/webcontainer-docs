@@ -44,10 +44,11 @@ export default {
   </div>
 
   <div class="community-projects">
-    <template v-for="project of communityProjectCardData">
+    <template v-for="(project, index) in communityProjectCardData">
     <a v-if="!Object.keys(selectedCategories).length || Object.keys(selectedCategories).includes(project.category)"
       class="project-item"
       :href="project.itemUrl"
+      :key="index"
     >
       <CardSingle>
         <div class="item-content">
