@@ -44,27 +44,28 @@ export default {
   </div>
 
   <div class="community-projects">
-    <template v-for="project of communityProjectCardData">
-    <a v-if="!Object.keys(selectedCategories).length || Object.keys(selectedCategories).includes(project.category)"
-      class="project-item"
-      :href="project.itemUrl"
-    >
-      <CardSingle>
-        <div class="item-content">
-          <img :src="project.thumbnailUrl" />
+    <template v-for="(project, index) in communityProjectCardData">
+      <a v-if="!Object.keys(selectedCategories).length || Object.keys(selectedCategories).includes(project.category)"
+        :key="index"
+        class="project-item"
+        :href="project.itemUrl"
+      >
+        <CardSingle>
+          <div class="item-content">
+            <img :src="project.thumbnailUrl" />
 
-          <div class="item-description">
-            <div class="description-heading">
-              <span class="project-title">{{ project.title }}</span>
-              <span class="project-category" :style="{'--category-rgb': categories[project.category].rgb}">{{ categories[project.category].title }}</span>
+            <div class="item-description">
+              <div class="description-heading">
+                <span class="project-title">{{ project.title }}</span>
+                <span class="project-category" :style="{'--category-rgb': categories[project.category].rgb}">{{ categories[project.category].title }}</span>
+              </div>
+              <p v-html="project.description" />
             </div>
-            <p v-html="project.description" />
-          </div>
 
-        </div>
-      </CardSingle>
-    </a>
-  </template>
+          </div>
+        </CardSingle>
+      </a>
+    </template>
   </div>
 </template>
 
