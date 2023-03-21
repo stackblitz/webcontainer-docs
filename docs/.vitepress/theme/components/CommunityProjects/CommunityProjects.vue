@@ -9,7 +9,7 @@ export default {
   data() {
     return {
       selectedCategories: {},
-      communityProjects: communityProjectCardData
+      communityProjects: communityProjectCardData ? communityProjectCardData : null
     }
   },
   methods: {
