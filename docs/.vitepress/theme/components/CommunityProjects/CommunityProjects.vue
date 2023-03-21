@@ -44,7 +44,7 @@ export default {
     </button>
   </div>
 
-  <div class="community-projects">
+  <div class="community-projects" v-if="communityProjects">
     <template v-for="(project, index) in communityProjects">
       <a v-if="!Object.keys(selectedCategories).length || Object.keys(selectedCategories).includes(project.category)"
         :key="index"
