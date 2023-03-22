@@ -9,14 +9,13 @@ export default {
   data() {
     return {
       selectedCategories: {},
-      communityProjects: !Object.keys(this.selectedCategories).length
-        ? communityProjectCardData
-        : communityProjectCardData.filter(project => Object.keys(this.selectedCategories).includes(project.category))
+      communityProjects: communityProjectCardData
     }
   },
   methods: {
     clearSelectedCategories() {
       this.selectedCategories = {};
+      this.communityProjects = communityProjectCardData;
     },
     toggleSelectedCategory(category: CommunityProjectCategory) {
       if (this.selectedCategories[category]) {
@@ -25,6 +24,9 @@ export default {
       } else {
         this.selectedCategories[category] = true;
       }
+      this.communityProjects = Object.keys(this.selectedCategories).length === 0
+        ? communityProjectCardData
+        : communityProjectCardData.filter(project => Object.keys(this.selectedCategories).includes(project.category));
     }
   }
 }
@@ -47,28 +49,25 @@ export default {
   </div>
 
   <div class="community-projects">
-    <template v-for="project in communityProjects">
-      <a
-        class="project-item"
-        :href="project.itemUrl"
-      >
-        <CardSingle>
-          <div class="item-content">
-            <img :src="project.thumbnailUrl" />
+    <a v-for="project of communityProjects"
+      class="project-item"
+      :href="project.itemUrl"
+    >
+      <CardSingle>
+        <div class="item-content">
+          <img :src="project.thumbnailUrl" />
 
-            <div class="item-description">
-              <div class="description-heading">
-                <span class="project-title">{{ project.title }}</span>
-                <span class="project-title">{{ project.category }}</span>
-                <span class="project-category" :style="{'--category-rgb': categories[project.category].rgb}">{{ categories[project.category].title }}</span>
-              </div>
-              <p v-html="project.description" />
+          <div class="item-description">
+            <div class="description-heading">
+              <span class="project-title">{{ project.title }}</span>
+              <span class="project-category" :style="{'--category-rgb': categories[project.category].rgb}">{{ categories[project.category].title }}</span>
             </div>
-
+            <p v-html="project.description" />
           </div>
-        </CardSingle>
-      </a>
-    </template>
+
+        </div>
+      </CardSingle>
+    </a>
   </div>
 </template>
 
