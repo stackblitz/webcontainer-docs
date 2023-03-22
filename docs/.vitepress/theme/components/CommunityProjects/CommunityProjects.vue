@@ -8,12 +8,14 @@ export default {
   props: {},
   data() {
     return {
-      selectedCategories: {}
+      selectedCategories: {},
+      communityProjects: communityProjectCardData
     }
   },
   methods: {
     clearSelectedCategories() {
       this.selectedCategories = {};
+      this.communityProjects = communityProjectCardData;
     },
     toggleSelectedCategory(category: CommunityProjectCategory) {
       if (this.selectedCategories[category]) {
@@ -22,6 +24,9 @@ export default {
       } else {
         this.selectedCategories[category] = true;
       }
+      this.communityProjects = Object.keys(this.selectedCategories).length === 0
+        ? communityProjectCardData
+        : communityProjectCardData.filter(project => Object.keys(this.selectedCategories).includes(project.category));
     }
   }
 }
@@ -44,8 +49,7 @@ export default {
   </div>
 
   <div class="community-projects">
-    <template v-for="project of communityProjectCardData">
-    <a v-if="!Object.keys(selectedCategories).length || Object.keys(selectedCategories).includes(project.category)"
+    <a v-for="project of communityProjects"
       class="project-item"
       :href="project.itemUrl"
     >
@@ -58,13 +62,12 @@ export default {
               <span class="project-title">{{ project.title }}</span>
               <span class="project-category" :style="{'--category-rgb': categories[project.category].rgb}">{{ categories[project.category].title }}</span>
             </div>
-            <p v-html="project.description" />
+            <p>{{ project.description }}</p>
           </div>
 
         </div>
       </CardSingle>
     </a>
-  </template>
   </div>
 </template>
 
