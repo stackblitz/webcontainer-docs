@@ -49,8 +49,7 @@ export default {
   </div>
 
   <div class="community-projects">
-    <a v-for="(project, index) of communityProjects"
-      :key="index"
+    <a v-for="project of communityProjects"
       class="project-item"
       :href="project.itemUrl"
     >
