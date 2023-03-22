@@ -63,7 +63,7 @@ export default {
               <span class="project-title">{{ project.title }}</span>
               <span class="project-category" :style="{'--category-rgb': categories[project.category].rgb}">{{ categories[project.category].title }}</span>
             </div>
-            <p v-html="project.description" />
+            <p>{{ project.description }}</p>
           </div>
 
         </div>
