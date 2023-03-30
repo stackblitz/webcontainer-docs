@@ -131,7 +131,7 @@ async function bootWebContainer(terminal: import('xterm').Terminal) {
 
   terminal.write('Booting WebContainer...');
 
-  webcontainer = WebContainer.boot({ workdirName: 'demo' });
+  webcontainer = WebContainer.boot();
 
   try {
     const wc = await webcontainer;
