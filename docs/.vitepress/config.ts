@@ -24,6 +24,9 @@ const SIDEBAR_DEFAULT = [
     items: [{ text: 'API Reference', link: '/api' }],
   },
   {
+    items: [{ text: 'Changelog', link: '/changelog' }],
+  },
+  {
     items: [{ text: 'Enterprise', link: '/enterprise' }],
   },
   {
@@ -88,6 +91,7 @@ export default defineConfig({
       '/guides/': SIDEBAR_DEFAULT,
       '/tutorial/': SIDEBAR_DEFAULT,
       '/api': SIDEBAR_DEFAULT,
+      '/changelog': SIDEBAR_DEFAULT,
       '/enterprise': SIDEBAR_DEFAULT,
       '/contact': SIDEBAR_DEFAULT,
       '/community-projects': SIDEBAR_DEFAULT,
