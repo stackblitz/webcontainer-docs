@@ -12,7 +12,7 @@ head:
 
 This guide provides an overview on how to configure COOP/COEP headers, including hosting platform configuration.
 
-WebContainers require that your page, even in development, be served with these two headers:
+WebContainers require that your page, even in development, is served with these two headers:
 
 ```yaml
 Cross-Origin-Embedder-Policy: require-corp
@@ -20,6 +20,14 @@ Cross-Origin-Opener-Policy: same-origin
 ```
 
 These headers are needed because WebContainer _requires_ SharedArrayBuffer, which, in turn, requires your website to be cross-origin isolated.
+
+Some browsers support a different mode for cross-origin isolation: [`credentialless`](https://caniuse.com/mdn-http_headers_cross-origin-embedder-policy_credentialless). If you wish to serve your content in this way, set your headers instead to:
+```yaml
+Cross-Origin-Embedder-Policy: credentialless
+Cross-Origin-Opener-Policy: same-origin
+```
+and make sure to boot your WebContainer specifying [`coep: 'credentialless'`](/api).
+
 
 ::: info Deep Dive: cross-origin isolation
 Here are a few helpful resources if you'd like to learn more about these topics:
