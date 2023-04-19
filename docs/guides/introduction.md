@@ -9,6 +9,8 @@ head:
 ---
 # Introduction
 
+JAKE
+
 **WebContainers are a browser-based runtime for executing Node.js applications and operating system commands, entirely inside your browser tab.** Apps that previously required cloud VMs to execute user code, in WebContainers can run entirely client-side with [a number of benefits over the legacy cloud VM](#webcontainers-versus-cloud-vm-approach).
 
 **WebContainer API is perfect for interactive coding experiences.** Among its most common use cases are production-grade IDEs, programming tutorials, next-generation documentation, AI applications, or employee onboarding platforms. WebContainers have been [battle-tested by millions of users](#who-s-using-webcontainers) of StackBlitz classic editor, Codeflow, the official SvelteKit tutorial, and Cloudflare Wrangler workers, among others.
