@@ -112,7 +112,7 @@ async function bootWebContainer(terminal: import('xterm').Terminal) {
         [
           red('Incompatible Web Browser'),
           '',
-          `WebContainers currently work in Chromium-based browsers and Firefox. We're hoping to add support for more browsers as they implement the necessary Web Platform features.`,
+          `WebContainers currently work in Chromium-based browsers, Firefox, and Safari 16.4. We're hoping to add support for more browsers as they implement the necessary Web Platform features.`,
           '',
           'Read more about browser support:',
           'https://webcontainers.io/guides/browser-support',
