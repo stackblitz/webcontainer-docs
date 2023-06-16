@@ -42,7 +42,7 @@ To explore the API, check out the WebContainer starter:
 
 Initially [announced at Google I/O](https://blog.stackblitz.com/posts/introducing-webcontainers/), **WebContainers are developed by [StackBlitz](https://stackblitz.com) and have been battle-tested by millions of developers every month in StackBlitz [classic editor](https://node.new) and in the new [Codeflow IDE](https://stackblitz.com/codeflow)**. Externally, WebContainers also power a number of instant coding experiences such as Cloudflare Wrangler's [workers.new](https://blog.cloudflare.com/cloudflare-stackblitz-partnership/#powering-a-better-developer-experience-and-documentation) and the Svelte team's [interactive fullstack tutorial](http://learn.svelte.dev/) for SvelteKit.
 
-To see more examples of how WebContainers have been used so far, check out our [Community Inspirations page](/guides/community-inspirations).
+To see more examples of how WebContainers have been used so far, check out our [Community Projects page](/community-projects/all-projects).
 
 ## Get started
 
@@ -51,7 +51,7 @@ To get started:
 - check out our [WebContainer starter](https://webcontainer.new)
 - follow our [step-by-step tutorial](/tutorial/1-build-your-first-webcontainer-app) and build your first WebContainer app
 - reading the [API reference](/api)
-- get inspired by our [Community examples](/guides/community-inspirations)
+- get inspired by our [Community projects](/community-projects/all-projects)
 
 ## Community
 
