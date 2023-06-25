@@ -100,7 +100,7 @@ async function startDevServer() {
 
 ## 4. Preview
 
-After you have started the dev server, get the URL from `port-ready` event and mount it in an iframe:
+After you have started the dev server, get the URL from `server-ready` event and mount it in an iframe:
 
 ```js
 webcontainerInstance.on('server-ready', (port, url) => (iframeEl.src = url));
