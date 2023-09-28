@@ -13,7 +13,7 @@ head:
 ## 1.1.6
 
 * Add [`fs.rename`](api#▸-rename).
-* After a WebContainer instance has been [`teardown`](api#▸-teardown) you can [`boot`](api#▸-boot) it again.
+* After a WebContainer instance has been [`torn down`](api#▸-teardown) you can [`boot`](api#▸-boot) it again.
 
 ## 1.1.5
 
