@@ -41,7 +41,7 @@ Boots a [WebContainer](#webcontainer). Only a single instance of WebContainer ca
   <a href="#boot-signature" class="header-anchor" aria-hidden="true">#</a>
 </h4>
 
-`static boot(): Promise<WebContainer>`
+`static boot(options: BootOptions = {}): Promise<WebContainer>`
 
 <h4 id="boot-return">
   <a id="boot-return">Return</a>
@@ -49,6 +49,36 @@ Boots a [WebContainer](#webcontainer). Only a single instance of WebContainer ca
 </h4>
 
 Returns a [`WebContainer`](#webcontainer) instance.
+
+<h4 id="boot-options">
+  <a id="boot-options"><code>Options</code></a>
+  <a href="#boot-options" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+```ts
+interface Options {
+  coep?: 'require-corp' | 'credentialless' | 'none';
+  workdirName?: string;
+}
+```
+
+<br />
+
+#### `coep?: 'require-corp' | 'credentialless' | 'none'`
+
+The value of the [COEP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) header
+used to load your application.
+
+Choosing `'none'` will result in no cross-origin isolation headers being used. This will only work on Chromium-based
+browsers as long as an Origin Trial is supported.
+
+This value is fixed the first time a WebContainer is booted, and cannot be changed in successive reboots.
+
+#### `workdirName?: string`
+
+Sets the _folder name_ for the working directory of your WebContainer instance. If not provided, it will be auto-generated.
+
+This is mostly a "cosmetic" option.
 
 ### ▸ `mount`
 
@@ -360,6 +390,29 @@ const content = await webcontainerInstance.fs.readFile('/package.json', 'utf-8')
 </h4>
 
 `Promise<Uint8Array>` or `Promise<string>`
+
+### ▸ `rename`
+
+Rename the file from `oldPath` to `newPath`. The parent folders in `newPath` must all exist.
+
+<h4 id="rename-signature">
+  <a id="rename-signature">Signature</a>
+  <a href="#rename-signature" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+`rename(oldPath: string, newPath: string): Promise<void>`
+
+<h4 id="rename-example">
+  <a id="rename-example">Example</a>
+  <a href="#rename-example" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+Renaming a file:
+
+```js
+await webcontainerInstance.fs.rename('/src/index.js', '/src/main.js');
+```
+
 
 ### ▸ `rm`
 
