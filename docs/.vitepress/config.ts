@@ -73,6 +73,12 @@ export default defineConfig({
     'Build the future of web based coding experiences, from interactive tutorials to instant production-ready dev environments.',
   head: getHeadTags(process.env),
   // See docs: https://vitepress.vuejs.org/guides/theme-nav
+  
+  // Sitemap
+  lastUpdated: true,
+  sitemap: {
+    hostname: 'https://developer.stackblitz.com'
+  },
 
   // Theme
   themeConfig: {
@@ -100,12 +106,15 @@ export default defineConfig({
       pattern: 'https://pr.new/stackblitz/webcontainer-docs/edit/main/docs/:path',
       text: 'Edit this page',
     },
-    algolia: getAlgoliaConfig(process.env),
     socialLinks: [
       { icon: 'github', link: 'https://github.com/stackblitz/' },
       { icon: 'twitter', link: 'https://twitter.com/stackblitz' },
       { icon: 'discord', link: 'https://discord.gg/stackblitz' }
-    ]
+    ],
+    search: {
+      provider: 'algolia',
+      options: getAlgoliaConfig(process.env),
+    },
   },
 
   markdown: {
@@ -146,4 +155,9 @@ function getAlgoliaConfig(env: NodeJS.ProcessEnv) {
       apiKey: env.VITE_ALGOLIA_KEY,
     };
   }
+  return {
+    indexName: '',
+    appId: '',
+    apiKey: '',
+  };
 }
