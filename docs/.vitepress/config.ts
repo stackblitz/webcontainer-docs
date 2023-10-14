@@ -77,7 +77,7 @@ export default defineConfig({
   // Sitemap
   lastUpdated: true,
   sitemap: {
-    hostname: 'https://developer.stackblitz.com'
+    hostname: 'https://webcontainers.io'
   },
 
   // Theme
