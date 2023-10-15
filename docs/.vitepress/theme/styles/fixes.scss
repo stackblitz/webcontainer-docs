@@ -147,10 +147,13 @@ padding-top: 8px;
 }
 
 // New body styles
-.vp-doc p {
-  margin: 24px 0;
+.vp-doc p,
+.vp-doc li {
   font-size: 15px;
   line-height: 1.8;
+}
+.vp-doc p {
+  margin: 24px 0;
 }
 
 .vp-doc a {
@@ -161,6 +164,12 @@ padding-top: 8px;
   display: inline-block;
   text-underline-offset: 2px;
   text-decoration-thickness: 1px;
+}
+
+.vp-doc p > img,
+.vp-doc > div > img {
+  margin: 40px 0;
+  border-radius: 6px;
 }
 
 .vp-doc pre code {
@@ -186,6 +195,47 @@ padding-top: 8px;
     left: -28px;
     padding: 0 18px;
     transform: scale(0.94);
+  }
+}
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4,
+.vp-doc h5,
+.vp-doc h6 {
+  width: max-content;
+  max-width: 100%;
+}
+.vp-doc h1 + p,
+.vp-doc h2 + p {
+  margin-top: 0;
+}
+.vp-doc h2 {
+  padding-top: 16px !important;
+}
+.vp-doc h3 {
+  margin-top: 40px !important;
+}
+
+.vp-doc p > strong > a,
+.vp-doc p > a,
+.vp-doc li > strong > a,
+.vp-doc li > a,
+.vp-doc td > strong > a,
+.vp-doc td > a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  transition: 0.1s ease;
+  transition-property: color, text-underline-offset;
+  :root.dark & {
+    color: rgb(131, 222, 255);
+  }
+  &:hover,
+  :root.dark &:hover {
+    color: var(--vp-c-text-1);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
   }
 }
 
@@ -388,6 +438,7 @@ padding-top: 8px;
     --vp-custom-block-tip-text: rgb(0, 125, 111);
     --vp-custom-block-warning-text: rgb(202, 135, 0);
     --vp-custom-block-warning-border: rgb(255, 200, 0);
+    --vp-custom-block-warning-bg: rgba(255, 200, 0, 0.032);
   }
   :root.dark & {
     --vp-custom-block-tip-bg: var(--vp-c-green-dim-1);
@@ -495,6 +546,17 @@ h2 + .custom-block {
   margin-bottom: 0;
 }
 
+.vp-doc .custom-block summary {
+  position: relative;
+  margin: 0;
+  &::marker {
+    content: '▷\a0\a0\a0';
+  }
+}
+.vp-doc .custom-block[open] summary::marker {
+  content: '▽\a0\a0\a0';
+}
+
 .vp-doc .custom-block div[class*='language-'] {
   margin: 24px 0;
   &:last-child {
@@ -513,7 +575,7 @@ h2 + .custom-block {
   }
 }
 
-.content-container footer.VPDocFooter {
+.content-container footer.VPDocFooter .edit-info {
   margin-top: 20px;
 }
 
