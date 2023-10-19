@@ -1,19 +1,3 @@
-// ViteConfBanner related
-// Only show it in big screen for now
-.Layout.with-banner {
-  @media (min-width: 960px) {
-    .VPNav {
-      --vp-layout-top-height: 48px;
-    }
-    .VPContent .VPDoc {
-      padding: 90px 32px 0;
-    }
-    .VPSidebar {
-      --vp-nav-height: 90px;
-    }
-  }
-}
-
 // Remove nav border
 .VPNavBar {
   border-bottom: none !important;
@@ -49,7 +33,7 @@
 
 // We would like to have single pages in the sidebar (e.g. API Reference, Enterprise).
 // VitPress expects to have you section title text + items and when you only have one item it looks like there are extra spacing.
-// These styles are to adjust spacing between groups.
+// These styles are to adjust spacing between groups. 
 #VPSidebarNav .group {
   padding-bottom: 11px;
 }
@@ -235,7 +219,7 @@
   margin-top: 8px;
 }
   // Hide extraneous visual elements when parent group is collapsed
-// without messing with individual elements themselves.
+// without messing with individual elements themselves. 
 .VPSidebarGroup.collapsed .items {
   opacity: 0;
 }
@@ -379,7 +363,7 @@ h2 + .custom-block {
   margin: 2px 0 0;
   font-size: 14px;
   line-height: 1.8;
-
+  
   &.custom-block-title {
     position: relative;
     margin-bottom: 8px;
