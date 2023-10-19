@@ -69,13 +69,6 @@ defineProps<{
 <style scoped lang="scss">
 @import '@theme/styles/vars.scss';
 
-// for viteconf banner
-:root {
-  @media (min-width: 960px) {
-    --vp-layout-top-height: 30px;
-  }
-}
-
 .top-section {
   display: flex;
   flex-direction: column;
@@ -89,7 +82,7 @@ defineProps<{
   background-size: cover;
   background-position: center bottom;
   overflow-x: hidden;
-
+  
   :root.dark & {
     background-image: url('/img/0001-8-2-dk-bluedk.jpg');
   }
