@@ -7,9 +7,11 @@ const { Layout } = DefaultTheme;
 
 <template>
   <Layout>
+
     <!-- <template #layout-top>
       <ViteConfBanner />
     </template> -->
+
     <template #doc-footer-before>
       <Feedback />
     </template>
