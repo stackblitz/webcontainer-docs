@@ -35,25 +35,65 @@
 // VitPress expects to have you section title text + items and when you only have one item it looks like there are extra spacing.
 // These styles are to adjust spacing between groups. 
 #VPSidebarNav .group {
-  padding-bottom: 11px;
+  padding-top: 0;
 }
 
-#VPSidebarNav .group+.group {
-  margin-top: 0px;
-}
-
-.VPSidebarGroup.collapsed {
-  margin-bottom: 11px;
+.VPSidebarItem.collapsible {
+padding-top: 8px;
 }
 
 .VPSidebarGroup.collapsible.collapsed .items {
   margin-bottom: -14px;
 }
 
+.VPSidebarItem .items {
+  margin-top: 8px;
+}
+
 // Move search away from logo
 .VPNavBarSearch.search {
   justify-content: flex-end;
   margin-right: 32px;
+}
+
+//  Post 1.0.0-rc.20
+
+.VPSidebarItem {
+  margin: 0 -14px;
+}
+
+.VPSidebarItem.link {
+  transition-duration: 0.1s;
+  transition-property: opacity, box-shadow;
+}
+
+.VPSidebarItem.level-0 {
+  padding-bottom: 8px !important;
+}
+
+.VPSidebarItem.is-active {
+  position: relative;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  background-color: #fff;
+
+  .text {
+    color: var(--vp-c-text-1) !important;
+  }
+
+  :root.dark & {
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+    background-color: var(--vp-c-bg);
+  }
+}
+
+.VPSidebarItem.level-0 {
+  font-size: 13px;
+  margin: 0 4px;
+  &:hover:not(.is-active) {
+    opacity: 1;
+    color: var(--vp-c-text-1);
+  }
 }
 
 // --------------------------------
@@ -91,18 +131,37 @@
 }
 
 // New body styles
-.vp-doc p {
-  margin: 24px 0;
+.vp-doc p,
+.vp-doc li {
   font-size: 15px;
   line-height: 1.8;
+}
+.vp-doc p {
+  margin: 24px 0;
+}
+
+.vp-doc a {
+  transition: 0.1s ease;
 }
 
 .vp-doc p a {
   display: inline-block;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+.vp-doc p > img,
+.vp-doc > div > img {
+  margin: 40px 0;
+  border-radius: 6px;
 }
 
 .vp-doc pre code {
   font-size: 12.5px !important;
+}
+
+.vp-doc :not(pre) > code {
+  color: var(--vp-text-code);
 }
 
 .vp-code-group .tabs label {
@@ -120,6 +179,47 @@
     left: -28px;
     padding: 0 18px;
     transform: scale(0.94);
+  }
+}
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4,
+.vp-doc h5,
+.vp-doc h6 {
+  width: max-content;
+  max-width: 100%;
+}
+.vp-doc h1 + p,
+.vp-doc h2 + p {
+  margin-top: 0;
+}
+.vp-doc h2 {
+  padding-top: 16px !important;
+}
+.vp-doc h3 {
+  margin-top: 40px !important;
+}
+
+.vp-doc p > strong > a,
+.vp-doc p > a,
+.vp-doc li > strong > a,
+.vp-doc li > a,
+.vp-doc td > strong > a,
+.vp-doc td > a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  transition: 0.1s ease;
+  transition-property: color, text-underline-offset;
+  :root.dark & {
+    color: rgb(131, 222, 255);
+  }
+  &:hover,
+  :root.dark &:hover {
+    color: var(--vp-c-text-1);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
   }
 }
 
@@ -216,7 +316,7 @@
   }
 }
 #VPSidebarNav.nav {
-  margin-top: 8px;
+  margin-top: 24px;
 }
   // Hide extraneous visual elements when parent group is collapsed
 // without messing with individual elements themselves. 
@@ -238,25 +338,24 @@
   // New link styles
   &.link {
     margin: 0;
-    padding: 8px var(--active-indicator-padding) !important;
+    padding: 9px var(--active-indicator-padding) !important;
     transition-duration: 0.1s;
     transition-property: background-color, box-shadow, color;
-    &.active {
-      position: relative;
-      color: var(--vp-c-text-1);
-      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
-      border-radius: 8px;
-      background-color: #fff;
-      :root.dark & {
-        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
-        background-color: var(--vp-c-bg);
-      }
-    }
   }
 }
-.link-text {
+
+//  Post 1.0.0-rc.20
+
+.VPLink .text {
+  padding: 0;
   font-size: 13px !important;
   line-height: 1.32 !important;
+  transition-duration: 0.1s;
+  transition-property: color, opacity;
+}
+
+.VPLink:hover .text {
+  color: var(--vp-c-text-1) !important;
 }
 
 // --------------------------------
@@ -264,6 +363,8 @@
 
 // Widen aside
 .VPDoc .aside {
+  max-width: 300px !important;
+  position: relative;
   padding-left: 0;
   @media (min-width: 1380px) {
     max-width: 248px;
@@ -274,6 +375,13 @@
   @media (min-width: 1600px) {
     max-width: 328px;
   }
+}
+.aside-container {
+  width: 300px !important;
+  max-width: 300px;
+}
+.aside-content {
+  padding-top: 56px;
 }
 
 // Add gap between title and list, but account for hardcoded `outline-marker` `top`
@@ -314,8 +422,10 @@
     --vp-custom-block-tip-text: rgb(0, 125, 111);
     --vp-custom-block-warning-text: rgb(202, 135, 0);
     --vp-custom-block-warning-border: rgb(255, 200, 0);
+    --vp-custom-block-warning-bg: rgba(255, 200, 0, 0.032);
   }
   :root.dark & {
+    --vp-custom-block-tip-bg: var(--vp-c-green-dim-1);
     --vp-custom-block-tip-text: hsl(165 100% 60%);
     --vp-custom-block-tip-border: hsl(172, 100%, 19%);
     --vp-custom-block-warning-text: rgb(255, 183, 0);
@@ -408,8 +518,27 @@ h2 + .custom-block {
   transition-duration: 0.1s;
 }
 
+.vp-doc .custom-block code {
+  color: var(--vp-c-text-1);
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+  :root.dark & {
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.16);
+  }
+}
+
 .vp-doc .custom-block ul {
   margin-bottom: 0;
+}
+
+.vp-doc .custom-block summary {
+  position: relative;
+  margin: 0;
+  &::marker {
+    content: '▷\a0\a0\a0';
+  }
+}
+.vp-doc .custom-block[open] summary::marker {
+  content: '▽\a0\a0\a0';
 }
 
 .vp-doc .custom-block div[class*='language-'] {
@@ -430,7 +559,7 @@ h2 + .custom-block {
   }
 }
 
-.content-container footer.VPDocFooter {
+.content-container footer.VPDocFooter .edit-info {
   margin-top: 20px;
 }
 

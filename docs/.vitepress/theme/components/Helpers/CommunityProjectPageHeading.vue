@@ -56,6 +56,7 @@ export default {
   color: var(--vp-c-text-2);
   font-size: 13px;
   font-weight: 500;
+  text-decoration: none;
   transition-duration: 0.1s;
   transition-timing-function: ease;
   &:hover {
@@ -67,6 +68,7 @@ export default {
 .heading-title:hover {
   color: var(--vp-c-text-1);
   font-weight: 600;
+  text-decoration: none;
 }
 
 .project-category {

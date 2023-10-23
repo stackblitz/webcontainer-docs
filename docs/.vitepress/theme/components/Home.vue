@@ -259,27 +259,4 @@ img {
 
 <!-- global on current page only -->
 <style lang="scss">
-.VPNavBar .content-body,
-.VPNavBar.fill .content-body {
-  background-color: transparent !important;
-  backdrop-filter: none;
-  :root.dark & {
-    background-color: transparent !important;
-  }
-}
-.VPNavBar {
-  transition: 0.2s ease !important;
-  transition-property: background-color, backdrop-filter !important;
-}
-.VPNavBar.fill {
-  transition-property: background-color, backdrop-filter !important;
-  backdrop-filter: blur(6px) !important;
-  background-color: rgba(255,255,255,0.8) !important;
-  :root.dark & {
-    background-color: rgba(7, 8, 10, 0.8) !important;
-  }
-}
-.VPContent:not(.has-sidebar) {
-  padding-top: 0 !important;
-}
 </style>

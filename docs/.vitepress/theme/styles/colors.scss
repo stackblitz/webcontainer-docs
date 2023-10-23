@@ -21,6 +21,10 @@
 
   // Greys
   --vp-c-gray-dark-2: rgb(186, 194, 210);
+
+  // rc.20
+  --vp-c-brand-1: var(--vp-c-brand);
+  --vp-c-brand-2: var(--vp-c-brand-light);
 }
 
 :root.dark {
@@ -46,7 +50,7 @@
   --vp-custom-block-info-bg: hsl(220 14% 17%);
 
   // Highlight color (links, some borders or hover effects)
-  --vp-c-brand: hsl(190 100% 48%);
+  --vp-c-brand: hsl(190, 100%, 58%);
   --vp-c-brand-light: hsl(185 100% 54%);
   --vp-c-brand-lighter: hsl(180 100% 60%);
   --vp-c-brand-dark: hsl(190 100% 42%);

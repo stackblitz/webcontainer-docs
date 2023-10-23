@@ -93,6 +93,7 @@ export default {
 .project-item {
   align-self: flex-start;
   color: var(--vp-c-text-1);
+  text-decoration: none;
   border-radius: 16px;
   overflow: hidden;
   transition: 0.14s ease;
