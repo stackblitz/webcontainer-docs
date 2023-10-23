@@ -295,4 +295,4 @@ And - that's it! You have a fully working terminal 🥳 To see the end product, 
 
 ## Next steps
 
-If you'd like to explore the API on your own, you can check out the [API reference](../api) or see the [projects made by our Community](/guides/community-inspirations).
+If you'd like to explore the API on your own, you can check out the [API reference](../api) or see the [projects made by our Community](/community-projects/all-projects).
