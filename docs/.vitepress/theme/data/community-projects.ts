@@ -83,5 +83,12 @@ export const communityProjectCardData: CommunityProjectCardData[] = [
     description: `Tech Educator's Toolkit is an early exploration of WebContainer API and of a new way to write interactive tutorials.`,
     itemUrl: '/community-projects/tech-educators-toolkit',
     thumbnailUrl: '/img/community/dan_jutan_talk.png',
+  },
+  {
+    category: 'tutorial',
+    title: 'API Security Academy',
+    description: `The API Security Academy is a new interactive learning platform focused on mastering GraphQL security.`,
+    itemUrl: '/community-projects/api-security-academy',
+    thumbnailUrl: '/img/community/api_security_academy.png',
   }
 ];
