@@ -505,9 +505,9 @@ Watch for changes to a given file or directory.
   <a href="#watch-signature" class="header-anchor" aria-hidden="true">#</a>
 </h4>
 
-`watch(path: string, options: Options, Callback): Watcher`
+`watch(path: string, options: Options, listener: Listener): Watcher`
 
-`watch(path: string, Callback): Watcher`
+`watch(path: string, Listener): Watcher`
 
 <h4 id="watch-options">
   <a id="watch-options"><code>Options</code></a>
@@ -524,7 +524,7 @@ interface Options {
 
 <br />
 
-#### `encoding?: boolean`
+#### `encoding?: BufferEncoding | null`
 
 Specifies the character encoding to be used for the filename passed to the listener. Default: `'utf8'`.
 
