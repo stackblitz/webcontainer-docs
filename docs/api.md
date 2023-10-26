@@ -517,7 +517,6 @@ Watch for changes to a given file or directory.
 ```ts
 interface Options {
   encoding?: BufferEncoding | null;
-  persistent?: boolean;
   recursive?: boolean;
 }
 ```
