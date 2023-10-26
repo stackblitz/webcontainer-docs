@@ -10,6 +10,14 @@ head:
 
 # Changelog
 
+## 1.1.8
+
+* Add [`fs.watch`](api#▸-watch).
+
+## 1.1.7
+
+* Change compile target to ES2022
+
 ## 1.1.6
 
 * Add [`fs.rename`](api#▸-rename).
