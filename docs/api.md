@@ -507,7 +507,7 @@ Watch for changes to a given file or directory.
 
 `watch(path: string, options: Options, listener: Listener): Watcher`
 
-`watch(path: string, Listener): Watcher`
+`watch(path: string, listener: Listener): Watcher`
 
 <h4 id="watch-options">
   <a id="watch-options"><code>Options</code></a>
