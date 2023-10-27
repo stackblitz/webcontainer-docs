@@ -685,6 +685,5 @@ type BufferEncoding =
   | 'base64url'
   | 'latin1'
   | 'binary'
-  | 'hex'
-  | 'buffer';
+  | 'hex';
 ```
