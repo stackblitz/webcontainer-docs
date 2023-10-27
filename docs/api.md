@@ -496,6 +496,88 @@ await webcontainerInstance.fs.writeFile(
 );
 ```
 
+### ▸ `watch`
+
+Watch for changes to a given file or directory.
+
+<h4 id="watch-signature">
+  <a id="watch-signature">Signature</a>
+  <a href="#watch-signature" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+`watch(path: string, options: Options, listener: Listener): Watcher`
+
+`watch(path: string, listener: Listener): Watcher`
+
+<h4 id="watch-options">
+  <a id="watch-options"><code>Options</code></a>
+  <a href="#watch-options" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+```ts
+interface Options {
+  encoding?: BufferEncoding | null;
+  recursive?: boolean;
+}
+```
+
+<br />
+
+#### `encoding?: BufferEncoding | null`
+
+Specifies the character encoding to be used for the filename passed to the listener. Default: `'utf8'`.
+
+#### `recursive?: boolean`
+
+Indicates whether all subdirectories should be watched, or only the current directory. This applies when a directory is specified, and only on supported platforms. Default: `false`.
+
+<h4 id="watch-listener">
+  <a id="watch-listener"><code>Listener</code></a>
+  <a href="#watch-listener" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+```ts
+type Listener = (event: 'rename' | 'change', filename: string | Buffer) => void;
+```
+
+<h4 id="watch-watcher">
+  <a id="watch-watcher"><code>Watcher</code></a>
+  <a href="#watch-watcher" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+```ts
+interface Watcher {
+  close(): void;
+}
+```
+
+<br />
+
+#### `close(): void`
+
+Stop watching for changes on the given Watcher.
+
+<h4 id="watch-example">
+  <a id="watch-example">Example</a>
+  <a href="#watch-example" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+Watching a file:
+
+```js
+webcontainerInstance.fs.watch('/src/main.js', (event) => {
+    console.log(`action: ${event}`);
+});
+```
+
+Watching a directory:
+
+```js
+webcontainerInstance.fs.watch('/src', { recursive: true }, (event, filename) => {
+    console.log(`file: ${filename} action: ${event}`);
+});
+```
+
 ---
 
 ## `FileSystemTree`
