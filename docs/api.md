@@ -89,7 +89,7 @@ Mounts a [`FileSystemTree`](#filesystemtree) into the file system.
   <a href="#filesystemtree-signature" class="header-anchor" aria-hidden="true">#</a>
 </h4>
 
-<code>mount(tree: <a href="#filesystemtree">FileSystemTree</a>, options?: Options): Promise<void\></code>
+<code>mount(tree: <a href="#filesystemtree">FileSystemTree</a> | Uint8Array, options?: Options): Promise<void\></code>
 
 <h4 id="filesystemtree-options">
   <a id="filesystemtree-options"><code>Options</code></a>
