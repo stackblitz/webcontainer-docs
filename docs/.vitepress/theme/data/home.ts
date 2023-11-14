@@ -195,16 +195,6 @@ export const testimonialCardData: TestimonialCardData[] = [
   },
   {
     author: {
-      name: 'Dan Jutan',
-      title: 'Technical writer and frontend developer',
-    },
-    imgPath: {
-      author: '/img/testimonials/dan_jutan.jpg',
-    },
-    quote: `The WebContainers API lets you use the magic behind Stackblitz to power your own experiments. <br/><strong>A huge step forward for dev education, documentation, and demos!</strong>`,
-  },
-  {
-    author: {
       name: 'Ramón Huidobro',
       title: 'Developer Advocate at Suborbital Software Systems',
     },

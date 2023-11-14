@@ -7,7 +7,6 @@ export interface Person {
 }
 
 const PEOPLE = {
-  DAN_JUTAN: 'DAN_JUTAN',
   ERIC_SIMONS: 'ERIC_SIMONS',
   RICH_HARRIS: 'RICH_HARRIS',
   SYLWIA_VARGAS: 'SYLWIA_VARGAS',
@@ -15,13 +14,6 @@ const PEOPLE = {
 type PeopleKeys = keyof typeof PEOPLE;
 
 export const people: {[key in PeopleKeys]: Person} = {
-  DAN_JUTAN: {
-    name: 'Dan Jutan',
-    href: 'https://twitter.com/jutanium',
-    hrefAlias: 'jutanium',
-    imgPath: '/img/people/dan_jutan.jpg',
-    title: 'Technical writer and frontend developer'
-  },
   ERIC_SIMONS: {
     name: 'Eric Simons',
     href: 'https://twitter.com/ericsimons40',
