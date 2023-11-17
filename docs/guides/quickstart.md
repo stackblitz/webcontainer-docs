@@ -118,4 +118,4 @@ Please note that your deployed page must be served over HTTPS. This is not neces
 
 We also prepared a thorough [step-by-step tutorial](../tutorial/1-build-your-first-webcontainer-app) if you learn best with walkthroughs.
 
-If you'd like to explore the API on your own, you can check out the [API Reference](../api) or see the [projects made by our Community](/guides/community-inspirations).
+If you'd like to explore the API on your own, you can check out the [API Reference](../api) or see the [projects made by our Community](https://webcontainers.io/community-projects/all-projects).
