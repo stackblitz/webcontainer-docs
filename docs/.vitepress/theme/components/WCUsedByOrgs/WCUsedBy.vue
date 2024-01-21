@@ -8,9 +8,9 @@
   <div class="used_by">
     <ClientOnly>
       <img
-      v-for="company of wcUsedBy"
-      :src="isDark ? company.imgDark : company.imgLight"
-      :alt="`${company.name} logo`"
+        v-for="company of wcUsedBy"
+        :src="isDark ? company.imgDark : company.imgLight"
+        :alt="`${company.name} logo`"
       />
     </ClientOnly>
   </div>
