@@ -6,11 +6,13 @@
 
 <template>
   <div class="used_by">
-    <img
+    <ClientOnly>
+      <img
       v-for="company of wcUsedBy"
       :src="isDark ? company.imgDark : company.imgLight"
       :alt="`${company.name} logo`"
-    />
+      />
+    </ClientOnly>
   </div>
 </template>
 
