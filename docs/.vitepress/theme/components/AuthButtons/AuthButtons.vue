@@ -24,21 +24,15 @@ defineProps<{ place: 'navScreen' | 'navBar' }>();
   @media screen and (max-width: 768px) {
     margin-inline-start: 0px;
   }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 
-  .link {
-    @media screen and (max-width: 500px) {
-      height: 30px;
-      padding: 0 10px;
-    }
-  }
 }
 
 .navScreenContainer {
   display: none;
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 768px) {
     display: flex;
     gap: 8px;
     margin-block-start: 24px;
