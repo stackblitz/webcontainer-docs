@@ -1,0 +1,48 @@
+
+.link {
+    --outline-color-hsl: 0, 0%, 100%;
+    --outline-opacity: 0.08;
+    --text-strong-color: #fff;
+    display: flex;
+    align-items: center;
+    height: 36px;
+    padding: 0 20px;
+    border-radius: 8px;
+    color: var(--text-strong-color);
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: inset 0 0 0 1px hsla(var(--outline-color-hsl), var(--outline-opacity));
+    background-color: hsla(224, 32%, 28%, 0.24);
+    backdrop-filter: blur(8px);
+    transition: 0.1s ease;
+    transition-property: background-color, box-shadow, color;
+  }
+  
+  .light {
+    &:hover {
+      --outline-opacity: 0.14;
+      color: var(--text-strong-color);
+      background-color: hsla(224, 32%, 28%, 0.54);
+    }
+    :root:not(.dark) & {
+      --outline-color-hsl: 224, 32%, 28%;
+      --outline-opacity: 0.1;
+      color: hsl(240, 6%, 23%);
+      background-color: hsla(224, 32%, 28%, 0.1);
+      &:hover {
+        --outline-opacity: 0.2;
+        background-color: transparent;
+      }
+    }
+  }  
+  
+  .accent {
+    --outline-opacity: 0.14;
+    color: var(--text-strong-color);
+    background-color: hsl(214, 87%, 51%);
+    &:hover {
+      --outline-opacity: 0.24;
+      background-color: hsl(208, 100%, 53%);
+    }
+  }
