@@ -268,7 +268,7 @@ Suppose we want our WebContainer API application to mount a source code folder t
 import { snapshot } from '@webcontainer/snapshot';
 
 // snapshot is a `Buffer`
-const snapshot = await snapshot(SOURCE_CODE_FOLDER);
+const folderSnapshot = await snapshot(SOURCE_CODE_FOLDER);
 
 // for an express-based application
 app.get('/snapshot', (req, res) => {
