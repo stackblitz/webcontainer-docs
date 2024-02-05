@@ -258,6 +258,47 @@ await webcontainerInstance.mount(files, { mountPoint: 'my-mount-point' });
 
 :::
 
+## Generating snapshots
+
+The `mount()` method not only accepts the tree-like format we described above, but a binary snapshot format that can be automatically generated, using the
+[`@webcontainer/snapshot`](https://www.npmjs.com/package/@webcontainer/snapshot) package.
+Suppose we want our WebContainer API application to mount a source code folder that is present on our server. In that case, we could do the following:
+
+```typescript
+import { snapshot } from '@webcontainer/snapshot';
+
+// snapshot is a `Buffer`
+const folderSnapshot = await snapshot(SOURCE_CODE_FOLDER);
+
+// for an express-based application
+app.get('/snapshot', (req, res) => {
+  res
+    .setHeader('content-type', 'application/octet-stream')
+    .send(snapshot);
+});
+
+// for a SvelteKit-like application
+export function getSnapshot(req: Request) {
+  return new Response(sourceSnapshot, {
+    headers: {
+      'content-type': 'application/octet-stream',
+    },
+  });
+}
+```
+
+Now, on the client side of our application we can fetch that snapshot and mount it:
+```typescript
+import { WebContainer } from '@webcontainer/api';
+
+const webcontainer = await WebContainer.boot();
+
+const snapshotResponse = await fetch('/snapshot');
+const snapshot = await snapshotResponse.arrayBuffer();
+
+await webcontainer.mount(snapshot);
+```
+
 ## File System operations (`fs`)
 
 WebContainers expose an `fs` property on the WebContainer instance (`webcontainerInstance`). Currently, `fs` supports a few methods:
