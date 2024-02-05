@@ -270,7 +270,7 @@ import { snapshot } from '@webcontainer/snapshot';
 // snapshot is a `Buffer`
 const snapshot = await snapshot(SOURCE_CODE_FOLDER);
 
-// for a express-based application
+// for an express-based application
 app.get('/snapshot', (req, res) => {
   res
     .setHeader('content-type', 'application/octet-stream')
