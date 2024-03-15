@@ -52,7 +52,7 @@ Calling `spawn` returns a `WebContainerProcess`. Every process has an `output` p
 
 The output property is a `ReadableStream`. That’s because it is, in fact, a stream that can emit strings numerous times, just like the actual `stdout` or `stderr` from a process in Node.js. The advantage of streams is that they allow composition, meaning we can pipe data from one stream into another stream, for example `source.pipeTo(destination)`. Furthermore, streams can be transferred via `postMessage` from one context to a different context, for example a web worker. A `ReadableStream` also keeps a buffer of the data which is only flushed once you start reading.
 
-If you want to read data from output you can pipe it into a `WriteableStream` just like in the example above.
+If you want to read data from output you can pipe it into a `WriteableStream` just like in the example below.
 
 :::
 
@@ -61,7 +61,7 @@ An example of a usage could be the following:
 
 ```js
   const installProcess = await webcontainerInstance.spawn('npm', ['install']);
-  
+
   installProcess.output.pipeTo(new WritableStream({
     write(data) {
       console.log(data);
