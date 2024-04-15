@@ -21,7 +21,7 @@ Supercharge your production Node.js apps with a zero-footprint backend that elim
 - Designed for commercial use cases
 - Priority support from our team
 
-## Producton usage 
+## Production usage 
 
 WebContainers rely on hosted proxies and server-side acceleration to enable truly instant development environments. By obtaining a WebContainer API license, your business can gain access to higher API rate limits, uptime reliability, and a range of benefits designed to help you maximize the potential of the WebContainer API in your organization. This includes direct access to the development team to help you optimize performance and navigate any roadblocks during implementation, priority bug fixes, and the ability to influence the API's roadmap, ensuring that it continues to meet the evolving needs of your business. Licenses also help support the continued hosting & development of the WebContainer API for both commercial and open source use cases.
 
