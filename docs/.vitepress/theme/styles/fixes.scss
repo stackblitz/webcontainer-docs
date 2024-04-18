@@ -130,6 +130,11 @@ padding-top: 8px;
   }
 }
 
+// Hide social links in the nav bar
+.VPSocialLinks.VPNavBarSocialLinks {
+  display: none;
+}
+
 // New body styles
 .vp-doc p,
 .vp-doc li {
@@ -180,6 +185,9 @@ padding-top: 8px;
     padding: 0 18px;
     transform: scale(0.94);
   }
+}
+h2 .header-anchor {
+  margin-top: -8px;
 }
 .vp-doc h1,
 .vp-doc h2,

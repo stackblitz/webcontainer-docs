@@ -6,6 +6,7 @@ export const guideLinks = [
   { text: 'Configuring Headers', link: '/guides/configuring-headers' },
   { text: 'Troubleshooting', link: '/guides/troubleshooting'},
   { text: 'Browser Support', link: '/guides/browser-support' },
+  { text: 'API Versioning and Support', link: '/guides/api-support' },
   { text: 'Browser Configuration', link: '/guides/browser-config' },
 ];
 
@@ -26,7 +27,6 @@ export const communityProjectsLinks = [
   { text: 'StackBlitz Codeflow', link: '/community-projects/stackblitz-codeflow' },
   { text: 'StackBlitz Web Publisher', link: '/community-projects/stackblitz-web-publisher' },
   { text: 'SvelteKit', link: '/community-projects/sveltekit' },
-  { text: `Tech Educator's Toolkit`, link: '/community-projects/tech-educators-toolkit' },
   { text: 'API Security Academy', link: '/community-projects/api-security-academy' },
 ];
 
