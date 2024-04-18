@@ -521,7 +521,6 @@ Watch for changes to a given file or directory.
 ```ts
 interface Options {
   encoding?: BufferEncoding | null;
-  recursive?: boolean;
 }
 ```
 
@@ -530,10 +529,6 @@ interface Options {
 #### `encoding?: BufferEncoding | null`
 
 Specifies the character encoding to be used for the filename passed to the listener. Default: `'utf8'`.
-
-#### `recursive?: boolean`
-
-Indicates whether all subdirectories should be watched, or only the current directory. This applies when a directory is specified, and only on supported platforms. Default: `false`.
 
 <h4 id="watch-listener">
   <a id="watch-listener"><code>Listener</code></a>
