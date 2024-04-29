@@ -248,6 +248,196 @@ after calling this method.
 
 ---
 
+## `auth`
+
+::: warning
+This module is currently only available under the `beta` tag. If you want to use
+it you will need to install this version specifically:
+
+```bash
+npm install @webcontainer/api@beta
+```
+
+We don't guarantee backwards compatibility between beta versions.
+:::
+
+The authentication API is exported under the `auth` namespace. It allows you to authenticate users visiting your website via StackBlitz. In order for users to be authenticated via this method, they must:
+
+ * Be logged in on StackBlitz.
+ * Belong to the organisation you used to generate your `client_id` for use with the WebContainer API.
+ * Authorize your website.
+
+Once logged in, you'll be able to install private packages that those users have access to within WebContainer.
+
+### `auth` Functions
+
+<br />
+
+### ▸ `init`
+
+Intialize the authentication for use in WebContainer. This method should be call as soon as possible as part of the loading of your page. For example at the top of a module that gets loaded as soon as the page load. This is important for multiple reasons:
+
+ * If you do client side routing, and the OAuth flow is happening, then query parameters might be populated with values related to the OAuth flow. The `init` function remove them after they've been consumed.
+
+ * If you do the authentication in <a href="#▸-startauthflow">popup</a> mode, you probably want the popup to be closed as soon as the authentication completed to provide a great experience for your users.
+
+<h4 id="auth-init-signature">
+  <a id="auth-init-signature">Signature</a>
+  <a href="#auth-init-signature" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+<code>init(options: <a href="#authinit-options">AuthInitOptions</a>): { status: 'need-auth' | 'authorized' } | <a href="#authfailed-error">AuthFailedError</a></code>
+
+
+<h4 id="authinit-options">
+  <a id="authinit-options"><code>AuthInitOptions</code></a>
+  <a href="#authinit-options" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+```ts
+interface AuthInitOptions {
+  /**
+   * StackBlitz' origin.
+   *
+   * @default https://stackblitz.com
+   */
+  editorOrigin?: string;
+
+  /**
+   * The client id for this OAuth application.
+   */
+  clientId: string;
+
+  /**
+   * OAuth scope.
+   *
+   * @see https://www.rfc-editor.org/rfc/rfc6749#section-3.3
+   */
+  scope: string;
+}
+```
+
+<h4 id="authfailed-error">
+  <a id="authfailed-error"><code>AuthFailedError</code></a>
+  <a href="#authfailed-error" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+```ts
+interface AuthFailedError {
+  status: 'auth-failed';
+
+  /**
+   * A short description of the error.
+   */
+  error: string;
+
+  /**
+   * A detailed description of the error.
+   */
+  description: string;
+}
+```
+
+### ▸ `startAuthFlow`
+
+This starts the OAuth flow, redirecting the current page to the StackBlitz editor to authenticate the user unless `popup` is set to true in which case it's done in a popup.
+
+<code>startAuthFlow(options?: { popup?: boolean }): void</code>
+
+### ▸ `loggedIn`
+
+Returns a promise that resolves when the user authorized your application.
+This promise is guaranteed to never be rejected.
+
+If the user never authorizes or declines your application, this promise never
+resolves.
+
+<h4 id="auth-loggedin-signature">
+  <a id="auth-loggedin-signature">Signature</a>
+  <a href="#auth-loggedin-signature" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+<code>loggedIn(): Promise<void\></code>
+
+<h4 id="auth-loggedin-example">
+  <a id="auth-loggedin-example">Example</a>
+  <a href="#auth-loggedin-example" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+```ts
+const instance = await WebContainer.boot();
+
+// wait until the user is logged in
+await auth.loggedIn();
+
+// we can now fetch private packages from our organisation
+await instance.spawn('npm', ['install']);
+```
+
+### ▸ `logout`
+
+Logout the user and clear any credentials that were saved locally.
+
+If `ignoreRevokeError` is set and the revocation failed, the locally-saved credentials are discarded nonetheless.
+
+<h4 id="auth-logout-signature">
+  <a id="auth-logout-signature">Signature</a>
+  <a href="#auth-logout-signature" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+<code>logout(options?: { ignoreRevokeError?: boolean }): Promise<void\></code>
+
+### ▸ `on`
+
+Listens for an `event`. The `listener` is called every time the `event` gets emitted.
+
+<h4 id="auth-on-signature">
+  <a id="auth-on-signature">Signature</a>
+  <a href="#auth-on-signature" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+<br />
+
+<h4 id="auth-on-signature">
+  <code>on(event: 'logged-out' | 'auth-failed', listener: () => void | (reason: { error: string, description: string }) => void): () => void</code>
+</h4>
+
+<br />
+
+<h4 id="auth-on-returns">
+  <a id="auth-on-returns">Returns</a>
+  <a href="#auth-on-returns" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+Returns a function to unsubscribe from the events. Once unsubscribed, the `listener` will no longer be called.
+
+<br />
+
+<h4 id="auth-on-overloads">
+  <a id="auth-on-overloads">Overloads</a>
+  <a href="#auth-on-overloads" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+<br />
+
+<h4>
+  ▸ <code>on(event: 'logged-out', listener: () => void): () => void</code>
+</h4>
+
+Listens for `logged-out` events, which are emitted when the credentials are revoked, meaning the user needs to re-authenticate.
+
+<br />
+
+<h4>
+  ▸ <code>on(event: 'auth-failed', listener: (reason: { error: string, description: string }) => void): () => void</code>
+</h4>
+
+Listens for `auth-failed` events, which are emitted when the user declines authorization in another tab / popup.
+
+The property `error` correspond to a constant that your code can match against while description is a human readable error that can be useful for development.
+
+---
+
 ## `DirEnt`
 
 A representation of a directory entry, see [the Node.js API](https://nodejs.org/dist/latest-v16.x/docs/api/fs.html#class-fsdirent).

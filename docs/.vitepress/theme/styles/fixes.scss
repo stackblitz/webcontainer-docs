@@ -33,7 +33,7 @@
 
 // We would like to have single pages in the sidebar (e.g. API Reference, Enterprise).
 // VitPress expects to have you section title text + items and when you only have one item it looks like there are extra spacing.
-// These styles are to adjust spacing between groups. 
+// These styles are to adjust spacing between groups.
 #VPSidebarNav .group {
   padding-top: 0;
 }
@@ -327,7 +327,7 @@ h2 .header-anchor {
   margin-top: 24px;
 }
   // Hide extraneous visual elements when parent group is collapsed
-// without messing with individual elements themselves. 
+// without messing with individual elements themselves.
 .VPSidebarGroup.collapsed .items {
   opacity: 0;
 }
@@ -481,7 +481,7 @@ h2 + .custom-block {
   margin: 2px 0 0;
   font-size: 14px;
   line-height: 1.8;
-  
+
   &.custom-block-title {
     position: relative;
     margin-bottom: 8px;
@@ -524,14 +524,6 @@ h2 + .custom-block {
 
 .vp-doc .custom-block a {
   transition-duration: 0.1s;
-}
-
-.vp-doc .custom-block code {
-  color: var(--vp-c-text-1);
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
-  :root.dark & {
-    box-shadow: 0 0 0 1px rgba(255,255,255,0.16);
-  }
 }
 
 .vp-doc .custom-block ul {
