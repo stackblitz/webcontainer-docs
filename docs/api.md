@@ -277,7 +277,7 @@ Once logged in, you'll be able to install private packages that those users have
 
 Intialize the authentication for use in WebContainer. This method should be call as soon as possible as part of the loading of your page. For example at the top of a module that gets loaded as soon as the page load. This is important for multiple reasons:
 
- * If you do client side routing, and the OAuth flow is happening, then query parameters might be populated with values related to the OAuth flow. The `init` function remove them after they've been consumed.
+ * If you do client side routing, and the OAuth flow is happening, then query parameters might be populated with values related to the OAuth flow. The `init` function removes them after they've been consumed.
 
  * If you do the authentication in <a href="#▸-startauthflow">popup</a> mode, you probably want the popup to be closed as soon as the authentication completed to provide a great experience for your users.
 
