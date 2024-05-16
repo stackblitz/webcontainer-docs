@@ -275,7 +275,7 @@ Once logged in, you'll be able to install private packages that those users have
 
 ### ▸ `init`
 
-Intialize the authentication for use in WebContainer. This method should be call as soon as possible as part of the loading of your page. For example at the top of a module that gets loaded as soon as the page load. This is important for multiple reasons:
+Intialize the authentication for use in WebContainer. This method should be called as soon as possible as part of the loading phase of your page. For example at the top of a module that gets loaded as soon as the page loads. This is important for multiple reasons:
 
  * If you do client side routing, and the OAuth flow is happening, then query parameters might be populated with values related to the OAuth flow. The `init` function removes them after they've been consumed.
 
