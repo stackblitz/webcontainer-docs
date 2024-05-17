@@ -434,7 +434,7 @@ Listens for `logged-out` events, which are emitted when the credentials are revo
 
 Listens for `auth-failed` events, which are emitted when the user declines authorization in another tab / popup.
 
-The property `error` correspond to a constant that your code can match against while description is a human readable error that can be useful for development.
+The property `error` corresponds to a constant that your code can match against, while `description` is a human readable error that can be useful for development.
 
 ---
 
