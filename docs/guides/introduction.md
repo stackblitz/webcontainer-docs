@@ -11,11 +11,12 @@ head:
 
 **WebContainers are a browser-based runtime for executing Node.js applications and operating system commands, entirely inside your browser tab.** Apps that previously required cloud VMs to execute user code, in WebContainers can run entirely client-side with [a number of benefits over the legacy cloud VM](#webcontainers-versus-cloud-vm-approach).
 
-**WebContainer API is perfect for interactive coding experiences.** Among its most common use cases are production-grade IDEs, programming tutorials, next-generation documentation, AI applications, or employee onboarding platforms. WebContainers have been [battle-tested by millions of users](#who-s-using-webcontainers) of StackBlitz classic editor, Codeflow, the official SvelteKit tutorial, and Cloudflare Wrangler workers, among others.
+**WebContainer API is perfect for interactive coding experiences.** Among its most common use cases are AI applications, adding in-browser code execution to your existing product, programming tutorials, next-generation documentation, browser based IDEs, and employee onboarding platforms. WebContainers have been [battle-tested by millions of users](#who-s-using-webcontainers) of StackBlitz, and inside the interactive coding environments built by [Svelte](https://learn.svelte.dev/tutorial/welcome-to-svelte), [Angular](https://angular.dev/tutorials/first-app), and [Nuxt](https://learn-dev.nuxt.com/) among others.
 
-Ready to try it? Check out this WebContainer API starter in an editor running on... WebContainers as well!
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://webcontainer.new)
+:::tip Ready to try it out for yourself?
+Get started in minutes with [our Quickstart guide here](./quickstart).
+:::
 
 ## Key features
 
@@ -34,13 +35,13 @@ WebContainers enables you to build applications that previously required running
 - **Scales to millions.** Leverages modern CDN caching and client-side compute.
 - **No risk of bad actors.** Say goodbyte to bitcoin miners, malware, and phishing sites.
 
-To explore the API, check out the WebContainer starter:
+If you want to skip [the Quickstart guide](./quickstart) and jump stright into exploring the API, you can open the WebContainer starter project in StackBlitz here:
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://webcontainer.new)
 
 ## Who's using WebContainers?
 
-Initially [announced at Google I/O](https://blog.stackblitz.com/posts/introducing-webcontainers/), **WebContainers are developed by [StackBlitz](https://stackblitz.com) and have been battle-tested by millions of developers every month in StackBlitz [classic editor](https://node.new) and in the new [Codeflow IDE](https://stackblitz.com/codeflow)**. Externally, WebContainers also power a number of instant coding experiences such as Cloudflare Wrangler's [workers.new](https://blog.cloudflare.com/cloudflare-stackblitz-partnership/#powering-a-better-developer-experience-and-documentation) and the Svelte team's [interactive fullstack tutorial](http://learn.svelte.dev/) for SvelteKit.
+Initially [announced at Google I/O](https://blog.stackblitz.com/posts/introducing-webcontainers/), **WebContainers are developed by [StackBlitz](https://stackblitz.com) and have been battle-tested by millions of developers every month as they power the StackBlitz editor**. Externally, WebContainers also power a number of popular interactive coding environments including those built by [Svelte](https://learn.svelte.dev/tutorial/welcome-to-svelte), [Angular](https://angular.dev/tutorials/first-app), and [Nuxt](https://learn-dev.nuxt.com/).
 
 To see more examples of how WebContainers have been used so far, check out our [Community Projects page](/community-projects/all-projects).
 

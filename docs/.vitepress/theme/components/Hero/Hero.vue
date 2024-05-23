@@ -9,8 +9,8 @@ import WCEmbed from '@theme/components/Examples/WCEmbed/WCEmbed.vue';
       <h1><strong>Dev environments.</strong><br/>In your <strong>web app.</strong></h1>
       <p>From interactive tutorials to full-blown IDEs, build instant, interactive coding experiences backed by WebContainers: the trusted, browser-based runtime from <a href="https://stackblitz.com" target="_blank">StackBlitz</a>.</p>
       <div class="cta-buttons">
-        <CTAButton href="/guides/quickstart">Get started</CTAButton>
-        <CTAButton href="/guides/introduction" layout="simple">Learn more</CTAButton>
+        <CTAButton href="/guides/introduction">Get started</CTAButton>
+        <CTAButton href="https://docs.google.com/forms/d/e/1FAIpQLSertiZLl-za0ZHxsWbd2IrISVft2OpPglykEHpEllPSfnZIUg/viewform" layout="simple">Book a demo</CTAButton>
       </div>
     </div>
 
