@@ -27,7 +27,7 @@ const SIDEBAR_DEFAULT = [
     items: [{ text: 'Changelog', link: '/changelog' }],
   },
   {
-    items: [{ text: 'Enterprise', link: '/enterprise' }],
+    items: [{ text: 'Commercial Usage', link: '/enterprise' }],
   },
   {
     text: 'Community Projects',
@@ -91,7 +91,7 @@ export default defineConfig({
       { text: 'Guides', link: '/guides/introduction' },
       { text: 'Tutorial', link: '/tutorial/1-build-your-first-webcontainer-app' },
       { text: 'API Reference', link: '/api' },
-      { text: 'Enterprise', link: '/enterprise' },
+      { text: 'Commercial Usage', link: '/enterprise' },
     ],
     sidebar: {
       '/guides/': SIDEBAR_DEFAULT,
