@@ -8,8 +8,11 @@ head:
   - ['meta', {name: 'twitter:description', content: *description}]
 ---
 # Commercial Usage
+The WebContainer API is powering a new class of in-browser experiences from interactive tutorials, to code editors, and advanced AI applications.
 
-Supercharge your production Node.js apps with a zero-footprint backend that eliminates the need for servers, boots in milliseconds, and provides 0ms latency backend connectivity. With WebContainer API you can create experiences that were previously impossible. If you're exploring the API for usage in a commercial, for-profit context, you're in the right place!
+Our secure and scalable API is designed to be integrated into your core application and scale effortlessly to millions of users thanks to our patented in-browser compute model.
+
+If you're considering the API for commercial, for-profit use, you're in the right place.
 
 :::tip Want to discuss your commercial use case?
  [Reach out here to book a meeting with our WebContainer API team!](https://docs.google.com/forms/d/e/1FAIpQLSertiZLl-za0ZHxsWbd2IrISVft2OpPglykEHpEllPSfnZIUg/viewform)
