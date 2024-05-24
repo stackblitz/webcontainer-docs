@@ -20,7 +20,7 @@ Licensing is required for *production* usage of the API in a commercial, for-pro
 
 ## WebContainer API for Enterprise
 For the most security conscious organizations in the world, the WebContainer API Enterprise offering provides the features you need to meet the requirements of your security team:
-- Self hosted, on-premise, and VPC installation options behind the firewall
+- Self hosted, on-premises, and VPC installation options behind the firewall
 - Use your private packages with support for private NPM registries
 - Enterprise SSO - Integrate with any SAML2-based authentication provider
 - Priority implementation & uptime support from our team
