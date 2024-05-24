@@ -16,7 +16,7 @@ Supercharge your production Node.js apps with a zero-footprint backend that elim
 :::
 
 ## Who needs a commercial WebContainer API license? 
-Licensing is required for *production* usage of the API in a commercial for-profit setting (feel free to prototype as much as you like without a license). If you're using the API to meet the needs of your customers, prospective customers, and/or employees you need a license to ensure compliance with our TOS and continued access to the API as you scale.
+Licensing is required for *production* usage of the API in a commercial, for-profit setting. (Prototypes or POCs do not require a commercial license.) If you're using the API to meet the needs of your customers, prospective customers, and/or employees, you need a license to ensure compliance with our [Terms of Service](https://stackblitz.com/terms-of-service). Usage of the API in violation of these terms may result in your access being revoked.
 
 ## WebContainer API for Enterprise
 For the most security conscious organizations in the world, the WebContainer API Enterprise offering provides the features you need to meet the requirements of your security team:
