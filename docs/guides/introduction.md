@@ -41,7 +41,7 @@ If you want to skip [the Quickstart guide](./quickstart) and jump stright into e
 
 ## Who's using WebContainers?
 
-Initially [announced at Google I/O](https://blog.stackblitz.com/posts/introducing-webcontainers/), **WebContainers are developed by [StackBlitz](https://stackblitz.com) and have been battle-tested by millions of developers every month as they power the StackBlitz editor**. Externally, WebContainers also power a number of popular interactive coding environments including those built by [Svelte](https://learn.svelte.dev/tutorial/welcome-to-svelte), [Angular](https://angular.dev/tutorials/first-app), and [Nuxt](https://learn-dev.nuxt.com/).
+Initially [announced at Google I/O](https://blog.stackblitz.com/posts/introducing-webcontainers/), **WebContainers are developed by [StackBlitz](https://stackblitz.com) and have been battle-tested by millions of developers every month as they power the StackBlitz editor**. Externally, WebContainers also power a number of popular interactive learning environments including those built by the [Svelte](https://learn.svelte.dev/tutorial/welcome-to-svelte), [Angular](https://angular.dev/tutorials/first-app), and [Nuxt](https://learn-dev.nuxt.com/) teams.
 
 To see more examples of how WebContainers have been used so far, check out our [Community Projects page](/community-projects/all-projects).
 
