@@ -15,7 +15,7 @@ Our secure and scalable API is designed to be integrated into your core applicat
 If you're considering the API for commercial, for-profit use, you're in the right place.
 
 :::tip Want to discuss your commercial use case?
- [Reach out here to book a meeting with our WebContainer API team!](https://docs.google.com/forms/d/e/1FAIpQLSertiZLl-za0ZHxsWbd2IrISVft2OpPglykEHpEllPSfnZIUg/viewform)
+ [Reach out here to book a meeting with our WebContainer API team!](https://forms.default.com/360757)
 :::
 
 ## Who needs a commercial WebContainer API license? 
@@ -31,4 +31,4 @@ For the most security conscious organizations in the world, the WebContainer API
 
 Ready to supercharge your production Node.js apps? Contact us to see if your use case is a good fit and learn more about our pricing and support options.
 
-[Start a conversation!](https://docs.google.com/forms/d/e/1FAIpQLSertiZLl-za0ZHxsWbd2IrISVft2OpPglykEHpEllPSfnZIUg/viewform)
+[Start a conversation!](https://forms.default.com/360757)

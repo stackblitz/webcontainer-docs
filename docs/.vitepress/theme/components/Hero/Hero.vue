@@ -10,7 +10,7 @@ import WCEmbed from '@theme/components/Examples/WCEmbed/WCEmbed.vue';
       <p>From interactive tutorials to full-blown IDEs, build instant, interactive coding experiences backed by WebContainers: the trusted, browser-based runtime from <a href="https://stackblitz.com" target="_blank">StackBlitz</a>.</p>
       <div class="cta-buttons">
         <CTAButton href="/guides/introduction">Get started</CTAButton>
-        <CTAButton href="https://docs.google.com/forms/d/e/1FAIpQLSertiZLl-za0ZHxsWbd2IrISVft2OpPglykEHpEllPSfnZIUg/viewform" layout="simple">Book a demo</CTAButton>
+        <CTAButton href="https://forms.default.com/360757" layout="simple">Book a demo</CTAButton>
       </div>
     </div>
 

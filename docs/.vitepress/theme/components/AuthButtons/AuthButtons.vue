@@ -4,7 +4,7 @@ defineProps<{ place: 'navScreen' | 'navBar' }>();
 
 <template>
   <div :class="place === 'navScreen' ? 'navScreenContainer' : 'navBarContainer'">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSertiZLl-za0ZHxsWbd2IrISVft2OpPglykEHpEllPSfnZIUg/viewform" class="link accent">Book a demo</a>
+    <a href="https://forms.default.com/360757" class="link accent">Book a demo</a>
   </div>
 </template>
 
