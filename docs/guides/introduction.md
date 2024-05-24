@@ -15,7 +15,7 @@ head:
 
 
 :::tip Ready to try it out for yourself?
-Get started in minutes with [our Quickstart guide here](./quickstart).
+Check out this [WebContainer API starter](https://webcontainer.new/) or see [our Quickstart guide](./quickstart) to get familiar with what's possible!
 :::
 
 ## Key features
