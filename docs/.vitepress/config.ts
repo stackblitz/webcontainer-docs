@@ -90,7 +90,7 @@ export default defineConfig({
     nav: [
       { text: 'Guides', link: '/guides/introduction' },
       { text: 'Tutorial', link: '/tutorial/1-build-your-first-webcontainer-app' },
-      { text: 'API Reference', link: '/api' },
+      { text: 'Artificial Intelligence', link: '/ai' },
       { text: 'Commercial Usage', link: '/enterprise' },
     ],
     sidebar: {
