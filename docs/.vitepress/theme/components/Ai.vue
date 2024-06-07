@@ -40,7 +40,7 @@ defineProps<{
 
   <div class="section">
     <h2>Leverage the tech <strong>we use<br/> in our own products.</strong></h2>
-    <p>WebContainer API already powers production developer experiences from interactive tutorials to full-blown IDEs. With the WebContainer API, you can build a secure and performant coding environment into your AI applications without worrying about provisioning infrastructure.</p>
+    <p>WebContainers already powers production developer experiences from interactive tutorials to full-blown IDEs. With the WebContainer API, you can build a secure and performant coding environment into your AI applications without worrying about provisioning infrastructure.</p>
     <CTAButton href="/guides/quickstart">Get started!</CTAButton>
   </div>
 
