@@ -28,7 +28,7 @@ defineProps<{
         </div>
         <div class="feature">
           <h2>Provide a better developer experience for your users</h2>
-          <p>With WebContainer API you can provide your users a low-latency in-browser code execution environment seamlessly integrated into your AI application so they can get production-ready code faster.</p>
+          <p>With the WebContainer API you can provide your users a low-latency in-browser code execution environment seamlessly integrated into your AI application so they can get production-ready code faster.</p>
         </div>
         <div class="feature">
           <h2>Avoid infrastructure and security headaches</h2>
