@@ -15,7 +15,7 @@ To help those looking to choose a solution for AI agents capable of running Node
 ## Test Cases
 These test cases cover a broad spectrum of essential tools and frameworks in web development, ensuring AI agents are versatile, efficient, and capable of handling *real-world* coding tasks. These tools, frameworks, and run time features are driven by real world data observed via real world usage of over 2m developers on StackBlitz.com and/or npm trends.
 
-**To run these test cases**: First, download the files from the StackBlitz example and have the environment arbitrarily install the npm packages, execute the dev command, check the server is booted properly, and validate the results are expected.
+**To run these test cases**: First, download the files from the StackBlitz example and have the environment arbitrarily install the npm packages, execute the dev or start command, when applicable check the server is booted properly, and validate the results are expected.
 
 ### NodeJS 
 *Multiple processes, Async promises, FS Operations, Built-ins, Http Server, Streams, Child processes, Inter, process, communication, timers, Event Emitter*
@@ -41,7 +41,7 @@ CLI operations assess the capability to interact with the system shell, execute 
 
 Using Vite evaluates the ability to configure and optimize modern development environments. It also assesses proficiency in handling hot module replacement, faster builds, and leveraging Vite's advanced features to enhance developer productivity.
 
-### NextJS
+### Next.js
 [NPM trend](https://npmtrends.com/next) - [View test case](https://stackblitz.com/edit/nextjs-lsmwnd?file=README.md)
 
 NextJS assesses the capability to manage both client-side and server-side code, handle complex routing, and optimize performance for SEO. It also tests the ability to integrate with various APIs and manage state in a universal JavaScript application.
