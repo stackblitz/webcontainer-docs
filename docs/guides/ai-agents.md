@@ -1,6 +1,6 @@
 # Runtime Test Cases For AI Agents
 
-When building AI apps, you'll often need to execute arbitrary code. The most ideal place is inside the user's browser, as it is:
+When building AI apps, you often need to execute arbitrary code. The most ideal place is inside the user's browser, as it is:
 
 1. Secure
 2. Long lived
@@ -10,7 +10,7 @@ When building AI apps, you'll often need to execute arbitrary code. The most ide
 
 While creating a simple in-browser proof-of-concept is straightforward, compatibility is usually the main issues with in-browser runtimes, and this is especially the case for AI agents where you need to execute the arbitrary code LLMs spit out.
 
-To help those looking to choose a solution for AI agents capable of running Node.js applications, we've pulled together a suite of test cases that you can independently run on any runtime of your choosing (serverless, VMs, WebContainers, etc). These tests represent the most common patterns, libraries, tools, commands and environments that developers and toolchains rely on in the Node.js ecosystem, thus serving as a good baseline for what LLM generated code could look like.
+We've pulled together a suite of test cases that you can independently run on any runtime of your choosing (serverless, VMs, WebContainers, etc). These tests represent the most common patterns, libraries, tools, commands and environments that developers and toolchains rely on in the Node.js ecosystem, thus serving as a good baseline for what LLM generated code could look like. We've put these together based on feedback from over 2m developers on StackBlitz.com and npm trends.
 
 ## Test Cases
 These test cases cover a broad spectrum of essential tools and frameworks in web development, ensuring AI agents are versatile, efficient, and capable of handling *real-world* coding tasks. These tools, frameworks, and run time features are driven by real world data observed via real world usage of over 2m developers on StackBlitz.com and/or npm trends.
