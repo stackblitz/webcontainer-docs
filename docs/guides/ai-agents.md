@@ -46,7 +46,7 @@ Using Vite evaluates the ability to configure and optimize modern development en
 
 NextJS assesses the capability to manage both client-side and server-side code, handle complex routing, and optimize performance for SEO. It also tests the ability to integrate with various APIs and manage state in a universal JavaScript application.
 
-### Shadcn
+### shadcn-ui
 [NPM trend](https://npmtrends.com/shadcn-ui) - [View test case](https://stackblitz.com/edit/vitejs-vite-7g7gcc)
 
 Using Shadcn ensures effective integration and utilization of CLI-driven component architectures. It also assesses the ability to customize and extend the library to meet specific project requirements.
@@ -56,7 +56,7 @@ Using Shadcn ensures effective integration and utilization of CLI-driven compone
 
 React Router evaluates the ability to manage complex navigation structures, handle dynamic routing, and ensure seamless transitions between different parts of an application. It also tests proficiency in managing route parameters, query strings, and nested routes.
 
-### NuxtJS
+### Nuxt
 [NPM trend](https://npmtrends.com/nuxt) - [View test case](https://stackblitz.com/github/nuxt/starter/tree/v3)
 
 NuxtJS assesses the ability to handle server-side rendering, auto-imports, file system conventions, and zero config TypeScript support. It also tests the capability to work with Nuxt's automation with conventions methodology.
