@@ -6,7 +6,7 @@ AI agents in the context of writing code are designed to assist, automate, and i
 
 Ideally, AI coding agents wouldn't require any additional training of the model and would just work. This is where zero-shot capabilities come into play. With zero-shot learning, AI agents can perform new coding tasks without having been explicitly trained on them. They leverage their general understanding and previously acquired knowledge to handle tasks they haven't encountered before, making them highly flexible and efficient in a variety of coding scenarios.
 
-To that end, the agent's code runtime should be as similar to where the end-user intends to run the code as possible. Therefore, environments like serverless, edge, or polyfills end up lacking key features that end users are looking for. Essentially, the end-user is almost always expecting to run generated code as a long running server. So what if you could have a long running server with a reliable runtime?
+To that end, the agent's runtime should be as similar to where the end-user intends to run the code as possible. Therefore, environments like serverless, edge, or polyfills end up lacking key features that end users are looking for. Essentially, the end-user is almost always expecting to run generated code as a long running server. This makes for an interesting problem set when evaluating test cases for AI agents.
 
 ## Test Cases
 These test cases cover a broad spectrum of essential tools and frameworks in web development, ensuring AI agents are versatile, efficient, and capable of handling *real-world* coding tasks. These tools, frameworks, and run time features are driven by real world data observed via real world usage of over 2m developers on StackBlitz.com and/or npm trends.
