@@ -23,7 +23,7 @@ Testing AI agents on NodeJS is crucial because it evaluates the agent's ability 
 
 [View test cases](https://stackblitz.com/edit/node-yahmwv?file=package.json)
 
-Testing AI agents with these package managers ensures they can handle dependency management, version conflicts, and script execution. It also tests the agent's ability to adapt to different package management systems and optimize for faster, more efficient builds.
+Testing AI agents with package managers ensures they can handle dependency management, version conflicts, and script execution. It also tests the agent's ability to adapt to different package management systems and optimize for faster, more efficient builds.
 
 ### Command Line (CLI)
 [View test case](https://stackblitz.com/edit/node-xrxygh?file=.stackblitzrc)
@@ -43,7 +43,7 @@ Testing AI agents with NextJS assesses their capability to manage both client-si
 ### Shadcn
 [NPM trend](https://npmtrends.com/shadcn-ui) - [View test case](https://stackblitz.com/edit/vitejs-vite-7g7gcc)
 
-Testing AI agents with Shadcn ensures they can effectively integrate and utilize cli driven architectures. It also assesses the agent's ability to customize and extend the library to meet specific project requirements.
+Testing AI agents with Shadcn ensures they can effectively integrate and utilize cli driven component architectures. It also assesses the agent's ability to customize and extend the library to meet specific project requirements.
 
 ### React Router
 [NPM trend](https://npmtrends.com/react-router) - [View test case](https://stackblitz.com/github/remix-run/react-router/tree/dev/examples/basic)
@@ -53,7 +53,7 @@ Testing AI agents with React Router evaluates their ability to manage complex na
 ### NuxtJS
 [NPM trend](https://npmtrends.com/nuxt) - [View text case](https://stackblitz.com/github/nuxt/starter/tree/v3)
 
-Testing AI agents with NuxtJS assesses their ability to manage Vue components, handle server-side rendering, and optimize for performance and SEO. It also tests the agent's capability to work with Vue's reactive data binding and component lifecycle.
+Testing AI agents with NuxtJS assesses their ability to handle server-side rendering, auto-imports, file system conventions, and zero config typescript support. It also tests the agent's capability to work with Nuxt's automation with conventions methodology.
 
 ### LibSQL
 [NPM trend](https://npmtrends.com/@libsql/client) - [View test case](https://stackblitz.com/edit/node-ox2oqu) 
