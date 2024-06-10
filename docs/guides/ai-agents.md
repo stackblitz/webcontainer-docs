@@ -11,23 +11,29 @@ To that end, the agent's code runtime should be as similar to where the end-user
 ## Test Cases
 These test cases cover a broad spectrum of essential tools and frameworks in web development, ensuring AI agents are versatile, efficient, and capable of handling *real-world* coding tasks. These tools, frameworks, and run time features are driven by real world data observed via real world usage of over 2m developers on StackBlitz.com and/or npm trends.
 
-**NodeJS** - Multiple processes - [View test case](https://stackblitz.com/edit/stackblitz-starters-9ozakx)
+### NodeJS 
+*Multiple processes, Async promises, FS Operations, Built-ins, Http Server, Streams, Child processes, Inter, process, communication, timers, Event Emitter*
 
-Testing AI agents on NodeJS, especially with multiple processes, is crucial because it evaluates the agent's ability to handle concurrency, manage child processes, and ensure performance efficiency. NodeJS's event-driven architecture makes it ideal for I/O-heavy tasks, and by leveraging multiple processes, the AI agent's proficiency in creating robust, performant applications is tested.
+[View test cases](https://stackblitz.com/edit/stackblitz-starters-9ozakx)
 
-**Package managers** - NPM, Yarn, PNPM - [View test case](https://stackblitz.com/edit/node-yahmwv?file=package.json)
+Testing AI agents on NodeJS is crucial because it evaluates the agent's ability to handle concurrency, manage child processes, and ensure performance efficiency. NodeJS's event-driven architecture makes it ideal for I/O-heavy tasks, and by leveraging multiple processes, the AI agent's proficiency in creating robust, performant applications is tested.
+
+### Package managers
+NPM, Yarn, PNPM
+
+[View test cases](https://stackblitz.com/edit/node-yahmwv?file=package.json)
 
 Testing AI agents with these package managers ensures they can handle dependency management, version conflicts, and script execution. It also tests the agent's ability to adapt to different package management systems and optimize for faster, more efficient builds.
 
-**Command Line (CLI)** - [View test case](#)
+**Command Line (CLI)** - [View test case](https://stackblitz.com/edit/node-xrxygh?file=.stackblitzrc)
 
 Testing AI agents on CLI operations assesses their capability to interact with the system shell, execute commands, and handle various command-line tools. It also tests the agent's ability to parse command-line arguments and provide meaningful outputs or perform actions based on those commands.
 
-**Vite** - [NPM trend](https://npmtrends.com/vite) - [View test case](#)
+**Vite** - [NPM trend](https://npmtrends.com/vite) - [View test case](https://vite.new)
 
 Testing AI agents with Vite evaluates their ability to configure and optimize modern development environments. It also assesses the agent's proficiency in handling hot module replacement, faster builds, and leveraging Vite's advanced features to enhance developer productivity.
 
-**NextJS** - [NPM trend](https://npmtrends.com/next) - [View test case](#)
+**NextJS** - [NPM trend](https://npmtrends.com/next) - [View test case](https://stackblitz.com/edit/nextjs-lsmwnd?file=README.md)
 
 Testing AI agents with NextJS assesses their capability to manage both client-side and server-side code, handle complex routing, and optimize performance for SEO. It also tests the agent's ability to integrate with various APIs and manage state in a universal JavaScript application.
 
@@ -35,11 +41,11 @@ Testing AI agents with NextJS assesses their capability to manage both client-si
 
 Testing AI agents with Shadcn ensures they can effectively integrate and utilize pre-built UI components, maintain design consistency, and manage component states. It also assesses the agent's ability to customize and extend the library to meet specific project requirements.
 
-**React Router** - [NPM trend](https://npmtrends.com/react-router) - [View test case](#)
+**React Router** - [NPM trend](https://npmtrends.com/react-router) - [View test case](https://stackblitz.com/github/remix-run/react-router/tree/dev/examples/basic)
 
 Testing AI agents with React Router evaluates their ability to manage complex navigation structures, handle dynamic routing, and ensure seamless transitions between different parts of an application. It also tests the agent's proficiency in managing route parameters, query strings, and nested routes.
 
-**NuxtJS** [NPM trend](https://npmtrends.com/nuxt) - [View text case](#)
+**NuxtJS** [NPM trend](https://npmtrends.com/nuxt) - [View text case](https://stackblitz.com/github/nuxt/starter/tree/v3)
 
 Testing AI agents with NuxtJS assesses their ability to manage Vue components, handle server-side rendering, and optimize for performance and SEO. It also tests the agent's capability to work with Vue's reactive data binding and component lifecycle.
 
@@ -47,7 +53,7 @@ Testing AI agents with NuxtJS assesses their ability to manage Vue components, h
 
 Testing AI agents with LibSQL evaluates their ability to perform database operations such as querying, updating, and managing transactions. It also tests the agent's proficiency in handling database connections, optimizing queries, and ensuring data integrity and security.
 
-**Drizzle ORM** - [NPM trend](https://npmtrends.com/drizzle-orm) - [View test case](#)
+**Drizzle ORM** - [NPM trend](https://npmtrends.com/drizzle-orm) - [View test case](https://stackblitz.com/edit/github-9wp31h-ghh5jl?file=readme.md)
 
 Testing AI agents with Drizzle ORM assesses their ability to map database tables to objects, handle complex relationships, and perform CRUD operations efficiently. It also tests the agent's ability to optimize database access and integrate with other parts of the application seamlessly.
 
