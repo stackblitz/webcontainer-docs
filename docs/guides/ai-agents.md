@@ -4,7 +4,7 @@ To help developers validate whether WebContainer is right for their use case, we
 
 ## Evaluating in-browser versus server runtimes
 
-When building AI apps you often need to execute arbitrary code. The most ideal place to do this tends to be inside the user's browser tab, as it is secure, long lived, scales infinitely, is cost effective, and boots instantly which provides an extremely fast user experience.
+When building AI agents you often need to execute arbitrary code. The most ideal place to do this tends to be inside the user's browser tab, as it is secure, long lived, scales infinitely, is cost effective, and boots instantly which provides an extremely fast user experience.
 
 While creating a simple in-browser proof-of-concept is straightforward, compatibility is usually the main issue with in-browser runtimes, and this is especially the case for AI agents where you need to execute the arbitrary code LLMs produce.
 
