@@ -20,8 +20,8 @@ defineProps<{
   </div>
 
   <div class="section">
-    <h2>Runtime test cases for <strong>AI Agents.</strong></h2>
-    <p>Looking for proper test cases to evaluate an AI agent? We've assembled the best test cases based on npm trends and usage by over 2m developers.</p>
+    <h2>The best runtime for your <strong>AI Agents.</strong></h2>
+    <p>Looking for proper test cases to evaluate an AI agent? We've assembled the best test cases based on npm stats and usage by millions of developers.</p>
     <CTAButton href="/guides/ai-agents">Learn more</CTAButton>
   </div>
 
