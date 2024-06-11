@@ -5,6 +5,7 @@ export const guideLinks = [
   { text: 'Running Processes', link: '/guides/running-processes' },
   { text: 'Configuring Headers', link: '/guides/configuring-headers' },
   { text: 'Troubleshooting', link: '/guides/troubleshooting'},
+  { text: 'Runtime Test Cases for AI Agents', link: '/guides/ai-agents'},
   { text: 'Browser Support', link: '/guides/browser-support' },
   { text: 'API Versioning and Support', link: '/guides/api-support' },
   { text: 'Browser Configuration', link: '/guides/browser-config' },

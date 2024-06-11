@@ -19,6 +19,12 @@ defineProps<{
     <HeroAi />
   </div>
 
+  <div class="section">
+    <h2>The best runtime for your <strong>AI Agents.</strong></h2>
+    <p>Looking for proper test cases to evaluate an AI agent? We've assembled the best test cases based on npm stats and usage by millions of developers.</p>
+    <CTAButton href="/guides/ai-agents">Learn more</CTAButton>
+  </div>
+
   <div class="final-section">
     <div class="section">
       <div class="features-small">
