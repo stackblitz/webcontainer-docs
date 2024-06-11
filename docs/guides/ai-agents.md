@@ -14,9 +14,9 @@ WebContainers is the first technology that has merged the best of both these wor
 
 
 ## Test Cases
-The following test cases cover a broad spectrum of essential tools and frameworks in web development, ensuring AI agents are versatile, efficient, and capable of handling *real-world* coding tasks. These tools, frameworks, and runtime features are driven by real world data observed via real world usage of over 3 million developers on StackBlitz.com every month and npm trends.
+The following test cases cover a broad spectrum of essential tools and frameworks in web development, ensuring AI agents are versatile, efficient, and capable of handling *real-world* coding tasks. These tools, frameworks, and runtime features are driven by real world data from the usage of over 3 million developers on StackBlitz.com every month and npm trends.
 
-**To run these test cases**: First, download the files from the StackBlitz example and have the environment arbitrarily install the npm packages, execute the dev or start command, when applicable check the server is booted properly, and validate the results are expected.
+**To run these test cases**: First, download the files from the StackBlitz example and have the environment arbitrarily install the npm packages, execute the dev or start command, when applicable check the server is booted properly, and validate the results are as expected.
 
 ### NodeJS 
 *Multiple processes, Async promises, FS Operations, Built-ins, Http Server, Streams, Child processes, Inter, process, communication, timers, Event Emitter*
