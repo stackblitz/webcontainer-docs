@@ -30,6 +30,18 @@ The main export of this library. An instance of `WebContainer` represents a runt
 
 Gives access to the underlying file system.
 
+<br />
+
+#### <code>path: string</code>
+
+The default value of the `PATH` environment variable for processes started through [`spawn`](#▸-spawn).
+
+<br />
+
+#### <code>workdir: string</code>
+
+The full path to the working directory (see [FileSystemAPI](#filesystemapi)).
+
 ### `WebContainer` Methods
 
 ### ▸ `boot`
@@ -245,16 +257,6 @@ All entities derived from this instance (e.g. processes, the file system, etc.) 
 
 ## `auth`
 
-::: warning
-This namespace is currently only available under the `beta` tag. If you want to use it you will need to install this version specifically:
-
-```bash
-npm install @webcontainer/api@beta
-```
-
-We don't guarantee backwards compatibility between beta versions.
-:::
-
 The authentication API is exported under the `auth` namespace. It allows you to authenticate users visiting your website via StackBlitz. In order for users to be authenticated via this method, they must:
 
  * Be logged in on StackBlitz.
@@ -264,8 +266,6 @@ The authentication API is exported under the `auth` namespace. It allows you to 
 Once logged in, you'll be able to install private packages that those users have access to within WebContainer.
 
 ### `auth` Functions
-
-<br />
 
 ### ▸ `init`
 
@@ -851,6 +851,7 @@ Options that control spawning a process.
 
 ```ts
 export interface SpawnOptions {
+  cwd?: string;
   env?: Record<string, string | number | boolean>;
   output?: boolean;
   terminal?: { cols: number; rows: number };
@@ -858,6 +859,14 @@ export interface SpawnOptions {
 ```
 
 ### `SpawnOptions` Properties
+
+<br />
+
+#### ▸ `cwd?: string`
+
+Current working directory for the process, relative to [`workdir`](#workdir-string) this instance (which you can change when [booting `WebContainer`](#▸-boot)).
+
+By default, the working directory of the spawned process is [`workdir`](#workdir-string).
 
 <br />
 
