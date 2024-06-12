@@ -851,6 +851,7 @@ Options that control spawning a process.
 
 ```ts
 export interface SpawnOptions {
+  cwd?: string;
   env?: Record<string, string | number | boolean>;
   output?: boolean;
   terminal?: { cols: number; rows: number };
@@ -858,6 +859,14 @@ export interface SpawnOptions {
 ```
 
 ### `SpawnOptions` Properties
+
+<br />
+
+#### ▸ `cwd?: string`
+
+Current working directory for the process, relative to the working directory of this instance (which you can change when <a href="#%E2%96%B8-boot">booting `WebContainer`</a>).
+
+By default, the working directory of the spawned process is the working directory of the instance.
 
 <br />
 
