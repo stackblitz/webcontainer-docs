@@ -63,7 +63,7 @@ export const footerSections = [
     items: [
       { text: 'Docs', link: 'https://developer.stackblitz.com/' },
       { text: 'Enterprise', link: 'https://stackblitz.com/enterprise' },
-      { text: 'Pricing', link: 'https://stackblitz.com/membership' },
+      { text: 'Pricing', link: 'https://stackblitz.com/pricing' },
       { text: 'Case Studies', link: 'https://stackblitz.com/case-studies' },
     ],
   },
