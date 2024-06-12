@@ -257,16 +257,6 @@ All entities derived from this instance (e.g. processes, the file system, etc.) 
 
 ## `auth`
 
-::: warning
-This namespace is currently only available under the `beta` tag. If you want to use it you will need to install this version specifically:
-
-```bash
-npm install @webcontainer/api@beta
-```
-
-We don't guarantee backwards compatibility between beta versions.
-:::
-
 The authentication API is exported under the `auth` namespace. It allows you to authenticate users visiting your website via StackBlitz. In order for users to be authenticated via this method, they must:
 
  * Be logged in on StackBlitz.
@@ -276,8 +266,6 @@ The authentication API is exported under the `auth` namespace. It allows you to 
 Once logged in, you'll be able to install private packages that those users have access to within WebContainer.
 
 ### `auth` Functions
-
-<br />
 
 ### ▸ `init`
 

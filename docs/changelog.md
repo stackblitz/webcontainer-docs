@@ -10,6 +10,11 @@ head:
 
 # Changelog
 
+## 1.2.0
+
+* Add support for [`authentication`](api#auth).
+* add [`cwd`](api#▸-cwd-string) option to [`SpawnOptions`](api#spawnoptions).
+
 ## 1.1.8
 
 * Add [`fs.watch`](api#▸-watch).
