@@ -30,6 +30,18 @@ The main export of this library. An instance of `WebContainer` represents a runt
 
 Gives access to the underlying file system.
 
+<br />
+
+#### <code>path: string</code>
+
+The default value of the `PATH` environment variable for processes started through [`spawn`](#▸-spawn).
+
+<br />
+
+#### <code>workdir: string</code>
+
+The full path to the working directory (see [FileSystemAPI](#filesystemapi)).
+
 ### `WebContainer` Methods
 
 ### ▸ `boot`
@@ -864,9 +876,9 @@ export interface SpawnOptions {
 
 #### ▸ `cwd?: string`
 
-Current working directory for the process, relative to the working directory of this instance (which you can change when <a href="#%E2%96%B8-boot">booting `WebContainer`</a>).
+Current working directory for the process, relative to [`workdir`](#workdir-string) this instance (which you can change when [booting `WebContainer`](#▸-boot)).
 
-By default, the working directory of the spawned process is the working directory of the instance.
+By default, the working directory of the spawned process is [`workdir`](#workdir-string).
 
 <br />
 
