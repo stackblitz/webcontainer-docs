@@ -792,7 +792,7 @@ const tree = {
           contents: 'const x = 1;',
         },
       },
-      .envrc: {
+      '.envrc': {
         file: {
           contents: 'ENVIRONMENT=staging'
         }
