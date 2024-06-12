@@ -144,7 +144,7 @@ With this change, you hooked up your terminal to the shell running in the WebCon
 ![The commands typed in the terminal](./images/20-typing.png)
 
 
-## 4. Add `xterm-addon-fit`
+## 4. Add `@xterm/addon-fit`
 
 You might've noticed that resizing the window doesn't redraw the terminal output. If you make the window very narrow, lines that are too long don't wrap to the next line, which is not a good UX practice. For example, look at the highlightened line:
 
@@ -152,19 +152,19 @@ You might've noticed that resizing the window doesn't redraw the terminal output
 
 To fix this, you'll need to make the WebContainer process aware of the size of the terminal.
 
-First of all, let's make sure that the terminal itself gets adjusted properly when resizing the window. To do that, you can use the [`xterm-addon-fit`](http://xtermjs.org/docs/api/addons/fit/) plugin for `Xterm.js` which adjusts the terminal columns and rows depending on the element it's rendered in.
+First of all, let's make sure that the terminal itself gets adjusted properly when resizing the window. To do that, you can use the [`@xterm/addon-fit`](http://xtermjs.org/docs/api/addons/fit/) plugin for `Xterm.js` which adjusts the terminal columns and rows depending on the element it's rendered in.
 
 First, install the plugin:
 
 ```bash
-npm install xterm-addon-fit
+npm install @xterm/addon-fit
 ```
 
 And import it at the top of your `main.js` file.
 
 :::code-group
 ```js [main.js]
-import { FitAddon } from 'xterm-addon-fit';
+import { FitAddon } from '@xterm/addon-fit';
 ```
 :::
 

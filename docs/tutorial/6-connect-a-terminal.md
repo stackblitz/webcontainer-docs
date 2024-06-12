@@ -16,7 +16,7 @@ Your Express app is up and running and the preview window updates automatically 
 The terminal frontend component that we will use is [`Xterm.js`](https://xtermjs.org). It's the same terminal that is used by Visual Studio Code and many other web-based IDEs. To install it, run the following command in your development terminal:
 
 ```bash
-npm install xterm
+npm install @xterm/xterm
 ```
 
 ## 2. Build terminal scaffolding
@@ -62,7 +62,7 @@ First of all, import `Xterm.js`. To do so, add an import statement at the top of
 
 :::code-group
 ```js [main.js]
-import { Terminal } from 'xterm'
+import { Terminal } from '@xterm/xterm'
 ```
 :::
 
@@ -105,7 +105,7 @@ The terminal looks a bit plain now. Fortunately, `Xterm.js` ships its own CSS st
 
 :::code-group
 ```js [main.js]
-import 'xterm/css/xterm.css';
+import '@xterm/xterm/css/xterm.css';
 ```
 :::
 
