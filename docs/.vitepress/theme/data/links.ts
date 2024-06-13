@@ -34,6 +34,7 @@ export const communityProjectsLinks = [
   { text: 'Otto Engineer', link: '/community-projects/otto-engineer' },
   { text: 'Stylelint Playground', link: '/community-projects/stylelint-playground' },
   { text: 'builder.io playground', link: '/community-projects/builder-io-playground' },
+  { text: 'VSLite', link: '/community-projects/vslite' },
   { text: 'pkg-size', link: '/community-projects/pkg-size' },
   { text: 'clack.cc', link: '/community-projects/clack' },
 ];

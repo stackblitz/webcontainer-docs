@@ -118,6 +118,13 @@ export const communityProjectCardData: CommunityProjectCardData[] = [
     thumbnailUrl: '/img/community/builder-io-playground.png',
   },
   {
+    category: 'ide',
+    title: 'VSLite',
+    description: `A lighweight IDE-like experience with a fresh Node.js environment for you to play with.`,
+    itemUrl: '/community-projects/vslite',
+    thumbnailUrl: '/img/community/vslite.png',
+  },
+  {
     category: 'tool',
     title: 'pkg-size',
     description: `Find the true size of an npm package.`,
