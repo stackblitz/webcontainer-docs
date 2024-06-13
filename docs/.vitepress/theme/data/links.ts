@@ -24,7 +24,6 @@ export const tutorialLinks = [
 export const communityProjectsLinks = [
   { text: 'All Projects', link: '/community-projects/all-projects' },
   { text: 're:tune', link: '/community-projects/retune' },
-  { text: 're:tune', link: '/community-projects/retune' },
   { text: 'Angular Tutorial', link: '/community-projects/angular-tutorial' },
   { text: 'schachnovelle', link: '/community-projects/schachnovelle' },
   { text: 'StackBlitz Codeflow', link: '/community-projects/stackblitz-codeflow' },
