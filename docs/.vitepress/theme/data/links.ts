@@ -29,6 +29,7 @@ export const communityProjectsLinks = [
   { text: 'StackBlitz Web Publisher', link: '/community-projects/stackblitz-web-publisher' },
   { text: 'SvelteKit', link: '/community-projects/sveltekit' },
   { text: 'API Security Academy', link: '/community-projects/api-security-academy' },
+  { text: 'Otto Engineer', link: '/community-projects/otto-engineer' },
 ];
 
 export const footerSections = [

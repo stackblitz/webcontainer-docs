@@ -83,5 +83,12 @@ export const communityProjectCardData: CommunityProjectCardData[] = [
     description: `The API Security Academy is a new interactive learning platform focused on mastering GraphQL security.`,
     itemUrl: '/community-projects/api-security-academy',
     thumbnailUrl: '/img/community/api_security_academy.png',
-  }
+  },
+  {
+    category: 'ai',
+    title: 'Otto Engineer',
+    description: `The AI sidekick that tests its own code and iterates until it works.`,
+    itemUrl: '/community-projects/otto-engineer',
+    thumbnailUrl: '/img/community/otto_engineer.png',
+  },
 ];
