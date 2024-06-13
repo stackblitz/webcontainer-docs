@@ -1,6 +1,6 @@
 export type CardLinkType = 'article'|'podcast'|'repositoryGithub'|'video';
 
-export type CommunityProjectCategory = 'ai'|'game'|'ide'|'lowCode'|'tutorial';
+export type CommunityProjectCategory = 'ai'|'game'|'ide'|'tool'|'lowCode'|'tutorial';
 export type CommunityProjectCategories = { [project in CommunityProjectCategory]: {
   rgb: string;
   title: string;
@@ -20,7 +20,12 @@ export const communityProjectCategories: CommunityProjectCategories = {
   ide: {
     rgb: '31, 143, 255',
     title: 'Browser IDE',
-    titlePlural: 'Browser IDEs',
+    titlePlural: 'Browser IDE',
+  },
+  tool: {
+    rgb: '231, 203, 255',
+    title: 'Tool',
+    titlePlural: 'Tools',
   },
   lowCode: {
     rgb: '255, 9, 255',
@@ -111,5 +116,12 @@ export const communityProjectCardData: CommunityProjectCardData[] = [
     description: `Explore builder.io's visual editor fully in the browser.`,
     itemUrl: '/community-projects/builder-io-playground',
     thumbnailUrl: '/img/community/builder-io-playground.png',
+  },
+  {
+    category: 'tool',
+    title: 'pkg-size',
+    description: `Find the true size of an npm package.`,
+    itemUrl: '/community-projects/pkg-size',
+    thumbnailUrl: '/img/community/pkg-size.png',
   },
 ];

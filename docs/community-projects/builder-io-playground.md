@@ -17,4 +17,4 @@ import Screenshot from '@theme/components/Helpers/Screenshot.vue';
 
 Explore builder.io's visual editor fully in the browser
 
-<Screenshot src="/img/community/builder-io-playground.png" alt="Angular Tutorial" href="https://angular.dev/tutorials/learn-angular" />
+<Screenshot src="/img/community/builder-io-playground.png" alt="builder.io playground" href="https://playground.builder.io/" />
