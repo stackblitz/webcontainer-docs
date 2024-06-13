@@ -13,7 +13,7 @@ import PageHeading from '@theme/components/Helpers/CommunityProjectPageHeading.v
 import Screenshot from '@theme/components/Helpers/Screenshot.vue';
 </script>
 
-<PageHeading title="vslite" category="ide" />
+<PageHeading title="VSLite" category="ide" />
 
 A lighweight IDE-like experience with a fresh Node.js environment for you to play with. 
 
