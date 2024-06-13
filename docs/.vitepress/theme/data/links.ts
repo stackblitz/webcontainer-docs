@@ -33,6 +33,7 @@ export const communityProjectsLinks = [
   { text: 'API Security Academy', link: '/community-projects/api-security-academy' },
   { text: 'Otto Engineer', link: '/community-projects/otto-engineer' },
   { text: 'Stylelint Playground', link: '/community-projects/stylelint-playground' },
+  { text: 'builder.io playground', link: '/community-projects/builder-io-playground' },
 ];
 
 export const footerSections = [

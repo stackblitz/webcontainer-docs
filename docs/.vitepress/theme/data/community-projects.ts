@@ -105,4 +105,11 @@ export const communityProjectCardData: CommunityProjectCardData[] = [
     itemUrl: '/community-projects/stylelint-playground',
     thumbnailUrl: '/img/community/stylelint-playground.png',
   },
+  {
+    category: 'ide',
+    title: 'builder.io playground',
+    description: `Explore builder.io's visual editor fully in the browser.`,
+    itemUrl: '/community-projects/builder-io-playground',
+    thumbnailUrl: '/img/community/builder-io-playground.png',
+  },
 ];
