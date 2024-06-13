@@ -91,4 +91,11 @@ export const communityProjectCardData: CommunityProjectCardData[] = [
     itemUrl: '/community-projects/otto-engineer',
     thumbnailUrl: '/img/community/otto_engineer.png',
   },
+  {
+    category: 'ide',
+    title: 'Stylelint Playground',
+    description: `A live playground where you can experiment with styleling rulesets using various packages.`,
+    itemUrl: '/community-projects/stylelint-playground',
+    thumbnailUrl: '/img/community/stylelint-playground.png',
+  },
 ];
