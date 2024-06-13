@@ -35,6 +35,7 @@ export const communityProjectsLinks = [
   { text: 'Stylelint Playground', link: '/community-projects/stylelint-playground' },
   { text: 'builder.io playground', link: '/community-projects/builder-io-playground' },
   { text: 'pkg-size', link: '/community-projects/pkg-size' },
+  { text: 'clack.cc', link: '/community-projects/clack' },
 ];
 
 export const footerSections = [

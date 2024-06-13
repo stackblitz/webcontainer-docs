@@ -124,4 +124,11 @@ export const communityProjectCardData: CommunityProjectCardData[] = [
     itemUrl: '/community-projects/pkg-size',
     thumbnailUrl: '/img/community/pkg-size.png',
   },
+  {
+    category: 'tool',
+    title: 'clack.cc',
+    description: `Build your own custom CLI with a set of feature-rich components.`,
+    itemUrl: '/community-projects/clack',
+    thumbnailUrl: '/img/community/clack.png',
+  },
 ];
