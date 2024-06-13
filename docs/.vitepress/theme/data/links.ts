@@ -24,12 +24,15 @@ export const tutorialLinks = [
 export const communityProjectsLinks = [
   { text: 'All Projects', link: '/community-projects/all-projects' },
   { text: 're:tune', link: '/community-projects/retune' },
+  { text: 're:tune', link: '/community-projects/retune' },
+  { text: 'Angular Tutorial', link: '/community-projects/angular-tutorial' },
   { text: 'schachnovelle', link: '/community-projects/schachnovelle' },
   { text: 'StackBlitz Codeflow', link: '/community-projects/stackblitz-codeflow' },
   { text: 'StackBlitz Web Publisher', link: '/community-projects/stackblitz-web-publisher' },
   { text: 'SvelteKit', link: '/community-projects/sveltekit' },
   { text: 'API Security Academy', link: '/community-projects/api-security-academy' },
   { text: 'Otto Engineer', link: '/community-projects/otto-engineer' },
+  { text: 'Stylelint Playground', link: '/community-projects/stylelint-playground' },
 ];
 
 export const footerSections = [

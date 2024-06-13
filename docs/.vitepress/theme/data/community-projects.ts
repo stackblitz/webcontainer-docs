@@ -57,6 +57,13 @@ export const communityProjectCardData: CommunityProjectCardData[] = [
     thumbnailUrl: '/img/community/codeflow.png',
   },
   {
+    category: 'tutorial',
+    title: 'Angular Tutorial',
+    description: 'The official Angular Tutorial at angular.dev.',
+    itemUrl: '/community-projects/angular-tutorial',
+    thumbnailUrl: '/img/community/angular-tutorial.png',
+  },
+  {
     category: 'ai',
     title: 're:tune',
     description: `The missing frontend for GPT-3, on a mission to empower everyone to build AI-first software at the speed of thought.`,
