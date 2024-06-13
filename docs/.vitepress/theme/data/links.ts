@@ -24,11 +24,18 @@ export const tutorialLinks = [
 export const communityProjectsLinks = [
   { text: 'All Projects', link: '/community-projects/all-projects' },
   { text: 're:tune', link: '/community-projects/retune' },
+  { text: 'Angular Tutorial', link: '/community-projects/angular-tutorial' },
   { text: 'schachnovelle', link: '/community-projects/schachnovelle' },
   { text: 'StackBlitz Codeflow', link: '/community-projects/stackblitz-codeflow' },
   { text: 'StackBlitz Web Publisher', link: '/community-projects/stackblitz-web-publisher' },
   { text: 'SvelteKit', link: '/community-projects/sveltekit' },
   { text: 'API Security Academy', link: '/community-projects/api-security-academy' },
+  { text: 'Otto Engineer', link: '/community-projects/otto-engineer' },
+  { text: 'Stylelint Playground', link: '/community-projects/stylelint-playground' },
+  { text: 'builder.io playground', link: '/community-projects/builder-io-playground' },
+  { text: 'VSLite', link: '/community-projects/vslite' },
+  { text: 'pkg-size', link: '/community-projects/pkg-size' },
+  { text: 'clack.cc', link: '/community-projects/clack' },
 ];
 
 export const footerSections = [

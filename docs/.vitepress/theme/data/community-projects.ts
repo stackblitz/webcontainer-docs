@@ -1,6 +1,6 @@
 export type CardLinkType = 'article'|'podcast'|'repositoryGithub'|'video';
 
-export type CommunityProjectCategory = 'ai'|'game'|'ide'|'lowCode'|'tutorial';
+export type CommunityProjectCategory = 'ai'|'game'|'ide'|'tool'|'lowCode'|'tutorial';
 export type CommunityProjectCategories = { [project in CommunityProjectCategory]: {
   rgb: string;
   title: string;
@@ -20,7 +20,12 @@ export const communityProjectCategories: CommunityProjectCategories = {
   ide: {
     rgb: '31, 143, 255',
     title: 'Browser IDE',
-    titlePlural: 'Browser IDEs',
+    titlePlural: 'Browser IDE',
+  },
+  tool: {
+    rgb: '231, 203, 255',
+    title: 'Tool',
+    titlePlural: 'Tools',
   },
   lowCode: {
     rgb: '255, 9, 255',
@@ -57,6 +62,13 @@ export const communityProjectCardData: CommunityProjectCardData[] = [
     thumbnailUrl: '/img/community/codeflow.png',
   },
   {
+    category: 'tutorial',
+    title: 'Angular Tutorial',
+    description: 'The official Angular Tutorial at angular.dev.',
+    itemUrl: '/community-projects/angular-tutorial',
+    thumbnailUrl: '/img/community/angular-tutorial.png',
+  },
+  {
     category: 'ai',
     title: 're:tune',
     description: `The missing frontend for GPT-3, on a mission to empower everyone to build AI-first software at the speed of thought.`,
@@ -83,5 +95,47 @@ export const communityProjectCardData: CommunityProjectCardData[] = [
     description: `The API Security Academy is a new interactive learning platform focused on mastering GraphQL security.`,
     itemUrl: '/community-projects/api-security-academy',
     thumbnailUrl: '/img/community/api_security_academy.png',
-  }
+  },
+  {
+    category: 'ai',
+    title: 'Otto Engineer',
+    description: `The AI sidekick that tests its own code and iterates until it works.`,
+    itemUrl: '/community-projects/otto-engineer',
+    thumbnailUrl: '/img/community/otto_engineer.png',
+  },
+  {
+    category: 'ide',
+    title: 'Stylelint Playground',
+    description: `A live playground where you can experiment with styleling rulesets using various packages.`,
+    itemUrl: '/community-projects/stylelint-playground',
+    thumbnailUrl: '/img/community/stylelint-playground.png',
+  },
+  {
+    category: 'ide',
+    title: 'builder.io playground',
+    description: `Explore builder.io's visual editor fully in the browser.`,
+    itemUrl: '/community-projects/builder-io-playground',
+    thumbnailUrl: '/img/community/builder-io-playground.png',
+  },
+  {
+    category: 'ide',
+    title: 'VSLite',
+    description: `A lighweight IDE-like experience with a fresh Node.js environment for you to play with.`,
+    itemUrl: '/community-projects/vslite',
+    thumbnailUrl: '/img/community/vslite.png',
+  },
+  {
+    category: 'tool',
+    title: 'pkg-size',
+    description: `Find the true size of an npm package.`,
+    itemUrl: '/community-projects/pkg-size',
+    thumbnailUrl: '/img/community/pkg-size.png',
+  },
+  {
+    category: 'tool',
+    title: 'clack.cc',
+    description: `Build your own custom CLI with a set of feature-rich components.`,
+    itemUrl: '/community-projects/clack',
+    thumbnailUrl: '/img/community/clack.png',
+  },
 ];
