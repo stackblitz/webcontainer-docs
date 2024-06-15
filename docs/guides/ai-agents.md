@@ -1,3 +1,13 @@
+---
+title: &title Runtime Test Cases For AI Agents
+description: &description A suite of WebContainer test cases you can independently run on any runtime.
+head:
+  - ['meta', {property: 'og:title', content: *title}]
+  - ['meta', {property: 'og:image', content: 'https://webcontainers.io/img/og/guide-runtime_test_cases_for_ai_agents.png'}]
+  - ['meta', {name: 'twitter:title', content: *title}]
+  - ['meta', {name: 'twitter:description', content: *description}]
+---
+
 # Runtime Test Cases For AI Agents
 
 To help developers validate whether WebContainer is right for their use case, we've compiled a suite of test cases that you can independently run on any runtime of your choosing (serverless, VMs, WebContainers, etc). These tests represent the most common patterns, libraries, tools, commands and environments that developers and toolchains rely on in the Node.js ecosystem, and thus serve as a good baseline for what capabilities LLM generated code would require.
