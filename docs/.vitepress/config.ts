@@ -15,10 +15,7 @@ const SIDEBAR_DEFAULT = [
     items: links.guideLinks,
   },
   {
-    text: 'Tutorial',
-    collapsible: true,
-    collapsed: false,
-    items: links.tutorialLinks,
+    items: [{ text: 'Tutorial', link: 'https://webcontainer-tutorial.pages.dev', target: "_blank" }],
   },
   {
     items: [{ text: 'API Reference', link: '/api' }],
@@ -89,7 +86,7 @@ export default defineConfig({
     },
     nav: [
       { text: 'Guides', link: '/guides/introduction' },
-      { text: 'Tutorial', link: '/tutorial/1-build-your-first-webcontainer-app' },
+      { text: 'Tutorial', link: 'https://webcontainer-tutorial.pages.dev', target: '_blank' },
       { text: 'API Reference', link: '/api' },
       { text: 'AI', link: '/ai' },
       { text: 'Pricing', link: '/enterprise' },
