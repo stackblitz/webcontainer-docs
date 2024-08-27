@@ -70,6 +70,7 @@ Returns a [`WebContainer`](#webcontainer) instance.
 interface BootOptions {
   coep?: 'require-corp' | 'credentialless' | 'none';
   workdirName?: string;
+  forwardPreviewErrors?: boolean | 'exceptions-only';
 }
 ```
 
@@ -88,6 +89,34 @@ This value is fixed the first time a WebContainer is booted, and cannot be chang
 Sets the _folder name_ for the working directory of your WebContainer instance. If not provided, it will be auto-generated.
 
 This is mostly a "cosmetic" option.
+
+#### `forwardPreviewErrors?: boolean | 'exceptions-only'`
+
+Configure whether errors occurring in embedded preview iframes should be forwarded to the parent page. Captured errors originate from:
+
+ - Calls to `console.error`
+ - Any `unhandledrejection` events on `window`
+ - Any uncaught `error` events on `window`
+
+If set to `'exceptions-only'`, `console.error`s are not forwarded.
+
+Default value is `false`, so no errors are emitted.
+
+To receive the events, you register an event handler like this:
+
+```js
+import { isPreviewMessage } from '@webcontainer/api';
+
+window.addEventListener('message', (event) => {
+  const data = event.data;
+
+  if (!isPreviewMessage(data)) {
+    return;
+  }
+
+  // process the data received from a preview
+});
+```
 
 ### ▸ `mount`
 
@@ -254,6 +283,56 @@ All entities derived from this instance (e.g. processes, the file system, etc.) 
 `teardown(): void`
 
 ---
+
+## `isPreviewMessage`
+
+Check wether or not a message has the `PreviewMessage` shape.
+
+<h4 id="ispreviewmessage-signature">
+  <a id="ispreviewmessage-signature">Signature</a>
+  <a href="#ispreviewmessage-signature" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+<br />
+
+<h4 id="ispreviewmessage-signature">
+  <code>isPreviewMessage(data: any): data is <a href="#preview-message">PreviewMessage</a></code>
+</h4>
+
+<br />
+
+<h4 id="ispreviewmessage-returns">
+  <a id="ispreviewmessage-returns">Returns</a>
+  <a href="#ispreviewmessage-returns" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+Returns `true` if `data` is of type `PreviewMessage`.
+
+<h4 id="preview-message">
+  <a id="preview-message"><code>PreviewMessage</code></a>
+  <a href="#preview-message" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+```ts
+export type PreviewMessage = UncaughtExceptionMessage | UnhandledRejectionMessage | ConsoleErrorMessage;
+
+export interface UncaughtExceptionMessage {
+  type: PreviewMessageType.UncaughtException;
+  message: string;
+  stack: string | undefined;
+}
+
+export interface UnhandledRejectionMessage {
+  type: PreviewMessageType.UnhandledRejection;
+  message: string;
+  stack: string | undefined;
+}
+
+export interface ConsoleErrorMessage {
+  type: PreviewMessageType.ConsoleError;
+  args: any[];
+}
+```
 
 ## `auth`
 
