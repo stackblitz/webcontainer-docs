@@ -98,7 +98,7 @@ Configure whether errors occurring in embedded preview iframes should be forward
  - Any `unhandledrejection` events on `window`
  - Any uncaught `error` events on `window`
 
-If set to `'exceptions-only'`, `console.error`s are not forwarded.
+If set to `exceptions-only`, `console.error`s are not forwarded.
 
 Default value is `false`, so no errors are emitted.
 
