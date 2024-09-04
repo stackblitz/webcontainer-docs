@@ -10,10 +10,32 @@ head:
 
 # Changelog
 
+## 1.2.4
+
+* Bug fix: [`reloadPreview`](api#reloadpreview) was always doing a hard refresh as the port was not transfered.
+
+## 1.2.3
+
+* Make `@webcontainer/api` ESM and SSR friendly again.
+* Emit preview messages on the webcontainer's [`on('preview-message')`](api#on-overloads) event handler.
+
+## 1.2.2
+
+* Add [`reloadPreview`](api#reloadpreview) utility, also exported under `@webcontainer/api/utils`.
+
+## 1.2.1
+
+:::warning
+It's recommended to use version `>= 1.2.3` to use the `forwardPreviewErrors` as you cannot add an
+event listener in the `webcontainerInstance` in that version.
+:::
+
+* Add `forwardPreviewErrors` to [`BootOptions`](api#boot-options) which lets you capture "errors" from previews.
+
 ## 1.2.0
 
 * Add support for [`authentication`](api#auth).
-* add [`cwd`](api#▸-cwd-string) option to [`SpawnOptions`](api#spawnoptions).
+* Add [`cwd`](api#▸-cwd-string) option to [`SpawnOptions`](api#spawnoptions).
 
 ## 1.1.8
 
