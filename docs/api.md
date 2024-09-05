@@ -105,16 +105,8 @@ Default value is `false`, so no errors are emitted.
 To receive the events, you register an event handler like this:
 
 ```js
-import { isPreviewMessage } from '@webcontainer/api';
-
-window.addEventListener('message', (event) => {
-  const data = event.data;
-
-  if (!isPreviewMessage(data)) {
-    return;
-  }
-
-  // process the data received from a preview
+webcontainerInstance.on('preview-message', (message) => {
+  // process the message received from a preview
 });
 ```
 
@@ -152,7 +144,7 @@ Listens for an `event`. The `listener` is called every time the `event` gets emi
 <br />
 
 <h4 id="on-signature">
-  <code>on(event: 'port' | 'error' | 'server-ready', listener: <a href="#portlistener">PortListener</a> | <a href="#">ErrorListener</a> | <a href="#">ServerReadyListener</a>): () => void</code>
+  <code>on(event: 'port' | 'error' | 'server-ready' | 'preview-message', listener: <a href="#portlistener">PortListener</a> | <a href="#errorlistener">ErrorListener</a> | <a href="#serverreadylistener">ServerReadyListener</a> | <a href="#previewmessagelistener">PreviewMessageListener</a>): () => void</code>
 </h4>
 
 <br />
@@ -197,6 +189,54 @@ Listens for `error` events, emitted when an internal error is triggered.
 
 ```ts
 (error: { message: string }): void
+```
+
+<br />
+
+<h4>
+  ▸ <code>on(event: 'preview-message', listener: <a href="#previewmessagelistener">PreviewMessageListener</a>): () => void</code>
+</h4>
+
+Listens for `preview-message` events, emitted when an internal error is triggered.
+
+<span id="previewmessagelistener">`PreviewMessageListener` (Function)</span>
+
+```ts
+(message: PreviewMessage): void
+```
+
+<h4 id="previewmessage-type">
+  <a id="previewmessage-type"><code>PreviewMessage</code></a>
+  <a href="#previewmessage-type" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+```ts
+type PreviewMessage = (UncaughtExceptionMessage | UnhandledRejectionMessage | ConsoleErrorMessage) & BasePreviewMessage;
+
+interface BasePreviewMessage {
+    previewId: string;
+    port: number;
+    pathname: string;
+    search: string;
+    hash: string;
+}
+
+interface UncaughtExceptionMessage {
+    type: PreviewMessageType.UncaughtException;
+    message: string;
+    stack: string | undefined;
+}
+
+interface UnhandledRejectionMessage {
+    type: PreviewMessageType.UnhandledRejection;
+    message: string;
+    stack: string | undefined;
+}
+
+interface ConsoleErrorMessage {
+    type: PreviewMessageType.ConsoleError;
+    args: any[];
+}
 ```
 
 <br />
@@ -284,55 +324,31 @@ All entities derived from this instance (e.g. processes, the file system, etc.) 
 
 ---
 
-## `isPreviewMessage`
+## `reloadPreview`
 
-Check wether or not a message has the `PreviewMessage` shape.
+Added in version `1.2.2`.
 
-<h4 id="ispreviewmessage-signature">
-  <a id="ispreviewmessage-signature">Signature</a>
-  <a href="#ispreviewmessage-signature" class="header-anchor" aria-hidden="true">#</a>
+Reload the provided iframe by sending a message to the iframe and falling back to resetting the `src` if the iframe didn't respond in time.
+
+<h4 id="reloadpreview-signature">
+  <a id="reloadpreview-signature">Signature</a>
+  <a href="#reloadpreview-signature" class="header-anchor" aria-hidden="true">#</a>
 </h4>
 
 <br />
 
-<h4 id="ispreviewmessage-signature">
-  <code>isPreviewMessage(data: any): data is <a href="#preview-message">PreviewMessage</a></code>
+<h4 id="reloadpreview-signature">
+  <code>reloadPreview(preview: HTMLIFrameElement, hardRefreshTimeout?: number = 200): Promise&lt;void&gt;</code>
 </h4>
 
 <br />
 
-<h4 id="ispreviewmessage-returns">
-  <a id="ispreviewmessage-returns">Returns</a>
-  <a href="#ispreviewmessage-returns" class="header-anchor" aria-hidden="true">#</a>
+<h4 id="reloadpreview-returns">
+  <a id="reloadpreview-returns">Returns</a>
+  <a href="#reloadpreview-returns" class="header-anchor" aria-hidden="true">#</a>
 </h4>
 
-Returns `true` if `data` is of type `PreviewMessage`.
-
-<h4 id="preview-message">
-  <a id="preview-message"><code>PreviewMessage</code></a>
-  <a href="#preview-message" class="header-anchor" aria-hidden="true">#</a>
-</h4>
-
-```ts
-export type PreviewMessage = UncaughtExceptionMessage | UnhandledRejectionMessage | ConsoleErrorMessage;
-
-export interface UncaughtExceptionMessage {
-  type: PreviewMessageType.UncaughtException;
-  message: string;
-  stack: string | undefined;
-}
-
-export interface UnhandledRejectionMessage {
-  type: PreviewMessageType.UnhandledRejection;
-  message: string;
-  stack: string | undefined;
-}
-
-export interface ConsoleErrorMessage {
-  type: PreviewMessageType.ConsoleError;
-  args: any[];
-}
-```
+Returns a `Promise` that resolves when the reload has completed.
 
 ## `auth`
 
@@ -787,6 +803,7 @@ Watch for changes to a given file or directory.
 ```ts
 interface Options {
   encoding?: BufferEncoding | null;
+  recursive?: boolean;
 }
 ```
 
@@ -795,6 +812,10 @@ interface Options {
 #### `encoding?: BufferEncoding | null`
 
 Specifies the character encoding to be used for the filename passed to the listener. Default: `'utf8'`.
+
+#### `recursive?: boolean`
+
+Indicates whether all subdirectories should be watched, or only the current directory. This applies when a directory is specified. Default: `false`.
 
 <h4 id="watch-listener">
   <a id="watch-listener"><code>Listener</code></a>
