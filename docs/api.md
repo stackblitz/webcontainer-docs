@@ -328,7 +328,7 @@ All entities derived from this instance (e.g. processes, the file system, etc.) 
 
 Added in version `1.2.2`.
 
-Reload the provided iframe by sending a message to the iframe and fallback to reseting the `src` if the iframe didn't respond in time.
+Reload the provided iframe by sending a message to the iframe and falling back to resetting the `src` if the iframe didn't respond in time.
 
 <h4 id="reloadpreview-signature">
   <a id="reloadpreview-signature">Signature</a>

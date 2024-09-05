@@ -12,7 +12,7 @@ head:
 
 ## 1.2.4
 
-* Bug fix: [`reloadPreview`](api#reloadpreview) was always doing a hard refresh as the port was not transfered.
+* Bug fix: [`reloadPreview`](api#reloadpreview) was always doing a hard refresh as the port was not transferred.
 
 ## 1.2.3
 
@@ -26,7 +26,7 @@ head:
 ## 1.2.1
 
 :::warning
-It's recommended to use version `>= 1.2.3` to use the `forwardPreviewErrors` as you cannot add an
+It's recommended to use version `>= 1.2.3` to use `forwardPreviewErrors` as you cannot add an
 event listener in the `webcontainerInstance` in that version.
 :::
 
