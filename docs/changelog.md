@@ -10,6 +10,11 @@ head:
 
 # Changelog
 
+## 1.3.0
+
+* Add [`configureAPIKey`](api#configureapikey) to use the API with an API key.
+* Add `stack` information to `console.error` messages coming from previews.
+
 ## 1.2.4
 
 * Bug fix: [`reloadPreview`](api#reloadpreview) was always doing a hard refresh as the port was not transferred.
