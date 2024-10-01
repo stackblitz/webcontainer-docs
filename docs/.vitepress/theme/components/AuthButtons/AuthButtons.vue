@@ -4,7 +4,7 @@ defineProps<{ place: 'navScreen' | 'navBar' }>();
 
 <template>
   <div :class="place === 'navScreen' ? 'navScreenContainer' : 'navBarContainer'">
-    <a href="https://jake.stackblitz.com/api-console" class="link accent">Go to Console</a>
+    <a href="https://stackblitz.com/api-console" class="link accent">Go to Console</a>
   </div>
 </template>
 
