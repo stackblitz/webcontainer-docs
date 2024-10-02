@@ -309,6 +309,35 @@ Spawns a process with additional arguments.
 
 Spawns a process without additional arguments.
 
+### ▸ `export`
+
+Exports the filesystem.
+
+<h4 id="wc-export-signature">
+  <a id="wc-export-signature">Signature</a>
+  <a href="#wc-export-signature" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+<code>export(path: string, options?: <a href="#exportoptions">ExportOptions</a>): Promise<Uint8Array | <a href="#filesystemtree">FileSystemTree</a>></code>
+
+<h4 id="wc-export-example">
+  <a id="wc-export-example">Example</a>
+  <a href="#wc-export-example" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+```js
+const data = await webcontainerInstance.export('dist', { format: 'zip' });
+
+const zip = new Blob([data]);
+```
+
+<h4 id="wc-export-returns">
+  <a id="wc-export-returns">Returns</a>
+  <a href="#wc-spawn-returns" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+Returns a [`FileSystemTree`](#filesystemtree) when the format is `json`, otherwise a `Uint8Array`.
+
 ### ▸ `teardown`
 
 Destroys the WebContainer instance, turning it unusable, and releases its resources. After this, a new WebContainer instance can be obtained by calling [`boot`](#▸-boot).
@@ -872,11 +901,11 @@ A tree-like structure to describe the contents of a folder to be mounted.
 
 ```ts
 interface FileSystemTree {
-  [name: string]: FileNode | DirectoryNode;
+  [name: string]: FileNode | SymlinkNode | DirectoryNode;
 }
 ```
 
-Also see [`FileNode`](#filenode) and [`DirectoryNode`](#directorynode).
+Also see [`FileNode`](#filenode), [`SymlinkNode`](#symlinknode), and [`DirectoryNode`](#directorynode).
 
 <h4 id="filesystemtree-example">
   <a id="filesystemtree-example">Example</a>
@@ -890,6 +919,11 @@ const tree = {
       'foo.js': {
         file: {
           contents: 'const x = 1;',
+        },
+      },
+      'bar.js': {
+        file: {
+          symlink: './foo.js',
         },
       },
       '.envrc': {
@@ -924,6 +958,26 @@ interface FileNode {
 #### ▸ `file: { contents: string | Uint8Array }`
 
 Represents a file with contents. Also see [`FileSystemTree`](#filesystemtree).
+
+---
+
+## `SymlinkNode`
+
+```ts
+interface SymlinkNode {
+  file: {
+    symlink: string;
+  };
+}
+```
+
+### `SymlinkNode` Properties
+
+<br />
+
+#### ▸ `file: { symlink: string }`
+
+Represents a symlink pointing to another location. Also see [`FileSystemTree`](#filesystemtree).
 
 ---
 
@@ -985,6 +1039,42 @@ When set to `false`, no terminal output is sent back to the process, and the `ou
 #### ▸ `terminal?: { cols: number; rows: number }`
 
 The size of the attached terminal.
+
+---
+
+## `ExportOptions`
+
+Options that control exporting data.
+
+```ts
+export interface ExportOptions {
+  format?: 'json' | 'binary' | 'zip',
+  includes?: string[];
+  excludes?: string[];
+}
+```
+
+### `ExportOptions` Properties
+
+<br />
+
+#### ▸ `format?: 'json' | 'binary' | 'zip'`
+
+The format of the exported data. The `json` and `binary` format can be used as `tree` when calling [`mount`](#▸-mount).
+
+The default value is `json`.
+
+<br />
+
+#### ▸ `includes?: string[]`
+
+Globbing patterns to include files from within excluded folders.
+
+<br />
+
+#### ▸ `excludes?: string[]`
+
+Globbing patterns to exclude files from the export.
 
 ---
 
