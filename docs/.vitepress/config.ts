@@ -53,7 +53,7 @@ export default defineConfig({
       },
     ],
   },
-  
+
   srcDir: '.',
   outDir: 'build',
 
@@ -70,7 +70,7 @@ export default defineConfig({
     'Build the future of web based coding experiences, from interactive tutorials to instant production-ready dev environments.',
   head: getHeadTags(process.env),
   // See docs: https://vitepress.vuejs.org/guides/theme-nav
-  
+
   // Sitemap
   lastUpdated: true,
   sitemap: {
@@ -89,7 +89,7 @@ export default defineConfig({
       { text: 'Tutorial', link: 'https://webcontainer-tutorial.pages.dev', target: '_blank' },
       { text: 'API Reference', link: '/api' },
       { text: 'AI', link: '/ai' },
-      { text: 'Pricing', link: '/enterprise' },
+      { text: 'Pricing', link: 'https://stackblitz.com/pricing#webcontainer-api' },
     ],
     sidebar: {
       '/guides/': SIDEBAR_DEFAULT,
