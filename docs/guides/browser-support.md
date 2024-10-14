@@ -10,7 +10,7 @@ head:
 
 # {{ $frontmatter.title }}
 
-_Last update: October 2024
+_Last update: October 2024_
 
 **TL;DR** WebContainers are supported on desktop Chromium-based browsers out of the box, as well as on Safari 16.4 TP and Firefox, which both are in beta. If you have issues with supported browsers, [check your browser configuration](./browser-config).
 
