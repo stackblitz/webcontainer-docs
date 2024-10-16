@@ -12,6 +12,7 @@ head:
 
 ## 1.3.0
 
+* Breaking change: we now throw if [`auth.init`](api#▸-init) is called after [`WebContainer.boot`](api#▸-boot)
 * Add [`configureAPIKey`](api#configureapikey) to use the API with an API key.
 * Add `stack` information to `console.error` messages coming from previews.
 
