@@ -312,6 +312,8 @@ Spawns a process without additional arguments.
 
 ### ▸ `export`
 
+Added in version `1.4.0`.
+
 Exports the filesystem.
 
 <h4 id="wc-export-signature">
