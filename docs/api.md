@@ -236,6 +236,7 @@ interface UnhandledRejectionMessage {
 interface ConsoleErrorMessage {
     type: PreviewMessageType.ConsoleError;
     args: any[];
+    stack: string;
 }
 ```
 
@@ -379,6 +380,25 @@ Reload the provided iframe by sending a message to the iframe and falling back t
 
 Returns a `Promise` that resolves when the reload has completed.
 
+## `configureAPIKey`
+
+Added in version `1.3.0`.
+
+Configure an API key to be used for commercial usage of the WebContainer API. See https://webcontainers.io/enterprise for more information.
+
+<h4 id="configureapikey-signature">
+  <a id="configureapikey-signature">Signature</a>
+  <a href="#configureapikey-signature" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+<br />
+
+<h4 id="configureapikey-signature">
+  <code>configureAPIKey(key: string): void</code>
+</h4>
+
+This function will throw an exception if `WebContainer.boot` was called before `configureAPIKey`.
+
 ## `auth`
 
 The authentication API is exported under the `auth` namespace. It allows you to authenticate users visiting your website via StackBlitz. In order for users to be authenticated via this method, they must:
@@ -406,6 +426,9 @@ Intialize the authentication for use in WebContainer. This method should be call
 
 <code>init(options: <a href="#authinit-options">AuthInitOptions</a>): { status: 'need-auth' | 'authorized' } | <a href="#authfailed-error">AuthFailedError</a></code>
 
+This function will throw an exception if `WebContainer.boot` was called before `auth.init`.
+
+<br />
 
 <h4 id="authinit-options">
   <a id="authinit-options"><code>AuthInitOptions</code></a>
