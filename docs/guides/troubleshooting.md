@@ -1,4 +1,4 @@
----
+`---
 title: &title Troubleshooting
 description: &description This page offers troubleshooting tips for WebContainers.
 head:
@@ -112,3 +112,17 @@ Currently, WebContainers can only execute languages that are natively supported 
 > `Cannot load native addon because loading addons is disabled`.
 
 The solution to this is to use an alternative to the native addon which is either fully implemented in JavaScript or can be compiled to WebAssembly.
+
+## `Protocol "https:" not supported. Expected "http:"` npm error
+
+In some environments it may be helpful to explicitly set an `.npmrc` with the registry specifed to overcome this. 
+
+An example in your `files,js` add this with <strong>http://</strong>
+
+```js 
+".npmrc": {
+  file: {
+    contents: `registry=http://registry.npmjs.org`
+  }
+},
+```
