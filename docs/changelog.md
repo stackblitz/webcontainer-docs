@@ -10,6 +10,10 @@ head:
 
 # Changelog
 
+## 1.4.0
+
+* Add support for exporting the file system with [`export`](api#▸-export).
+
 ## 1.3.0
 
 * Breaking change: we now throw if [`auth.init`](api#▸-init) is called after [`WebContainer.boot`](api#▸-boot)
