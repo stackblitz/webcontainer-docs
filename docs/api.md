@@ -359,7 +359,7 @@ Since you can control servers running in WebContainer, it's preferable to add th
 
 <br />
 
-In particular, this might break existing or future WebContainer features added in the future.
+In particular, this might break existing WebContainer features or ones that will be added later.
 :::
 
 <h4 id="wc-setpreviewscript-signature">
@@ -381,7 +381,7 @@ const script = `
 
 await webcontainerInstance.setPreviewScript(script);
 
-// now all previews will always print hello world to the console.
+// now all previews will always print hello world to the console if they serve HTML
 ```
 
 ### ▸ `teardown`
