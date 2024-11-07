@@ -346,20 +346,20 @@ Returns a [`FileSystemTree`](#filesystemtree) when the format is `json`, otherwi
 Added in version `1.5.0`.
 
 Configure a script to be injected inside all previews. After this function returned,
-every preview iframes that are either added or reloaded will now include that extra
+every preview iframe that is either added or reloaded will now include this extra
 script on all HTML responses.
 
-Notably, existing previews won't included until they have been reloaded.
+Notably, existing previews won't include the script until they have been reloaded.
 
 To reload a preview you can use [`reloadPreview`](#reloadpreview)
 
 :::warning
-This API is a pretty advanced feature that should be used only if this is your only option.
+This API is an advanced feature that should only be used if it is your only option.
 As you can control what runs in webcontainer it's usually best to use your own server if you can.
 
 <br />
 
-In particular, this might break exisiting or future WebContainer features added in the future.
+In particular, this might break existing or future WebContainer features added in the future.
 :::
 
 <h4 id="wc-setpreviewscript-signature">
@@ -1148,7 +1148,7 @@ Globbing patterns to exclude files from the export.
 
 ## `PreviewScriptOptions`
 
-Options that control attributes on a script injected in previews.
+Options that control attributes on a script injected into previews.
 
 ```ts
 export interface PreviewScriptOptions {
@@ -1164,19 +1164,19 @@ export interface PreviewScriptOptions {
 
 #### ▸ `type?: 'module' | 'importmap'`
 
-The type attribute to use for the script. For more information, check the [MDN page on script: type attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type).
+The type attribute to use for the script. For more information, check the [MDN page on the script: type attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type).
 
 <br />
 
 #### ▸ `defer?: boolean`
 
-If set to true, then the `defer` attribute will be set on the script tag. For more information, check the [MDN page on script: defer attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#async).
+If set to true, then the `defer` attribute will be set on the script tag. For more information, check the [MDN page on the script: defer attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#async).
 
 <br />
 
 #### ▸ `async?: boolean`
 
-If set to true, then the `async` attribute will be set on the script tag. For more information, check the [MDN page on script: async attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#async).
+If set to true, then the `async` attribute will be set on the script tag. For more information, check the [MDN page on the script: async attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#async).
 
 ---
 
