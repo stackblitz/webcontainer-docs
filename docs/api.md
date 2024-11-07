@@ -345,7 +345,7 @@ Returns a [`FileSystemTree`](#filesystemtree) when the format is `json`, otherwi
 
 Added in version `1.5.0`.
 
-Configure a script to be injected inside all previews. After this function returned,
+Configure a script to be injected inside all previews. After this function resolves,
 every preview iframe that is either added or reloaded will now include this extra
 script on all HTML responses.
 
