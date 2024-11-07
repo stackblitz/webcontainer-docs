@@ -10,6 +10,10 @@ head:
 
 # Changelog
 
+## 1.5.0
+
+* Add support for injecting a script in previews with [`setPreviewScript`](api#▸-setPreviewScript).
+
 ## 1.4.0
 
 * Add support for exporting the file system with [`export`](api#▸-export).

@@ -341,6 +341,49 @@ const zip = new Blob([data]);
 
 Returns a [`FileSystemTree`](#filesystemtree) when the format is `json`, otherwise a `Uint8Array`.
 
+### ▸ `setPreviewScript`
+
+Added in version `1.5.0`.
+
+Configure a script to be injected inside all previews. After this function resolves,
+every preview iframe that is either added or reloaded will now include this extra
+script on all HTML responses.
+
+Notably, existing previews won't include the script until they have been reloaded.
+
+To reload a preview you can use [`reloadPreview`](#reloadpreview)
+
+:::warning
+This API is an advanced feature that should only be used if it is your only option.
+Since you can control servers running in WebContainer, it's preferable to add this code when serving the content itself.
+
+<br />
+
+In particular, this might break existing or future WebContainer features added in the future.
+:::
+
+<h4 id="wc-setpreviewscript-signature">
+  <a id="wc-setpreviewscript-signature">Signature</a>
+  <a href="#wc-setpreviewscript-signature" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+<code>setPreviewScript(scriptSrc: string, options?: <a href="#previewscriptoptions">PreviewScriptOptions</a>): Promise&lt;void&gt;</code>
+
+<h4 id="wc-setpreviewscript-example">
+  <a id="wc-setpreviewscript-example">Example</a>
+  <a href="#wc-setpreviewscript-example" class="header-anchor" aria-hidden="true">#</a>
+</h4>
+
+```js
+const script = `
+  console.log('Hello world!');
+`;
+
+await webcontainerInstance.setPreviewScript(script);
+
+// now all previews will always print hello world to the console.
+```
+
 ### ▸ `teardown`
 
 Destroys the WebContainer instance, turning it unusable, and releases its resources. After this, a new WebContainer instance can be obtained by calling [`boot`](#▸-boot).
@@ -1100,6 +1143,40 @@ Globbing patterns to include files from within excluded folders.
 #### ▸ `excludes?: string[]`
 
 Globbing patterns to exclude files from the export.
+
+---
+
+## `PreviewScriptOptions`
+
+Options that control attributes on a script injected into previews.
+
+```ts
+export interface PreviewScriptOptions {
+  type?: 'module' | 'importmap';
+  defer?: boolean;
+  async?: boolean;
+}
+```
+
+### `PreviewScriptOptions` Properties
+
+<br />
+
+#### ▸ `type?: 'module' | 'importmap'`
+
+The type attribute to use for the script. For more information, check the [MDN page on the script: type attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type).
+
+<br />
+
+#### ▸ `defer?: boolean`
+
+If set to true, then the `defer` attribute will be set on the script tag. For more information, check the [MDN page on the script: defer attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#async).
+
+<br />
+
+#### ▸ `async?: boolean`
+
+If set to true, then the `async` attribute will be set on the script tag. For more information, check the [MDN page on the script: async attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#async).
 
 ---
 
