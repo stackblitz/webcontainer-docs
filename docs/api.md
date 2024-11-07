@@ -355,7 +355,7 @@ To reload a preview you can use [`reloadPreview`](#reloadpreview)
 
 :::warning
 This API is an advanced feature that should only be used if it is your only option.
-As you can control what runs in webcontainer it's usually best to use your own server if you can.
+Since you can control servers running in WebContainer, it's preferable to add this code when serving the content itself.
 
 <br />
 
