@@ -102,7 +102,7 @@ After cloning the repository, run the docs site in development mode with:
 
 ```sh
 npm install
-npm start
+npm run dev
 ```
 
 ### Editor setup
