@@ -26,8 +26,7 @@ const files = {
         {
           "name": "vite-starter",
           "private": true,
-         // ...
-          },
+          // ...
           "devDependencies": {
             "vite": "^4.0.4"
           }
