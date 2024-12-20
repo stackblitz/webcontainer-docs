@@ -299,13 +299,13 @@ Returns a [`WebContainerProcess`](#webcontainerprocess).
 <br />
 
 <h4>
-  ▸ <code>spawn(command: string, args: string[], options?:  <a href="#spawnoptions">SpawnOptions</a>): () => void</code>
+  ▸ <code>spawn(command: string, args: string[], options?:  <a href="#spawnoptions">SpawnOptions</a>): () => Promise<<a href="#webcontainerprocess">WebContainerProcess</a>></code>
 </h4>
 
 Spawns a process with additional arguments.
 
 <h4>
-  ▸ <code>spawn(command: string, options?:  <a href="#spawnoptions">SpawnOptions</a>): () => void</code>
+  ▸ <code>spawn(command: string, options?:  <a href="#spawnoptions">SpawnOptions</a>): () => Promise<<a href="#webcontainerprocess">WebContainerProcess</a>></code>
 </h4>
 
 Spawns a process without additional arguments.
