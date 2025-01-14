@@ -52,7 +52,7 @@ In the `main.js` file, add an `installDependencies` function:
 ::: code-group
 
 ```js {11-24} [main.js]
-async function installDependencies() {
+async function installDependencies(webcontainerInstance) {
   // Install dependencies
   const installProcess = await webcontainerInstance.spawn('npm', ['install']);
   // Wait for install command to exit
@@ -75,7 +75,7 @@ window.addEventListener('load', async () => {
   webcontainerInstance = await WebContainer.boot();
   await webcontainerInstance.mount(files);
 
-  const exitCode = await installDependencies();
+  const exitCode = await installDependencies(webcontainerInstance);
   if (exitCode !== 0) {
     throw new Error('Installation failed');
   };
