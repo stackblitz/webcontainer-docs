@@ -13,7 +13,7 @@ import PageHeading from '@theme/components/Helpers/CommunityProjectPageHeading.v
 import Screenshot from '@theme/components/Helpers/Screenshot.vue';
 </script>
 
-<PageHeading title="Stylelint Playgroung" category="ide" />
+<PageHeading title="Stylelint Playground" category="ide" />
 
 
 With Stylelint playground you can experiment with rulesets defined in different npm packages by specifying them in package.json! 
