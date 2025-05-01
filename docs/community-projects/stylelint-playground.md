@@ -20,4 +20,4 @@ With Stylelint playground you can experiment with rulesets defined in different 
 
 They are actually being installed – just as they would in your project
 
-<Screenshot src="/img/community/stylelint-playground.png" alt="Stylelint Playground" href="https://chimerical-trifle-8d3c21.netlify.app/" />
+<Screenshot src="/img/community/stylelint-playground.png" alt="Stylelint Playground" href="https://stylelint.io/demo/" />
