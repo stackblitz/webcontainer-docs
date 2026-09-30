@@ -10,19 +10,19 @@ import {
   keymap,
   lineNumbers
 } from '@codemirror/view';
-import type { WebContainerProcess } from '@webcontainer/api';
-import { WebContainer } from '@webcontainer/api';
+import type { WebContainer, WebContainerProcess } from '@webcontainer/api';
 import pDefer from 'p-defer';
 import type { Ref } from 'vue';
+import { acquireWebContainer } from '../../../scripts/webcontainer';
 import { isWebContainerSupported, wordWrap } from './utils';
 import { vsCodeDarkPlus, vsCodeDarkPlusTerminalTheme } from './vscode-dark-plus';
 import { vsCodeLightPlus, vsCodeLightPlusTerminalTheme } from './vscode-light-plus';
 
 type DirtyListener = (isDirty: boolean) => void;
 
-let webcontainer: Promise<WebContainer>;
-let currentProcess: WebContainerProcess;
-let shellWriter: WritableStreamDefaultWriter<string>;
+let webcontainer: Promise<WebContainer> | undefined;
+let currentProcess: WebContainerProcess | undefined;
+let shellWriter: WritableStreamDefaultWriter<string> | undefined;
 let terminal: (import('xterm').Terminal & { fit?: () => void }) | undefined;
 let editor: EditorView;
 
@@ -131,10 +131,22 @@ async function bootWebContainer(terminal: import('xterm').Terminal) {
 
   terminal.write('Booting WebContainer...');
 
-  webcontainer = WebContainer.boot({ workdirName: 'demo' });
+  let isTornDown = false;
+  let disposeTerminalInput: (() => void) | undefined;
+
+  // another component took over the WebContainer; reset so we reboot when mounted again
+  webcontainer = acquireWebContainer({ workdirName: 'demo' }, () => {
+    isTornDown = true;
+    webcontainer = undefined;
+    currentProcess = undefined;
+    shellWriter = undefined;
+    disposeTerminalInput?.();
+  });
+
+  const instance = webcontainer;
 
   try {
-    const wc = await webcontainer;
+    const wc = await instance;
 
     terminal.reset();
 
@@ -158,19 +170,21 @@ async function bootWebContainer(terminal: import('xterm').Terminal) {
 
     async function main() {
       // we set an infinite loop so that when the user runs the `exit` command, we restart
-      while (true) {
-        currentProcess = await wc.spawn('jsh', {
+      while (!isTornDown) {
+        const jsh = await wc.spawn('jsh', {
           terminal: {
             cols: terminal.cols,
             rows: terminal.rows,
           },
         });
 
+        currentProcess = jsh;
+
         const jshReady = pDefer();
         let isJSHReady = false;
 
         // write the process output to the terminal
-        currentProcess.output.pipeTo(
+        jsh.output.pipeTo(
           new WritableStream({
             write(data) {
               if (data.includes('❯') && !isJSHReady) {
@@ -184,19 +198,23 @@ async function bootWebContainer(terminal: import('xterm').Terminal) {
           }) 
         );
 
-        shellWriter = currentProcess.input.getWriter();
+        const writer = jsh.input.getWriter();
+
+        shellWriter = writer;
 
         await jshReady.promise;
 
-        shellWriter.write('pnpm install\n');
+        writer.write('pnpm install\n');
 
         // write the terminal input to the process
         const terminalWriter = terminal.onData((data) => {
-          shellWriter.write(data);
+          writer.write(data);
         });
 
+        disposeTerminalInput = () => terminalWriter.dispose();
+
         // wait for the process to finish
-        await currentProcess.exit;
+        await jsh.exit;
 
         terminal.clear();
         terminalWriter.dispose();
@@ -221,7 +239,7 @@ async function bootWebContainer(terminal: import('xterm').Terminal) {
     );
   }
 
-  return webcontainer;
+  return instance;
 }
 
 async function createTerminal(isDark: Ref<boolean>, element: HTMLElement) {

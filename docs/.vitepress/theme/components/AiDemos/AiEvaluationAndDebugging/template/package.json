@@ -1,0 +1,11 @@
+{
+  "name": "tip-calculator",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vite": "^7.1.0"
+  }
+}
