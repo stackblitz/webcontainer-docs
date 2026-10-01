@@ -7,6 +7,7 @@ import TestimonialCardList from '@theme/components/Testimonials/TestimonialCardL
 import WCUsedBy from '@theme/components/WCUsedByOrgs/WCUsedBy.vue';
 import WCHelloWorld from '@theme/components/Examples/WCHelloWorld.vue';
 import ProjectsUsingWCCardList from '@theme/components/WCUsedByProjects/ProjectsUsingWCCardList.vue';
+import DemoCardList from '@theme/components/AiDemos/DemoCardList.vue';
 
 defineProps<{
   footerSections: any[];
@@ -17,6 +18,12 @@ defineProps<{
 
   <div class="top-section">
     <HeroAi />
+  </div>
+
+  <div class="section">
+    <h2>See it <strong>in action.</strong></h2>
+    <p>Explore demos of the WebContainer API running AI-generated code right in your browser.</p>
+    <DemoCardList />
   </div>
 
   <div class="section">
