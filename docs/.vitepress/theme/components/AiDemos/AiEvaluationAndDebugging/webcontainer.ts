@@ -93,7 +93,7 @@ export function startProject(files: Files, callbacks: ProjectCallbacks) {
   };
 }
 
-function toTree(files: Files) {
+export function toTree(files: Files) {
   const tree: FileSystemTree = {};
 
   for (const [path, contents] of Object.entries(files)) {
